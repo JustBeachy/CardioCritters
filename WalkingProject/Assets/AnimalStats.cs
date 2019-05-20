@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AnimalStats : MonoBehaviour
 {
-    public string Name = "";
+   
+    public Sprite Icon;
     public enum Rarity { Common, Rare, Epic, Legendary };
     public Rarity rarity = Rarity.Common;
     public string BonusText = "";

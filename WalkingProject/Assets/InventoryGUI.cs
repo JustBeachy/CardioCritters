@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryGUI : MonoBehaviour
 {
     public GameObject player;
     public List<GameObject> zooList;
     int parser=0;
-    public GameObject locked;
+    public GameObject listItem;
+    public Sprite locked;
+    
+
     
     // Start is called before the first frame update
     void Start()
     {
-    
+
     }
 
     // Update is called once per frame
@@ -42,7 +46,9 @@ public class InventoryGUI : MonoBehaviour
                 {
                     if (sameAnim.name == AnimalLists.AllAnimals[i].name)
                     {
-                        var toList =Instantiate(sameAnim, new Vector2(1.5f * ((i+parser) % 3), 1.5f * ((i+parser)/3)), Quaternion.identity); //display animal
+                        var toList =Instantiate(listItem, new Vector2(1.5f * ((i+parser) % 3), 1.5f * ((i+parser)/3)), Quaternion.identity); //display animal
+                        toList.GetComponent<Image>().sprite = zooList[parser].GetComponent<AnimalStats>().Icon;
+                        toList.GetComponentInChildren<Text>().text = zooList[parser].name;
                         toList.transform.parent = transform.parent;
 
                         parser++;
@@ -51,7 +57,9 @@ public class InventoryGUI : MonoBehaviour
             }
             else
             {
-                var toList =Instantiate(locked, new Vector2(1.5f * ((i+parser) % 3), 1.5f * ((i+parser) / 3)), Quaternion.identity); //display locked animal
+                var toList =Instantiate(listItem, new Vector2(1.5f * ((i+parser) % 3), 1.5f * ((i+parser) / 3)), Quaternion.identity); //display locked animal
+                toList.GetComponent<Image>().sprite = locked;
+                toList.GetComponentInChildren<Text>().text = "Unknown";
                 toList.transform.parent = transform.parent;
                 parser++;
             }

@@ -262,7 +262,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -457,7 +457,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &506674537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,7 +472,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2138915788}
   zooList: []
-  locked: {fileID: 506674535}
+  listItem: {fileID: 506674535}
+  locked: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &506674538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +494,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -545,8 +546,8 @@ Camera:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.745, g: 0.84574074, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -627,7 +628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000020183279}
+  m_AnchoredPosition: {x: 0, y: 0.000021566708}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &538156074
@@ -650,7 +651,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 128, y: 128}
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -959,10 +960,10 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5, y: 67}
-  m_SizeDelta: {x: 60, y: -70}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 0, y: 30}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1454526673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,7 +977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.13652545, g: 0.33454606, b: 0.49056602, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -985,18 +986,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Animal
+  m_Text: Uknown
 --- !u!222 &1454526674
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1160,7 +1161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1208,7 +1209,7 @@ MonoBehaviour:
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 130768198}
   m_HorizontalScrollbarVisibility: 1
-  m_VerticalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 1
   m_HorizontalScrollbarSpacing: -3
   m_VerticalScrollbarSpacing: -3
   m_OnValueChanged:
@@ -1589,20 +1590,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lcommons:
-  - {fileID: 2313131755711587597, guid: 4ee4ee80202d1494c8c2c476e2c4f4f8, type: 3}
-  - {fileID: 2313131755711587597, guid: ee145fcc7a682470db8d65f600422c7c, type: 3}
-  - {fileID: 2313131755711587597, guid: dfb2560d2ba5b400089bd33c6c69a458, type: 3}
-  - {fileID: 2313131755711587597, guid: ff0e94399a4104b248d04b02d0bf40db, type: 3}
+  - {fileID: 1633134695, guid: c2e7ab3e062e2479cbda6d05a6ede74f, type: 3}
+  - {fileID: 1677568313, guid: 95d1e229c443845e382da53d1c7b8d2a, type: 3}
+  - {fileID: 287863711, guid: c75e7a9502fdc45baa55a2ba6a93e9a3, type: 3}
+  - {fileID: 763648792, guid: 1bdb8f9350b18459dbf5e476f9d3b51b, type: 3}
+  - {fileID: 1806365292, guid: 60d0d8210f42f4eafaa920c9097bb177, type: 3}
+  - {fileID: 2097143010, guid: a2b8ce1c9935749878f1d608391ae2d4, type: 3}
+  - {fileID: 1867433430, guid: ff0e94399a4104b248d04b02d0bf40db, type: 3}
+  - {fileID: 1853347731, guid: db5ad4741b9254c6eaafb5a9472d6cab, type: 3}
   lrares:
-  - {fileID: 2313131755711587597, guid: aa7f651b9e0784110ab68c2640591761, type: 3}
-  - {fileID: 2313131755711587597, guid: 2884af9a899a144548b37c2d9b05d098, type: 3}
-  - {fileID: 2313131755711587597, guid: db5ad4741b9254c6eaafb5a9472d6cab, type: 3}
+  - {fileID: 4891734, guid: dedab1604f5614e299fcb9e6a5d74d53, type: 3}
+  - {fileID: 1246806311, guid: ee145fcc7a682470db8d65f600422c7c, type: 3}
+  - {fileID: 1454929947, guid: 2884af9a899a144548b37c2d9b05d098, type: 3}
+  - {fileID: 1039623873, guid: 06a3ef768e5d84014aed5684c116413e, type: 3}
+  - {fileID: 1669232448, guid: 78b4e2f1e38f74b598700a938b4df774, type: 3}
+  - {fileID: 26281942, guid: c736727f0dbf4488abf20ba49e27c688, type: 3}
   lepics:
-  - {fileID: 2313131755711587597, guid: c9e0e454eae144e6ba0ce0cbe130f0b8, type: 3}
-  - {fileID: 2313131755711587597, guid: ac896a8b805c04365af492ab33c99370, type: 3}
+  - {fileID: 1492160498, guid: 6c08e88420cbb4daea04d1e3e818b26f, type: 3}
+  - {fileID: 973785286, guid: 7e6405c9859a14a849880e0317674981, type: 3}
+  - {fileID: 269882084, guid: 867c1eba0de0e45d29256689ff7b0537, type: 3}
+  - {fileID: 1154532386, guid: 2e414e48235cb4c119290bdf0690ac9f, type: 3}
   llegendaries:
-  - {fileID: 2313131755711587597, guid: dedab1604f5614e299fcb9e6a5d74d53, type: 3}
-  - {fileID: 2313131755711587597, guid: 91dd32fd7b68f4a0e85bb78da92b2f3b, type: 3}
+  - {fileID: 1661782589, guid: ac896a8b805c04365af492ab33c99370, type: 3}
+  - {fileID: 327617841, guid: b9ef3044ad6e44975a6c9db2f58e3e56, type: 3}
 --- !u!114 &2138915794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,6 +1748,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 217050249308824643, guid: 41c4e82248df54a44b16205612d57c3e,
+        type: 3}
+      propertyPath: lcommons.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 217050249308824643, guid: 41c4e82248df54a44b16205612d57c3e,
+        type: 3}
+      propertyPath: lrares.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 217050249308824643, guid: 41c4e82248df54a44b16205612d57c3e,
+        type: 3}
+      propertyPath: lepics.Array.size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
