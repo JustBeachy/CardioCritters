@@ -99,7 +99,7 @@ public class Crafting : MonoBehaviour
 
 
 
-        gameObject.GetComponent<Player>().xp += 50; // move to where crafting occurs since infinity slot uses this method
+        gameObject.GetComponent<Player>().xp += 50*Bonuses.xpMultiplier; // move to where crafting occurs since infinity slot uses this method
         gameObject.GetComponent<Player>().CheckLevelUp();
         newCrate.GetComponent<Crate>().rarity = createCrate.GetComponent<Crate>().rarity;
         return createCrate; 

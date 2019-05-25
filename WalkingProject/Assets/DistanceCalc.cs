@@ -5,8 +5,8 @@ using UnityEngine;
 public class DistanceCalc : MonoBehaviour {
 
     bool started = false;
-    float timer = 30;
-    float currentTime = 30;
+    public float timer = 30;
+    public float currentTime = 30;
     float clat = 0;
     float clong = 0;
     float distancemoved = 0;

@@ -10,19 +10,43 @@ public class InventoryGUI : MonoBehaviour
     int parser=0;
     public GameObject listItem;
     public Sprite locked;
+    public bool hide = false;
+    public GameObject animalTiedToIcon;
+
     
+   
 
     
     // Start is called before the first frame update
     void Start()
     {
 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (hide)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public Color SetColor(GameObject g)
+    {
+       
+
+        if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)
+            return Color.white;
+        if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
+            return Color.blue;
+        if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
+            return Color.magenta;
+        if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
+            return Color.yellow;
+
+        return Color.cyan;
     }
 
     public void LoadInventory()
@@ -37,35 +61,46 @@ public class InventoryGUI : MonoBehaviour
 
             zooList = player.GetComponent<Player>().Zoo;
 
-        for (int i = 0; i < AnimalLists.AllAnimals.Count; i++)
+        if(zooList!=null)
         {
-
-            if (zooList.Contains(AnimalLists.AllAnimals[i]))
+            for (int i = 0; i < AnimalLists.AllAnimals.Count; i++) //loop through animal dictionary
             {
-                foreach (GameObject sameAnim in zooList)
-                {
-                    if (sameAnim.name == AnimalLists.AllAnimals[i].name)
-                    {
-                        var toList =Instantiate(listItem, new Vector2(1.5f * ((i+parser) % 3), 1.5f * ((i+parser)/3)), Quaternion.identity); //display animal
-                        toList.GetComponent<Image>().sprite = zooList[parser].GetComponent<AnimalStats>().Icon;
-                        toList.GetComponentInChildren<Text>().text = zooList[parser].name;
-                        toList.transform.parent = transform.parent;
 
+                if (zooList.Contains(AnimalLists.AllAnimals[i]))
+                {
+                    foreach (GameObject sameAnim in zooList) //loop through inventory
+                    {
+                        if (sameAnim == AnimalLists.AllAnimals[i])
+                        {
+                            var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
+                            toList.GetComponent<InventoryGUI>().animalTiedToIcon = sameAnim; //tie animal to icon for sorting and clicking
+                            AnimalLists.iconList.Add(toList); //add to a list for sorting
+                            toList.GetComponent<Image>().sprite = zooList[parser].GetComponent<AnimalStats>().Icon; //icon image
+                            toList.GetComponentInChildren<Text>().text = zooList[parser].name; //text name
+                            toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]); //border color
+                            toList.transform.parent = transform.parent;
+
+                        }
                         parser++;
                     }
+                    parser = 0;
                 }
-            }
-            else
-            {
-                var toList =Instantiate(listItem, new Vector2(1.5f * ((i+parser) % 3), 1.5f * ((i+parser) / 3)), Quaternion.identity); //display locked animal
-                toList.GetComponent<Image>().sprite = locked;
-                toList.GetComponentInChildren<Text>().text = "Unknown";
-                toList.transform.parent = transform.parent;
-                parser++;
+                else
+                {
+                    var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display locked animal
+                    toList.GetComponent<Image>().sprite = locked;
+                    AnimalLists.iconList.Add(toList);//add to a list for sorting
+                    toList.GetComponentInChildren<Text>().text = "Unknown";
+                    toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]);
+                    toList.transform.parent = transform.parent;
+
+                }
             }
 
         }
+
         parser = 0;
+        Destroy(gameObject);
     }
 }
 

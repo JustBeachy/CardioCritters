@@ -65,6 +65,8 @@
     <Compile Include="Assets\Bonuses.cs" />
     <Compile Include="Assets\Crafting.cs" />
     <Compile Include="Assets\Crate.cs" />
+    <Compile Include="Assets\crateUI.cs" />
+    <Compile Include="Assets\CurrentAnimalUI.cs" />
     <Compile Include="Assets\DistanceCalc.cs" />
     <Compile Include="Assets\InventoryGUI.cs" />
     <Compile Include="Assets\Player.cs" />

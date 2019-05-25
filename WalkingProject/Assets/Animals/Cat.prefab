@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4490309859151136562}
   - component: {fileID: 4891735}
   m_Layer: 0
-  m_Name: cat
+  m_Name: Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 36b2bf74eb20b48308a9892e57ebc862, type: 3}
   rarity: 1
-  BonusText: 
+  BonusText: +5% Chance at rarer crates.
   Albino: 0
   bonus: 0
   bonusAmount: 0

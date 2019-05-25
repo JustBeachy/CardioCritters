@@ -10,7 +10,9 @@ public class Player : MonoBehaviour
 {
     //1 mi is 1.609344 km
     //.2 km  in 30 sec is fastest they should be able to go.
-    //steps are .4 height.
+    //steps are .4 height. 
+    //use FileInfo for key to encryption
+
 
     public GameObject crate;
     public string username = "";

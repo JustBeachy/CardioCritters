@@ -29,7 +29,7 @@ public class AnimalStats : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (ScreenState.currentScreen == ScreenState.Screen.Crafting) //check if in crafting screen
+        if (ScreenState.currentScreen == ScreenState.Screen.CraftAnimal) //check if in crafting screen
         {
             if (Crafting.AnimalCraft.Count < 5)
             {

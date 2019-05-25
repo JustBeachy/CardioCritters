@@ -9,6 +9,8 @@ public class AnimalLists : MonoBehaviour
     public List<GameObject> lepics;
     public List<GameObject> llegendaries;
 
+    public static List<GameObject> iconList = new List<GameObject>(); //stores icons in inventory screen
+
     static public List<GameObject> commons = new List<GameObject>();
     static public List<GameObject> rares = new List<GameObject>();
     static public List<GameObject> epics = new List<GameObject>();
