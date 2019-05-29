@@ -28,6 +28,7 @@ public class Crate : MonoBehaviour
         epics = AnimalLists.epics;
         legendaries = AnimalLists.legendaries;
 
+        ApplyRarity();
        
     }
 
@@ -50,6 +51,12 @@ public class Crate : MonoBehaviour
         {
             distancetoopen = 15000;
         }
+
+    }
+
+    public void ApplyRarity()
+    {
+      
     }
 
     public GameObject OpenCrate()
@@ -99,10 +106,11 @@ public class Crate : MonoBehaviour
             holder.GetComponent<AnimalStats>().Albino = isShiny;//make a holder to assign albino chance
             player.GetComponent<Player>().Zoo.Add(holder);//unbox crate and add to inventory
             if (player.GetComponent<Player>().slots[0] == null)//give new crate if in infinity slot
-                player.GetComponent<Player>().CrateIntoInventory(0);
+                player.GetComponent<Player>().slots[0]=player.GetComponent<Crafting>().CraftCrate();
             player.GetComponent<Player>().SaveGame();//save game
 
 
         }
+        
     }
 }

@@ -16,6 +16,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Distance.text = player.GetComponent<Player>().totaldistance.ToString();
     }
 }

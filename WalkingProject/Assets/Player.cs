@@ -81,20 +81,19 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
 
-
-            foreach (GameObject crate in slots)
-            {
-                if (crate!=null)
-                crate.GetComponent<Crate>().ApplyDistance(100);//give distance to crates
-
-            }
-            CrateIntoInventory(0);
+           
+                
+               ApplyDistance(100);//give distance to crates
 
 
-
-
+         
         }
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            CrateIntoInventory(0);
+        }
+
+            if (Input.GetKeyDown(KeyCode.I))
         {
             gameObject.GetComponent<InventoryGUI>().LoadInventory();
         }
@@ -116,12 +115,13 @@ public class Player : MonoBehaviour
         totaldistance += dis;
         dailyDistance += dis;
 
-        foreach (GameObject crate in slots)
+        foreach (GameObject c in slots)
         {
-            if(crate!=null)
-            crate.GetComponent<Crate>().ApplyDistance(dis);//give distance to crates
+            if(c!=null)
+            c.GetComponent<Crate>().ApplyDistance(dis);//give distance to crates
 
         }
+        dis = 0;
 
 
     }
@@ -156,6 +156,8 @@ public class Player : MonoBehaviour
         {
             if (i != null)
                 crateIndex.Add(i.GetComponent<Crate>().index); //hold crate index in save file
+            
+            
         }
 
         foreach (GameObject r in slots)
@@ -163,6 +165,12 @@ public class Player : MonoBehaviour
             if (r != null)
                 crateRarity.Add(r.GetComponent<Crate>().rarity); //hold crate rarity in save file
         }
+
+        //for (int g = 0; g < slots.Length; g++)
+        //{
+        //   if(slots[g]!=null)
+        //    slots[g] = crate;
+        //}
 
         Player saveFile = gameObject.GetComponent<Player>();
         saveFile.username = username;
@@ -209,14 +217,16 @@ public class Player : MonoBehaviour
         dailyDistance = PL.dailyDistance;
         //may need to add more properties to load in
 
-        for (int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < PL.crateIndex.Count; i++)
         {
-            slots[i] = crate; //assign blank crate to slots
+
+            slots[i] = Instantiate(crate); //assign blank crate to slots
+
         }
 
-        for (int i = 0; i < PL.ShinyFinder.Count;i++)
+        for (int z = 0; z < PL.ShinyFinder.Count;z++)
         {
-            Zoo[i].GetComponent<AnimalStats>().Albino = PL.ShinyFinder[i];//load in albino trait
+            Zoo[z].GetComponent<AnimalStats>().Albino = PL.ShinyFinder[z];//load in albino trait
         }
 
         for (int j = 0; j < PL.DistanceSaves.Count; j++)
@@ -231,7 +241,8 @@ public class Player : MonoBehaviour
 
         for (int j = 0; j < PL.crateRarity.Count; j++)
         {
-            slots[j].GetComponent<Crate>().rarity = PL.crateRarity[j];//load in rarity for crates
+            slots[j].GetComponent<Crate>().rarity = (Crate.Rarity)PL.crateRarity[j];//load in rarity for crates
+            print(slots[j].GetComponent<Crate>().rarity);
         }
 
 
