@@ -98,7 +98,7 @@ MonoBehaviour:
   rarity: 1
   BonusText: +5% Chance at rarer crates.
   Albino: 0
-  bonus: 0
+  bonus: 00000000
   bonusAmount: 0
   isActive: 0
   index: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8491849982468085446}
   - component: {fileID: 1677568314}
   m_Layer: 0
-  m_Name: caterpillar
+  m_Name: Caterpillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,9 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: d28b5996e16e8448387810a1462fd8ea, type: 3}
   rarity: 0
-  BonusText: 
+  BonusText: +5% Extra XP
   Albino: 0
-  bonus: 0
+  bonus: 04000000
   bonusAmount: 0
   isActive: 0
   index: 0
+  albinoIndex: 0

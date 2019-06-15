@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ScreenState : MonoBehaviour
 {
-    public enum Screen {Home, Settings, Inventory, Shop, CraftCrate, CraftAnimal, AnimalSelect };
+    public enum Screen {Home, Settings, Shop, CraftCrate, CraftAnimal, AnimalSelect };
     public static Screen currentScreen = Screen.Home;
+
     // Start is called before the first frame update
     void Start()
     {

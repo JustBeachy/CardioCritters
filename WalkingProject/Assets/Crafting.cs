@@ -7,6 +7,7 @@ public class Crafting : MonoBehaviour
     public GameObject newCrate;
     public static List<GameObject> AnimalCraft = new List<GameObject>();
     bool isShiny = false;
+    
    
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,12 @@ public class Crafting : MonoBehaviour
         
     }
 
-    public void CraftAnimal(GameObject[] craftMaterial)
+    public void CraftAnimal()
     {
         if ((int)Random.Range(1, 251 - Bonuses.AbinoEasier) <= 1) //check for albino
             isShiny = true;
 
-        if (craftMaterial[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)
+        if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)
         {
             GameObject holder = AnimalLists.rares[Random.Range(0, AnimalLists.rares.Count - 1)];
             holder.GetComponent<AnimalStats>().Albino = isShiny;
@@ -33,7 +34,7 @@ public class Crafting : MonoBehaviour
             gameObject.GetComponent<Player>().xp += 250 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
         }
-        if (craftMaterial[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
+        if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
         {
             GameObject holder = AnimalLists.epics[Random.Range(0, AnimalLists.epics.Count - 1)];
             holder.GetComponent<AnimalStats>().Albino = isShiny;
@@ -42,7 +43,7 @@ public class Crafting : MonoBehaviour
             gameObject.GetComponent<Player>().CheckLevelUp();
 
         }
-        if (craftMaterial[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
+        if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
         {
             GameObject holder = AnimalLists.legendaries[Random.Range(0, AnimalLists.legendaries.Count - 1)];
             holder.GetComponent<AnimalStats>().Albino = isShiny;
@@ -52,7 +53,7 @@ public class Crafting : MonoBehaviour
 
         }
 
-        foreach (GameObject cm in craftMaterial) //delete the crafting materials
+        foreach (GameObject cm in AnimalCraft) //delete the crafting materials
         {
             gameObject.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
         }
@@ -69,12 +70,12 @@ public class Crafting : MonoBehaviour
         var createCrate = Instantiate(newCrate);
         float random = Random.Range(1+Bonuses.RarerCrates,101);
 
-        if (random <= 60)
+        if (random <= 70)
         {
             createCrate.GetComponent<Crate>().rarity = Crate.Rarity.Common;
            
         }
-        if (random > 60 && random <= 95)
+        if (random > 70 && random <= 95)
         {
             createCrate.GetComponent<Crate>().rarity = Crate.Rarity.Rare;
 

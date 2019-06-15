@@ -11,10 +11,11 @@ public class AnimalStats : MonoBehaviour
     public string BonusText = "";
     public bool Albino = false;
     public enum Bonus { RarerCrates, FasterCrates, ExtraSlots, ExtraGold, MoreXP, AlbinoChance, Crafting2x}
-    public Bonus bonus = Bonus.RarerCrates;
+    public List<Bonus> bonus;
     public float bonusAmount = 0;
     public bool isActive = false;
     public int index = 0;
+    public int albinoIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,6 @@ public class AnimalStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void OnMouseDown()
@@ -38,24 +38,32 @@ public class AnimalStats : MonoBehaviour
         }
     }
 
+    public void ApplyAlbinoMaterial()
+    {
+        gameObject.GetComponent<MeshRenderer>().materials[albinoIndex].color = Color.white; //if albino, set certain material to white color.
+    }
+
     public void ApplyBonus()
     {
-        if(bonus==Bonus.RarerCrates)
-            Bonuses.RarerCrates = bonusAmount;
+        for (int i = 0; i < bonus.Count; i++)
+        {
+            if (bonus[i] == Bonus.RarerCrates)
+                Bonuses.RarerCrates = bonusAmount;
 
-        if (bonus == Bonus.FasterCrates)
-            Bonuses.FasterCrates = bonusAmount;
+            if (bonus[i] == Bonus.FasterCrates)
+                Bonuses.FasterCrates = bonusAmount;
 
-        if (bonus == Bonus.ExtraSlots)
-            Bonuses.BonusSlot = bonusAmount;
+            if (bonus[i] == Bonus.ExtraSlots)
+                Bonuses.BonusSlot = bonusAmount;
 
-        if (bonus == Bonus.AlbinoChance)
-            Bonuses.AbinoEasier = bonusAmount;
+            if (bonus[i] == Bonus.AlbinoChance)
+                Bonuses.AbinoEasier = bonusAmount;
 
-        if (bonus == Bonus.MoreXP)
-            Bonuses.xpMultiplier = bonusAmount;
+            if (bonus[i] == Bonus.MoreXP)
+                Bonuses.xpMultiplier = bonusAmount;
 
-        if (bonus == Bonus.ExtraGold)
-            Bonuses.goldMultiplier = bonusAmount;
+            if (bonus[i] == Bonus.ExtraGold)
+                Bonuses.goldMultiplier = bonusAmount;
+        }
     }
 }

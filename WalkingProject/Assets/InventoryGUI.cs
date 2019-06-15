@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class InventoryGUI : MonoBehaviour
 {
     public GameObject player;
+    public GameObject Canvas;
     public List<GameObject> zooList;
     int parser=0;
     public GameObject listItem;
     public Sprite locked;
     public bool hide = false;
     public GameObject animalTiedToIcon;
-
-    
+    public bool showUnknown = true;
+    public GameObject SelectionScreen;
+    bool isClickedOn = false;
    
 
     
@@ -27,6 +29,8 @@ public class InventoryGUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (hide)
         {
             gameObject.SetActive(false);
@@ -47,6 +51,35 @@ public class InventoryGUI : MonoBehaviour
             return Color.yellow;
 
         return Color.cyan;
+    }
+
+    public void ShowUnknown()
+    {
+        showUnknown = !showUnknown;
+        LoadInventory();
+    }
+
+    
+     public void WhenClicked()//when clicked
+    {
+        var moreinfo=Instantiate(SelectionScreen,Canvas.transform);
+        moreinfo.GetComponent<MoreInfoAnimal>().AnimalName.text = animalTiedToIcon.name;
+        moreinfo.GetComponent<MoreInfoAnimal>().BonusText.text = animalTiedToIcon.GetComponent<AnimalStats>().BonusText;
+        isClickedOn = true;
+
+      
+       
+    }
+
+    public void Cancelled()
+    {
+        isClickedOn = false;
+    }
+
+    public void HitYesOnSelect()
+    {
+        Crafting.AnimalCraft.Add(animalTiedToIcon);
+
     }
 
     public void LoadInventory()
@@ -87,12 +120,15 @@ public class InventoryGUI : MonoBehaviour
                 }
                 else
                 {
-                    var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display locked animal
-                    toList.GetComponent<Image>().sprite = locked;
-                    AnimalLists.iconList.Add(toList);//add to a list for sorting
-                    toList.GetComponentInChildren<Text>().text = "Unknown";
-                    toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]);
-                    toList.transform.parent = transform.parent;
+                    if (showUnknown)
+                    {
+                        var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display locked animal
+                        toList.GetComponent<Image>().sprite = locked;
+                        AnimalLists.iconList.Add(toList);//add to a list for sorting
+                        toList.GetComponentInChildren<Text>().text = "Unknown";
+                        toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]);
+                        toList.transform.parent = transform.parent;
+                    }
 
                 }
             }

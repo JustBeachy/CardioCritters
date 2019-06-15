@@ -17,6 +17,8 @@ public class UI : MonoBehaviour
     void Update()
     {
 
-        Distance.text = player.GetComponent<Player>().totaldistance.ToString();
+        //Distance.text = player.GetComponent<Player>().totaldistance.ToString();
     }
+
+   
 }
