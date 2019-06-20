@@ -69,10 +69,12 @@
     <Compile Include="Assets\CurrentAnimalUI.cs" />
     <Compile Include="Assets\DistanceCalc.cs" />
     <Compile Include="Assets\InventoryGUI.cs" />
+    <Compile Include="Assets\LoadInventory.cs" />
     <Compile Include="Assets\MoreInfoAnimal.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\ScreenState.cs" />
     <Compile Include="Assets\UI.cs" />
+    <Compile Include="Assets\UISimpleDestroy.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/abeach/Documents/WalkingProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

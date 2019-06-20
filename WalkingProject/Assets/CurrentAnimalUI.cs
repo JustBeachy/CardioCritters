@@ -8,13 +8,16 @@ public class CurrentAnimalUI : MonoBehaviour
 
     public Sprite AnimalModel;
     public GameObject player;
-    public Text AnimalName,BonusText;
+    public Text AnimalName, BonusText;
     public Image progressBar;
-    Vector3 mouseClick = new Vector3(0, 0,0);
+    Vector3 mouseClick = new Vector3(0, 0, 0);
+    public GameObject CraftingOptions;
+    public GameObject InventoryList;
+   
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
 
@@ -24,12 +27,6 @@ public class CurrentAnimalUI : MonoBehaviour
     {
         UpdateSelectedAnimalUI();
         progressBar.fillAmount = player.GetComponent<DistanceCalc>().currentTime / player.GetComponent<DistanceCalc>().timer;
-    }
-
-
-    void OnMouseDown()
-    {
-        mouseClick = Input.mousePosition;
     }
 
     void OnMouseDrag()
@@ -45,6 +42,24 @@ public class CurrentAnimalUI : MonoBehaviour
         gameObject.GetComponent<Image>().sprite = AnimalModel;
         AnimalName.text = player.GetComponent<Player>().selectedAnimal.name;
         BonusText.text = player.GetComponent<Player>().selectedAnimal.GetComponent<AnimalStats>().BonusText;
-
     }
+
+    public void MakeCraftingOptions() //makes the crafting selection buttons
+    {
+        Instantiate(CraftingOptions, transform.parent);
+    }
+
+    public void SetScreenState(int state) //set screen state from buttons on the crafting select menu
+    {
+        ScreenState.currentScreen = (ScreenState.Screen)state;
+    }
+
+    public void CreateInventory()
+    {
+        var inv =Instantiate(InventoryList);
+        inv.transform.SetParent(GameObject.FindWithTag("Canvas").transform,false);
+    }
+
 }
+ 
+
