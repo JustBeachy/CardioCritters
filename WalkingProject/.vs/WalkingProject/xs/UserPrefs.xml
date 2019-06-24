@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{75EE972F-7F60-221F-7763-F084C22D4DD3}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoadInventory.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ButtonAnimation.cs">
     <Files>
       <File FileName="Assets/DistanceCalc.cs" Line="9" Column="33" />
       <File FileName="Assets/AnimalStats.cs" Line="43" Column="142" />
@@ -10,13 +10,14 @@
       <File FileName="Assets/AnimalLists.cs" Line="16" Column="62" />
       <File FileName="Assets/UI.cs" Line="23" Column="4" />
       <File FileName="Assets/Bonuses.cs" Line="7" Column="56" />
-      <File FileName="Assets/InventoryGUI.cs" Line="77" Column="6" />
+      <File FileName="Assets/InventoryGUI.cs" Line="68" Column="21" />
       <File FileName="Assets/ScreenState.cs" Line="8" Column="84" />
       <File FileName="Assets/crateUI.cs" Line="27" Column="24" />
-      <File FileName="Assets/CurrentAnimalUI.cs" Line="58" Column="17" />
+      <File FileName="Assets/CurrentAnimalUI.cs" Line="60" Column="83" />
       <File FileName="Assets/MoreInfoAnimal.cs" Line="19" Column="29" />
       <File FileName="Assets/UISimpleDestroy.cs" Line="18" Column="1" />
-      <File FileName="Assets/LoadInventory.cs" Line="8" Column="22" />
+      <File FileName="Assets/LoadInventory.cs" Line="12" Column="70" />
+      <File FileName="Assets/ButtonAnimation.cs" Line="7" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

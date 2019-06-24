@@ -15,14 +15,15 @@ public class InventoryGUI : MonoBehaviour
     public GameObject animalTiedToIcon;
     public bool showUnknown = true;
     public GameObject SelectionScreen;
+    public Text rarity;
     bool isClickedOn = false;
    
 
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        player = GameObject.FindWithTag("Player");
 
     }
 
@@ -39,16 +40,28 @@ public class InventoryGUI : MonoBehaviour
 
     public Color SetColor(GameObject g)
     {
-       
+
 
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)
+        {
+            rarity.text = "Common";
             return Color.white;
+        }
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
+        {
+            rarity.text = "Rare";
             return Color.blue;
+        }
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
+        {
+            rarity.text = "Epic";
             return Color.magenta;
+        }
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
+        {
+            rarity.text = "Legendary";
             return Color.yellow;
+        }
 
         return Color.cyan;
     }
@@ -59,13 +72,17 @@ public class InventoryGUI : MonoBehaviour
         LoadInventory();
     }
 
-    
+
      public void WhenClicked()//when clicked
     {
-        var moreinfo=Instantiate(SelectionScreen,Canvas.transform);
-        moreinfo.GetComponent<MoreInfoAnimal>().AnimalName.text = animalTiedToIcon.name;
-        moreinfo.GetComponent<MoreInfoAnimal>().BonusText.text = animalTiedToIcon.GetComponent<AnimalStats>().BonusText;
-        isClickedOn = true;
+        if (GetComponent<Image>().sprite != locked) //make sure it isnt an unknoown
+        {
+            var moreinfo = Instantiate(SelectionScreen);
+            moreinfo.transform.SetParent(GameObject.FindWithTag("Canvas").transform, false);
+            moreinfo.GetComponent<MoreInfoAnimal>().AnimalName.text = animalTiedToIcon.name;
+            moreinfo.GetComponent<MoreInfoAnimal>().BonusText.text = animalTiedToIcon.GetComponent<AnimalStats>().BonusText;
+            isClickedOn = true;
+        }
 
       
        

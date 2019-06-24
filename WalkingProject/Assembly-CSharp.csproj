@@ -63,6 +63,7 @@
     <Compile Include="Assets\AnimalLists.cs" />
     <Compile Include="Assets\AnimalStats.cs" />
     <Compile Include="Assets\Bonuses.cs" />
+    <Compile Include="Assets\ButtonAnimation.cs" />
     <Compile Include="Assets\Crafting.cs" />
     <Compile Include="Assets\Crate.cs" />
     <Compile Include="Assets\crateUI.cs" />
