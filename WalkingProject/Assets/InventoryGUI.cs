@@ -15,7 +15,7 @@ public class InventoryGUI : MonoBehaviour
     public GameObject animalTiedToIcon;
     public bool showUnknown = true;
     public GameObject SelectionScreen;
-    public Text rarity;
+    public string rarity;
     bool isClickedOn = false;
    
 
@@ -25,6 +25,7 @@ public class InventoryGUI : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
 
+        
     }
 
     // Update is called once per frame
@@ -38,32 +39,47 @@ public class InventoryGUI : MonoBehaviour
         }
     }
 
+    public string SetRarityText(GameObject g)
+    {
+        if(g.GetComponent<InventoryGUI>().animalTiedToIcon.GetComponent<AnimalStats>().rarity==AnimalStats.Rarity.Common)
+            return "Common";
+        if (g.GetComponent<InventoryGUI>().animalTiedToIcon.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
+            return "Rare";
+        if (g.GetComponent<InventoryGUI>().animalTiedToIcon.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
+            return "Epic";
+        if (g.GetComponent<InventoryGUI>().animalTiedToIcon.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
+            return "Legendary";
+
+        return "common";
+
+    }
+
     public Color SetColor(GameObject g)
     {
 
 
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)
         {
-            rarity.text = "Common";
+
             return Color.white;
         }
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
         {
-            rarity.text = "Rare";
+            
             return Color.blue;
         }
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
         {
-            rarity.text = "Epic";
+            
             return Color.magenta;
         }
         if (g.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
         {
-            rarity.text = "Legendary";
+            
             return Color.yellow;
         }
 
-        return Color.cyan;
+        return Color.red;
     }
 
     public void ShowUnknown()
@@ -78,9 +94,11 @@ public class InventoryGUI : MonoBehaviour
         if (GetComponent<Image>().sprite != locked) //make sure it isnt an unknoown
         {
             var moreinfo = Instantiate(SelectionScreen);
+            moreinfo.GetComponent<MoreInfoAnimal>().whoCreatedMe = gameObject;
             moreinfo.transform.SetParent(GameObject.FindWithTag("Canvas").transform, false);
             moreinfo.GetComponent<MoreInfoAnimal>().AnimalName.text = animalTiedToIcon.name;
             moreinfo.GetComponent<MoreInfoAnimal>().BonusText.text = animalTiedToIcon.GetComponent<AnimalStats>().BonusText;
+            moreinfo.GetComponent<MoreInfoAnimal>().Rarity.text = rarity;
             isClickedOn = true;
         }
 
@@ -124,11 +142,13 @@ public class InventoryGUI : MonoBehaviour
                         {
                             var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
                             toList.GetComponent<InventoryGUI>().animalTiedToIcon = sameAnim; //tie animal to icon for sorting and clicking
+                            toList.GetComponent<InventoryGUI>().rarity = SetRarityText(toList); //set raarity text
                             AnimalLists.iconList.Add(toList); //add to a list for sorting
                             toList.GetComponent<Image>().sprite = zooList[parser].GetComponent<AnimalStats>().Icon; //icon image
                             toList.GetComponentInChildren<Text>().text = zooList[parser].name; //text name
                             toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]); //border color
                             toList.transform.parent = transform.parent;
+                            
 
                         }
                         parser++;
