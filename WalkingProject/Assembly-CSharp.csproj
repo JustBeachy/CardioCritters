@@ -67,6 +67,7 @@
     <Compile Include="Assets\Bonuses.cs" />
     <Compile Include="Assets\ButtonAnimation.cs" />
     <Compile Include="Assets\Crafting.cs" />
+    <Compile Include="Assets\CraftingOutputButton.cs" />
     <Compile Include="Assets\CraftingSlots.cs" />
     <Compile Include="Assets\CraftScreenTitle.cs" />
     <Compile Include="Assets\Crate.cs" />
@@ -78,8 +79,9 @@
     <Compile Include="Assets\MoreInfoAnimal.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\ScreenState.cs" />
-    <Compile Include="Assets\UI.cs" />
+    <Compile Include="Assets\SimpleScreenStateDestroy.cs" />
     <Compile Include="Assets\UISimpleDestroy.cs" />
+    <Compile Include="Assets\UIxpBar.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/abeach/Documents/WalkingProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

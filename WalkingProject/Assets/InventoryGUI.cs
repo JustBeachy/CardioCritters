@@ -157,7 +157,7 @@ public class InventoryGUI : MonoBehaviour
                 }
                 else
                 {
-                    if (showUnknown)
+                    if (showUnknown&&ScreenState.currentScreen==ScreenState.Screen.AnimalSelect)
                     {
                         var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display locked animal
                         toList.GetComponent<Image>().sprite = locked;

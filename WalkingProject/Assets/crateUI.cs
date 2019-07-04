@@ -10,6 +10,7 @@ public class crateUI : MonoBehaviour
     public GameObject player;
     public Text crateText;
     public Image progressBar;
+    public Sprite Empty;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,9 @@ public class crateUI : MonoBehaviour
         }
         else
         {
-            //hide it
+            gameObject.GetComponent<Image>().sprite = Empty;
+            crateText.text = "Empty";
+            progressBar.fillAmount = 0;
         }
 
     }

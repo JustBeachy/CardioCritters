@@ -51,6 +51,8 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        //CrateIntoInventory(0);//put crate in 1st slot
+
         timeNow = DateTime.Today;
         
         if ((timeNow - timeToCompare).Days!=dayCount)

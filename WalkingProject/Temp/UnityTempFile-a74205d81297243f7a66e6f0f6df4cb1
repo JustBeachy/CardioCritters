@@ -320,5 +320,7 @@
 "Assets/MoreInfoAnimal.cs"
 "Assets/Player.cs"
 "Assets/ScreenState.cs"
+"Assets/SimpleScreenStateDestroy.cs"
 "Assets/UI.cs"
 "Assets/UISimpleDestroy.cs"
+"Assets/UIxpBar.cs"
