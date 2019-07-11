@@ -18,7 +18,7 @@ public class CraftScreenTitle : MonoBehaviour
         if (ScreenState.currentScreen == ScreenState.Screen.CraftAnimal)
         {
             TitleText.text = "Craft an Animal";
-            SubtitleText.text = "Slect 5 animals with the same rarity to get a new animal one rarity higher.";
+            SubtitleText.text = "Slect 5 animals with the same rarity to get a new animal a rarity higher.";
         }
         if (ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal)
         {
@@ -28,7 +28,7 @@ public class CraftScreenTitle : MonoBehaviour
         if (ScreenState.currentScreen == ScreenState.Screen.AnimalSelect)
         {
             TitleText.text = "Select an Animal to be Your Pet";
-            SubtitleText.text = "You will gain the bonusses of the animal you select.";
+            SubtitleText.text = "You will gain the bonus of the animal you select.";
         }
     }
 

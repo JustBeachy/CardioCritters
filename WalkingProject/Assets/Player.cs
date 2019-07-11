@@ -222,8 +222,7 @@ public class Player : MonoBehaviour
         for (int i = 0; i < PL.crateIndex.Count; i++)
         {
 
-            slots[i] = Instantiate(crate); //assign blank crate to slots
-
+            slots[i] = Instantiate(crate); //assign blank crate to slots 
         }
 
         for (int z = 0; z < PL.ShinyFinder.Count;z++)
@@ -233,12 +232,13 @@ public class Player : MonoBehaviour
 
         for (int j = 0; j < PL.DistanceSaves.Count; j++)
         {
+            
             slots[j].GetComponent<Crate>().currentdistance = PL.DistanceSaves[j];//load in distance for crates
         }
 
         for (int j = 0; j < PL.crateIndex.Count; j++)
         {
-            slots[j].GetComponent<Crate>().index = PL.crateIndex[j];//load in index for crates
+            slots[j].GetComponent<Crate>().index = j;//PL.crateIndex[j];//set index for crates
         }
 
         for (int j = 0; j < PL.crateRarity.Count; j++)
@@ -260,19 +260,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void CrateIntoInventory(int index)
+    public void CrateIntoInventory(int slotindex)
     {
-        if (index < slots.Length)
+        if (slotindex < slots.Length)
         {
-            if (slots[index] == null)
+            if (slots[slotindex] == null)
             {
                 GameObject makecrate = gameObject.GetComponent<Crafting>().CraftCrate();
-                makecrate.GetComponent<Crate>().index = index; //assign index so crate can delete itself out of list
-                slots[index] = makecrate;
+                makecrate.GetComponent<Crate>().index = slotindex; //assign index so crate can delete itself out of list
+                slots[slotindex] = makecrate;
                 SaveGame();
             }
             else
-                CrateIntoInventory(index + 1); //fill in any empty slots
+                CrateIntoInventory(slotindex + 1); //fill in any empty slots
         }
 
     }

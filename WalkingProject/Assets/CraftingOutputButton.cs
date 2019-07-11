@@ -9,6 +9,7 @@ public class CraftingOutputButton : MonoBehaviour
     public Text click2craft;
     public bool cancraft = false;
     public int amountToCraft;
+    int parser = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,8 @@ public class CraftingOutputButton : MonoBehaviour
         {
             cancraft = false;
             click2craft.text = "?";
+            click2craft.color = Color.white;
+            click2craft.fontSize = 70;
         }
     }
 
@@ -37,6 +40,7 @@ public class CraftingOutputButton : MonoBehaviour
     {
         if (cancraft)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             player.GetComponent<Player>().CrateIntoInventory(0);
         }
     }
@@ -45,7 +49,36 @@ public void CraftAnimal()
     {
         if(cancraft)
         {
+            if (ScreenState.currentScreen == ScreenState.Screen.CraftAnimal)
+            {
+                bool isShiny = Crafting.AnimalCraft[0].GetComponent<AnimalStats>().Albino;
+                player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<Crafting>().CraftAnimal(isShiny); //force albino
+            }
+            if (ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal)
+            {
+                player = GameObject.FindGameObjectWithTag("Player");
+                GameObject newAlbino = Crafting.AnimalCraft[0];
+                newAlbino.GetComponent<AnimalStats>().Albino = true;
+                player.GetComponent<Player>().Zoo.Add(newAlbino);
 
+                foreach (GameObject cm in Crafting.AnimalCraft) //delete the crafting materials
+                {
+                    parser = 0;
+                    foreach (GameObject a in player.GetComponent<Player>().Zoo)
+                    {
+
+                        a.GetComponent<AnimalStats>().index = parser; //assign index to animals so they can delete themselves in crafting (fixed an issue with removeAt)
+                        parser++;
+                    }
+                    player.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
+                }
+                Crafting.AnimalCraft.Clear();//clear crafting list
+                Crafting.AnimalCraft.TrimExcess();
+            }
+            player.GetComponent<Player>().SaveGame();
         }
     }
+
+  
 }

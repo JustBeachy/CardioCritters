@@ -423,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.31933072, g: 0.92415947, b: 0.9811321, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -458,7 +458,6 @@ GameObject:
   - component: {fileID: 294045687}
   - component: {fileID: 294045686}
   - component: {fileID: 294045685}
-  - component: {fileID: 294045684}
   - component: {fileID: 294045683}
   m_Layer: 0
   m_Name: CCrate
@@ -485,20 +484,6 @@ MonoBehaviour:
   currentdistance: 0
   index: 0
   player: {fileID: 2138915788}
---- !u!65 &294045684
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2972257890337996282, guid: ecbc3049dfa044c4095efdec915b1510,
-    type: 3}
-  m_PrefabInstance: {fileID: 2057002340}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294045682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &294045685
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -711,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1100,7 +1085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.6745283, g: 0.97361046, b: 1, a: 0.45490196}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1178,7 +1163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1559,7 +1544,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: ecbc3049dfa044c4095efdec915b1510, type: 3}
 --- !u!1 &2138915788 stripped
 GameObject:

@@ -93,7 +93,7 @@ public class InventoryGUI : MonoBehaviour
     {
         if (GetComponent<Image>().sprite != locked) //make sure it isnt an unknoown
         {
-            var moreinfo = Instantiate(SelectionScreen);
+            var moreinfo = Instantiate(SelectionScreen); //more info screen
             moreinfo.GetComponent<MoreInfoAnimal>().whoCreatedMe = gameObject;
             moreinfo.transform.SetParent(GameObject.FindWithTag("Canvas").transform, false);
             moreinfo.GetComponent<MoreInfoAnimal>().AnimalName.text = animalTiedToIcon.name;
@@ -148,6 +148,12 @@ public class InventoryGUI : MonoBehaviour
                             toList.GetComponentInChildren<Text>().text = zooList[parser].name; //text name
                             toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]); //border color
                             toList.transform.parent = transform.parent;
+
+                            if(toList.GetComponent<InventoryGUI>().animalTiedToIcon.GetComponent<AnimalStats>().Albino)
+                            {
+                                toList.GetComponent<Outline>().effectColor = Color.black;
+                            }
+                            
                             
 
                         }

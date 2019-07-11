@@ -21,8 +21,10 @@ public class Crafting : MonoBehaviour
         
     }
 
-    public void CraftAnimal()
+    public void CraftAnimal(bool forceShiny=false)
     {
+        isShiny = forceShiny;
+
         if ((int)Random.Range(1, 251 - Bonuses.AbinoEasier) <= 1) //check for albino
             isShiny = true;
 
@@ -55,6 +57,13 @@ public class Crafting : MonoBehaviour
 
         foreach (GameObject cm in AnimalCraft) //delete the crafting materials
         {
+            int parser = 0;
+            foreach (GameObject a in GetComponent<Player>().Zoo)
+            {
+
+                a.GetComponent<AnimalStats>().index = parser; //assign index to animals so they can delete themselves in crafting (fixed an issue with removeAt)
+                parser++;
+            }
             gameObject.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
         }
         AnimalCraft.Clear();//clear crafting list
@@ -93,6 +102,13 @@ public class Crafting : MonoBehaviour
 
         foreach (GameObject cm in AnimalCraft) //delete the crafting materials
         {
+            int parser = 0;
+            foreach (GameObject a in GetComponent<Player>().Zoo)
+            {
+
+                a.GetComponent<AnimalStats>().index = parser; //assign index to animals so they can delete themselves in crafting (fixed an issue with removeAt)
+                parser++;
+            }
             gameObject.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
         }
         AnimalCraft.Clear();//clear crafting list

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CrateUI
   - Canvas
+  - ListItem
   layers:
   - Default
   - TransparentFX
