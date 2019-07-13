@@ -10,6 +10,7 @@ public class Crate : MonoBehaviour
     public float currentdistance = 0;
     bool isShiny = false;
     public int index = 0;
+    public GameObject popUpScreen;
     //Reminder: Display DistanceToOpen with bonus
 
     public GameObject player;
@@ -107,6 +108,8 @@ public class Crate : MonoBehaviour
             player.GetComponent<Player>().Zoo.Add(holder);//unbox crate and add to inventory
             if (player.GetComponent<Player>().slots[0] == null)//give new crate if in infinity slot
                 player.GetComponent<Player>().slots[0]=player.GetComponent<Crafting>().CraftCrate();
+            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+            popup.GetComponent<MoreInfoAnimal>().FillInfo(holder,true);//fill pop up screen
             player.GetComponent<Player>().SaveGame();//save game
 
 

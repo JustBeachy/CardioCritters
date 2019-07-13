@@ -95,6 +95,7 @@ public class InventoryGUI : MonoBehaviour
         {
             var moreinfo = Instantiate(SelectionScreen); //more info screen
             moreinfo.GetComponent<MoreInfoAnimal>().whoCreatedMe = gameObject;
+            moreinfo.GetComponent<MoreInfoAnimal>().PickedAnimal = gameObject.GetComponent<InventoryGUI>().animalTiedToIcon;
             moreinfo.transform.SetParent(GameObject.FindWithTag("Canvas").transform, false);
             moreinfo.GetComponent<MoreInfoAnimal>().AnimalName.text = animalTiedToIcon.name;
             moreinfo.GetComponent<MoreInfoAnimal>().BonusText.text = animalTiedToIcon.GetComponent<AnimalStats>().BonusText;
@@ -138,7 +139,7 @@ public class InventoryGUI : MonoBehaviour
                 {
                     foreach (GameObject sameAnim in zooList) //loop through inventory
                     {
-                        if (sameAnim == AnimalLists.AllAnimals[i])
+                        if (sameAnim == AnimalLists.AllAnimals[i]&&sameAnim.GetComponent<AnimalStats>().isActive==false) //if animal is in dictionary and is not the pet
                         {
                             var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
                             toList.GetComponent<InventoryGUI>().animalTiedToIcon = sameAnim; //tie animal to icon for sorting and clicking

@@ -27,16 +27,7 @@ public class AnimalStats : MonoBehaviour
     {
     }
 
-    public void OnMouseDown()
-    {
-        if (ScreenState.currentScreen == ScreenState.Screen.CraftAnimal) //check if in crafting screen
-        {
-            if (Crafting.AnimalCraft.Count < 5)
-            {
-                Crafting.AnimalCraft.Add(gameObject); //add to crafting list
-            }
-        }
-    }
+ 
 
     public void ApplyAlbinoMaterial()
     {

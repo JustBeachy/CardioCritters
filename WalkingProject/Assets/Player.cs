@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     public GameObject crate;
     public string username = "";
-    public GameObject selectedAnimal = null;
+    public GameObject selectedAnimal;
     public float height = 0;
     public int gold = 0;
     public float xp = 0;
@@ -282,8 +282,12 @@ public class Player : MonoBehaviour
 
         //* add check for new day (if)
         Bonuses.ClearBonuses();
+        Destroy(GameObject.FindWithTag("Pet"));///remove old pet from camera
         selectedAnimal = selected;
+        selectedAnimal.GetComponent<AnimalStats>().isActive = true;
         selectedAnimal.GetComponent<AnimalStats>().ApplyBonus();
+        var camIt = Instantiate(selectedAnimal, new Vector3(900, 900, 1200), Quaternion.identity); //spawn new pet to camera
+        camIt.tag = "Pet";
     }
 
 

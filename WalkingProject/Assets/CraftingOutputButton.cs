@@ -10,6 +10,7 @@ public class CraftingOutputButton : MonoBehaviour
     public bool cancraft = false;
     public int amountToCraft;
     int parser = 0;
+    public GameObject popUpScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +76,9 @@ public void CraftAnimal()
                 }
                 Crafting.AnimalCraft.Clear();//clear crafting list
                 Crafting.AnimalCraft.TrimExcess();
+
+                var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+                popup.GetComponent<MoreInfoAnimal>().FillInfo(newAlbino, true);//fill pop up screen
             }
             player.GetComponent<Player>().SaveGame();
         }

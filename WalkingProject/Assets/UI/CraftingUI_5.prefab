@@ -269,6 +269,8 @@ MonoBehaviour:
   click2craft: {fileID: 4893361195472868861}
   cancraft: 0
   amountToCraft: 5
+  popUpScreen: {fileID: 6327539344021015590, guid: 678ef54857a0b4228aee8fa526bb8576,
+    type: 3}
 --- !u!1 &4893361194581196878
 GameObject:
   m_ObjectHideFlags: 0

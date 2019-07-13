@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CurrentAnimalUI : MonoBehaviour
 {
 
-    public Sprite AnimalModel;
+    public GameObject AnimalModel;
     public GameObject player;
     public Text AnimalName, BonusText;
     public Image progressBar;
@@ -37,9 +37,9 @@ public class CurrentAnimalUI : MonoBehaviour
 
     public void UpdateSelectedAnimalUI()
     {
-        AnimalModel = player.GetComponent<Player>().selectedAnimal.GetComponent<AnimalStats>().Icon;
+        AnimalModel = player.GetComponent<Player>().selectedAnimal;
         //gameObject.GetComponent<MeshFilter>().mesh = AnimalModel.GetComponent<MeshFilter>().sharedMesh;
-        gameObject.GetComponent<Image>().sprite = AnimalModel;
+        //gameObject.GetComponent<Image>().sprite = AnimalModel;
         AnimalName.text = player.GetComponent<Player>().selectedAnimal.name;
         BonusText.text = player.GetComponent<Player>().selectedAnimal.GetComponent<AnimalStats>().BonusText;
     }

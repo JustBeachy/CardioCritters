@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class MoreInfoAnimal : MonoBehaviour
 {
+    public Text Title;
     public Text AnimalName;
     public Text BonusText;
     public GameObject PickedAnimal;
     public GameObject whoCreatedMe;
     public Text Rarity;
+    public GameObject ScrollViewDestroyer;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,55 @@ public class MoreInfoAnimal : MonoBehaviour
     public void CloseWindow()
     {
         Destroy(gameObject);
+    }
+    public void FillInfo(GameObject ob, bool isAnimal)
+    {
+        Destroy(GameObject.FindWithTag("PopUp"));
+        var camIt = Instantiate(ob, new Vector3(-900, 900, 1200), Quaternion.identity); //spawn new pet to camera
+        camIt.tag = "PopUp";
+
+        if (isAnimal)
+        {
+            AnimalName.text = ob.name;
+        BonusText.text = ob.GetComponent<AnimalStats>().BonusText;
+
+        if (ob.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)
+            Rarity.text = "Common";
+        if (ob.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
+            Rarity.text = "Rare";
+        if (ob.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
+            Rarity.text = "Epic";
+        if (ob.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
+            Rarity.text = "Legendary";
+
+            Title.text = "New Critter!";
+        }
+        else
+        {
+            Rarity.text = "";
+            Title.text = "NewCrate!";
+            string bonustext = (ob.GetComponent<Crate>().distancetoopen / 1000).ToString();
+            BonusText.text = "Walk a total distance of " + bonustext + "km to open.";
+
+            if (ob.GetComponent<Crate>().rarity == Crate.Rarity.Common)
+            {
+                AnimalName.text = "Common Crate";
+
+            }
+            if (ob.GetComponent<Crate>().rarity == Crate.Rarity.Rare)
+            {
+                AnimalName.text = "Rare Crate";
+            }
+            if (ob.GetComponent<Crate>().rarity == Crate.Rarity.Epic)
+            {
+                AnimalName.text = "Epic Crate";
+            }
+            if (ob.GetComponent<Crate>().rarity == Crate.Rarity.Legendary)
+            {
+                AnimalName.text = "Legendary Crate";
+            }
+        }
+
     }
     public void AddToCraft()
     {
@@ -53,6 +104,21 @@ public class MoreInfoAnimal : MonoBehaviour
                 Crafting.AnimalCraft.Add(whoCreatedMe.GetComponent<InventoryGUI>().animalTiedToIcon);//may need to add index to animal to track it
                 Destroy(whoCreatedMe);
             }
+
+        if (ScreenState.currentScreen == ScreenState.Screen.AnimalSelect)
+        {
+            GameObject player = GameObject.FindWithTag("Player");
+            foreach (GameObject g in player.GetComponent<Player>().Zoo)
+            {
+                g.GetComponent<AnimalStats>().isActive = false;
+            }
+            player.GetComponent<Player>().SelectBuddy(PickedAnimal); //apply new buddy
+            ScrollViewDestroyer = GameObject.FindWithTag("ScrollView");
+            Destroy(ScrollViewDestroyer);//go back to main screen after
+            ScreenState.currentScreen = ScreenState.Screen.Home;
+            player.GetComponent<Player>().SaveGame();
+
+        }
 
 
     }

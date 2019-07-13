@@ -436,6 +436,8 @@ MonoBehaviour:
   PickedAnimal: {fileID: 0}
   whoCreatedMe: {fileID: 0}
   Rarity: {fileID: 7760619176092595284}
+  ScrollViewDestroyer: {fileID: 3874239066025255573, guid: 22f22c0e00a754378b9b37e05c104a79,
+    type: 3}
 --- !u!222 &1312243225016233639
 CanvasRenderer:
   m_ObjectHideFlags: 0

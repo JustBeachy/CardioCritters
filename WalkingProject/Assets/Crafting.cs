@@ -7,6 +7,7 @@ public class Crafting : MonoBehaviour
     public GameObject newCrate;
     public static List<GameObject> AnimalCraft = new List<GameObject>();
     bool isShiny = false;
+    public GameObject popUpScreen;
     
    
     // Start is called before the first frame update
@@ -35,6 +36,9 @@ public class Crafting : MonoBehaviour
             gameObject.GetComponent<Player>().Zoo.Add(holder);//craft a new rare animal
             gameObject.GetComponent<Player>().xp += 250 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
+
+            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+            popup.GetComponent<MoreInfoAnimal>().FillInfo(holder, true);//fill pop up screen
         }
         if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
         {
@@ -44,6 +48,9 @@ public class Crafting : MonoBehaviour
             gameObject.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
 
+            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+            popup.GetComponent<MoreInfoAnimal>().FillInfo(holder, true);//fill pop up screen
+
         }
         if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
         {
@@ -52,6 +59,9 @@ public class Crafting : MonoBehaviour
             gameObject.GetComponent<Player>().Zoo.Add(holder);//craft a new legendary animal   
             gameObject.GetComponent<Player>().xp += 1000 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
+
+            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+            popup.GetComponent<MoreInfoAnimal>().FillInfo(holder, true);//fill pop up screen
 
         }
 
@@ -68,6 +78,7 @@ public class Crafting : MonoBehaviour
         }
         AnimalCraft.Clear();//clear crafting list
         AnimalCraft.TrimExcess();
+
 
 
         gameObject.GetComponent<Player>().SaveGame();
@@ -114,7 +125,8 @@ public class Crafting : MonoBehaviour
         AnimalCraft.Clear();//clear crafting list
         AnimalCraft.TrimExcess();
 
-
+        var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+        popup.GetComponent<MoreInfoAnimal>().FillInfo(createCrate, false);//fill pop up screen
 
         gameObject.GetComponent<Player>().xp += 50*Bonuses.xpMultiplier; // move to where crafting occurs since infinity slot uses this method
         gameObject.GetComponent<Player>().CheckLevelUp();

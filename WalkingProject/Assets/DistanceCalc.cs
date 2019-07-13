@@ -48,10 +48,7 @@ public class DistanceCalc : MonoBehaviour {
         }
 	}
 
-     void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 100, 20), distancemoved.ToString());
-    }
+   
     private float LatLongDistance(float lat_1, float lat_2, float long_1, float long_2)
     {
         int R = 6371; 
