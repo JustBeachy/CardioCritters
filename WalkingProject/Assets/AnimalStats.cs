@@ -25,6 +25,10 @@ public class AnimalStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(gameObject.tag=="Pet"||gameObject.tag=="PopUp")
+        {
+            gameObject.transform.Rotate(new Vector3(0, 90, 0)*Time.deltaTime);
+        }
     }
 
  

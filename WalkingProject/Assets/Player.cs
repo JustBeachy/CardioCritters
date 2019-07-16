@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public float cooldown = 0;
     public float currentCooldown = 0;
     public List<int> crateIndex = new List<int>();
+    public static int CameraCount = 0;
 
     string path = "Macintosh HD\\Users\\abeach\\Desktop\\SaveFile.json";
 

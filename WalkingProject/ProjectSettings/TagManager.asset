@@ -10,6 +10,7 @@ TagManager:
   - ScrollView
   - Pet
   - PopUp
+  - CameraCount
   layers:
   - Default
   - TransparentFX

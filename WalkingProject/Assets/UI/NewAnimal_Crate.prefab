@@ -404,6 +404,8 @@ MonoBehaviour:
   whoCreatedMe: {fileID: 0}
   Rarity: {fileID: 6327539345090007677}
   ScrollViewDestroyer: {fileID: 0}
+  Camera: {fileID: 800214980295517648, guid: 7efda55cec4ef422191bd430fecac588, type: 3}
+  RT: {fileID: 6327539344719629101}
 --- !u!1 &6327539344182096376
 GameObject:
   m_ObjectHideFlags: 0

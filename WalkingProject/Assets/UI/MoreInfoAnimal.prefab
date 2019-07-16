@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b779baa1c0a3a4c13b1d23ffc5dc098f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Title: {fileID: 0}
   AnimalName: {fileID: 8859045176760734389}
   BonusText: {fileID: 8083089297261457473}
   PickedAnimal: {fileID: 0}
@@ -438,6 +439,8 @@ MonoBehaviour:
   Rarity: {fileID: 7760619176092595284}
   ScrollViewDestroyer: {fileID: 3874239066025255573, guid: 22f22c0e00a754378b9b37e05c104a79,
     type: 3}
+  Camera: {fileID: 0}
+  CameraTexture: {fileID: 0}
 --- !u!222 &1312243225016233639
 CanvasRenderer:
   m_ObjectHideFlags: 0

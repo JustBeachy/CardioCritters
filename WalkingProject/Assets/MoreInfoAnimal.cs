@@ -12,6 +12,10 @@ public class MoreInfoAnimal : MonoBehaviour
     public GameObject whoCreatedMe;
     public Text Rarity;
     public GameObject ScrollViewDestroyer;
+    public GameObject Camera;
+    public RawImage RT;
+    
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +27,21 @@ public class MoreInfoAnimal : MonoBehaviour
     }
     public void FillInfo(GameObject ob, bool isAnimal)
     {
-        Destroy(GameObject.FindWithTag("PopUp"));
-        var camIt = Instantiate(ob, new Vector3(-900, 900, 1200), Quaternion.identity); //spawn new pet to camera
+       /* var popupcount = GameObject.FindGameObjectsWithTag("PopUp");
+        foreach (GameObject c in popupcount)
+            Destroy(c);
+        var camcount = GameObject.FindGameObjectsWithTag("CameraCount");   //add this back later to reduce lag
+        foreach (GameObject c in camcount)
+            Destroy(c); */
+
+        var newCam = Instantiate(Camera, new Vector3(-900 * Player.CameraCount,1000, 900), Quaternion.identity);//spawn camera
+        newCam.transform.Rotate(19, 0, 0);
+        var CameraTexture = new RenderTexture(400, 400, 24); //make new rendertexture
+        newCam.GetComponent<Camera>().targetTexture = CameraTexture; //assign rendertexture to camera
+        RT.texture = CameraTexture; //assignt rendertexture to raw image
+        var camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), Quaternion.identity); //spawn new pet to camera
         camIt.tag = "PopUp";
+        Player.CameraCount++;
 
         if (isAnimal)
         {
@@ -47,8 +63,8 @@ public class MoreInfoAnimal : MonoBehaviour
         {
             Rarity.text = "";
             Title.text = "NewCrate!";
-            string bonustext = (ob.GetComponent<Crate>().distancetoopen / 1000).ToString();
-            BonusText.text = "Walk a total distance of " + bonustext + "km to open.";
+            //string bonustext = (ob.GetComponent<Crate>().distancetoopen / 1000).ToString();
+            BonusText.text = "Walk to open and see what's inside.";
 
             if (ob.GetComponent<Crate>().rarity == Crate.Rarity.Common)
             {

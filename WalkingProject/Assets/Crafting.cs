@@ -126,7 +126,10 @@ public class Crafting : MonoBehaviour
         AnimalCraft.TrimExcess();
 
         var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+        // Instantiate(popup.GetComponent<Crate>().CrateModels[(int)popup.GetComponent<Crate>().rarity], GameObject.FindWithTag("Canvas").transform); //make crate model as child
         popup.GetComponent<MoreInfoAnimal>().FillInfo(createCrate, false);//fill pop up screen
+
+        
 
         gameObject.GetComponent<Player>().xp += 50*Bonuses.xpMultiplier; // move to where crafting occurs since infinity slot uses this method
         gameObject.GetComponent<Player>().CheckLevelUp();

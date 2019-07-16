@@ -11,6 +11,10 @@ public class Crate : MonoBehaviour
     bool isShiny = false;
     public int index = 0;
     public GameObject popUpScreen;
+    public GameObject[] CrateModels;
+    public GameObject child;
+    bool flag = false;
+
     //Reminder: Display DistanceToOpen with bonus
 
     public GameObject player;
@@ -24,18 +28,28 @@ public class Crate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Update();
         commons = AnimalLists.commons;
         rares = AnimalLists.rares;
         epics = AnimalLists.epics;
         legendaries = AnimalLists.legendaries;
 
         ApplyRarity();
+
+        
        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.tag == "PopUp")
+        {
+            gameObject.transform.Rotate(new Vector3(0, 90, 0) * Time.deltaTime);
+
+        }
+
         if (rarity == Rarity.Common)
         {
             distancetoopen = 1000;
@@ -52,6 +66,13 @@ public class Crate : MonoBehaviour
         {
             distancetoopen = 15000;
         }
+
+        if(!flag)
+        {
+            Instantiate(CrateModels[(int)gameObject.GetComponent<Crate>().rarity],gameObject.transform);
+            flag = true;
+        }
+
 
     }
 
@@ -108,7 +129,7 @@ public class Crate : MonoBehaviour
             player.GetComponent<Player>().Zoo.Add(holder);//unbox crate and add to inventory
             if (player.GetComponent<Player>().slots[0] == null)//give new crate if in infinity slot
                 player.GetComponent<Player>().slots[0]=player.GetComponent<Crafting>().CraftCrate();
-            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+           var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
             popup.GetComponent<MoreInfoAnimal>().FillInfo(holder,true);//fill pop up screen
             player.GetComponent<Player>().SaveGame();//save game
 
