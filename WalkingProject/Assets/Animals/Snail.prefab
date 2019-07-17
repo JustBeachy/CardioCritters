@@ -97,9 +97,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 646bf1ab340d74bdb94c15b28fb45c0c, type: 3}
   rarity: 0
-  BonusText: 
+  BonusText: Counts as 2 crafting materials instead of 1.
   Albino: 0
-  bonus: 0
+  bonus: 05000000
   bonusAmount: 0
   isActive: 0
-  index: 0
+  index: 8
+  albinoIndex: 4

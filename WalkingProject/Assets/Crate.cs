@@ -122,7 +122,7 @@ public class Crate : MonoBehaviour
     {
         currentdistance += dis;
 
-        if(currentdistance>=distancetoopen*Bonuses.FasterCrates)
+        if(currentdistance>=distancetoopen/Bonuses.FasterCrates)
         {
             GameObject holder = OpenCrate();
             holder.GetComponent<AnimalStats>().Albino = isShiny;//make a holder to assign albino chance
@@ -132,7 +132,7 @@ public class Crate : MonoBehaviour
            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
             popup.GetComponent<MoreInfoAnimal>().FillInfo(holder,true);//fill pop up screen
             player.GetComponent<Player>().SaveGame();//save game
-
+            Destroy(gameObject);//destroy crate
 
         }
         

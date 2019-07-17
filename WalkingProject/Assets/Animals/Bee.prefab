@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2394121022601889568}
   - component: {fileID: 1633134696}
   m_Layer: 0
-  m_Name: bee
+  m_Name: Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,9 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: aedfbf2eee03f49469be60c55c248027, type: 3}
   rarity: 0
-  BonusText: 
+  BonusText: +10% More gold income
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 03000000
+  bonusAmount: 1.1
   isActive: 0
-  index: 0
+  index: 11
+  albinoIndex: 3

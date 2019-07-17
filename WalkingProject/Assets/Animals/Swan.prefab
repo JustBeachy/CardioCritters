@@ -95,9 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: c38b016fe417a4c5dbfd6c7d8ab934ed, type: 3}
   rarity: 2
-  BonusText: 
+  BonusText: '-15% Crate open distance '
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 01000000
+  bonusAmount: 1.15
   isActive: 0
   index: 0
+  albinoIndex: 1

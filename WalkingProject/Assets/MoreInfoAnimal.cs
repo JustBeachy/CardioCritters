@@ -13,7 +13,10 @@ public class MoreInfoAnimal : MonoBehaviour
     public Text Rarity;
     public GameObject ScrollViewDestroyer;
     public GameObject Camera;
+    GameObject NewCamera;
     public RawImage RT;
+    GameObject animalPopup;
+    private bool craft2xFlag=false;
     
    
     // Start is called before the first frame update
@@ -21,21 +24,28 @@ public class MoreInfoAnimal : MonoBehaviour
     {
        
     }
+    public void DestroyCamera()
+    {
+        Destroy(NewCamera);
+        Destroy(RT);
+        //Destroy(animalPopup); deletes crates
+    }
     public void CloseWindow()
     {
         Destroy(gameObject);
     }
     public void FillInfo(GameObject ob, bool isAnimal)
     {
-       /* var popupcount = GameObject.FindGameObjectsWithTag("PopUp");
-        foreach (GameObject c in popupcount)
-            Destroy(c);
-        var camcount = GameObject.FindGameObjectsWithTag("CameraCount");   //add this back later to reduce lag
-        foreach (GameObject c in camcount)
-            Destroy(c); */
-
+        /* var popupcount = GameObject.FindGameObjectsWithTag("PopUp");
+         foreach (GameObject c in popupcount)
+             Destroy(c);
+         var camcount = GameObject.FindGameObjectsWithTag("CameraCount");   //add this back later to reduce lag
+         foreach (GameObject c in camcount)
+             Destroy(c); */
+        animalPopup = ob;
         var newCam = Instantiate(Camera, new Vector3(-900 * Player.CameraCount,1000, 900), Quaternion.identity);//spawn camera
         newCam.transform.Rotate(19, 0, 0);
+        NewCamera = newCam;
         var CameraTexture = new RenderTexture(400, 400, 24); //make new rendertexture
         newCam.GetComponent<Camera>().targetTexture = CameraTexture; //assign rendertexture to camera
         RT.texture = CameraTexture; //assignt rendertexture to raw image
@@ -136,6 +146,11 @@ public class MoreInfoAnimal : MonoBehaviour
 
         }
 
+        if (whoCreatedMe.GetComponent<InventoryGUI>().animalTiedToIcon.GetComponent<AnimalStats>().bonus[0] == AnimalStats.Bonus.Crafting2x && !craft2xFlag)
+        {
+            craft2xFlag = true;
+            AddToCraft(); //for 2x crafting slot bonus animals
+        }
 
     }
     // Update is called once per frame

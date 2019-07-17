@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2553303336262802630}
   - component: {fileID: 1867433431}
   m_Layer: 0
-  m_Name: spider
+  m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,9 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 75720121b83664dd7816822456f21f76, type: 3}
   rarity: 0
-  BonusText: 
+  BonusText: +3% Chance at finding rarer Crates. +2% Chance of finding an Albino.
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 0400000000000000
+  bonusAmount: 3
   isActive: 0
-  index: 0
+  index: 5
+  albinoIndex: 0

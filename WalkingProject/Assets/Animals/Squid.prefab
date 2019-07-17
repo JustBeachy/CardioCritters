@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3419546004597655760}
   - component: {fileID: 1661782590}
   m_Layer: 0
-  m_Name: squid
+  m_Name: Squid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,9 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 4ea1f1e66da9b4354961106a96a0f573, type: 3}
   rarity: 3
-  BonusText: 
+  BonusText: +20% Chance at finding an albino
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 04000000
+  bonusAmount: 50
   isActive: 0
   index: 0
+  albinoIndex: 2

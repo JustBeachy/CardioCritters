@@ -95,10 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: f91cb872a953d4b63a9a5af4c6031e43, type: 3}
   rarity: 2
-  BonusText: 
+  BonusText: +25% extra gold income
   Albino: 0
-  bonus: 
-  bonusAmount: 0
-  isActive: 0
-  index: 0
-  albinoIndex: 0
+  bonus: 03000000
+  bonusAmount: 1.25
+  isActive: 1
+  index: 14
+  albinoIndex: 3

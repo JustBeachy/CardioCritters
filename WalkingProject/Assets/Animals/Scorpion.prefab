@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6209188562258701908}
   - component: {fileID: 973785287}
   m_Layer: 0
-  m_Name: scorpion
+  m_Name: Scorpion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,9 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: aabef1b0796fb4157b668a63700eb963, type: 3}
   rarity: 2
-  BonusText: 
+  BonusText: +25% extra XP
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 03000000
+  bonusAmount: 1.25
   isActive: 0
-  index: 0
+  index: 13
+  albinoIndex: 4

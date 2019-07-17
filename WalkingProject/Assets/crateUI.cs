@@ -45,7 +45,7 @@ public class crateUI : MonoBehaviour
         {
             gameObject.GetComponent<Image>().sprite = GetSplash();
             float cd = player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().currentdistance / 1000; //current distance
-            float dto = player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().distancetoopen*Bonuses.FasterCrates / 1000; //distance to open
+            float dto = player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().distancetoopen/Bonuses.FasterCrates / 1000; //distance to open
             crateText.text = cd.ToString() +" / " +dto.ToString() +"km";
             progressBar.fillAmount = cd / dto;
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6109893556803620197}
   - component: {fileID: 1246806312}
   m_Layer: 0
-  m_Name: dog
+  m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,9 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: c7804ffc057184be6a8ff5c45930c93b, type: 3}
   rarity: 1
-  BonusText: 
+  BonusText: '-10% Crate open distance '
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 01000000
+  bonusAmount: 1.1
   isActive: 0
-  index: 0
+  index: 9
+  albinoIndex: 3

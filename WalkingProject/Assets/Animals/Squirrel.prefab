@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1417113925885601343}
   - component: {fileID: 1669232449}
   m_Layer: 0
-  m_Name: squirrel
+  m_Name: Squirrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,9 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: c841f266b1f564ad6a0512b767a51c17, type: 3}
   rarity: 1
-  BonusText: 
+  BonusText: +20% more gold income
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 02000000
+  bonusAmount: 1.2
   isActive: 0
-  index: 0
+  index: 6
+  albinoIndex: 4

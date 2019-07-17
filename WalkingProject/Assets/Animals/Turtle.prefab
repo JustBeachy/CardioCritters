@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5233576480157152776}
   - component: {fileID: 1853347732}
   m_Layer: 0
-  m_Name: turtle
+  m_Name: Turtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,9 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 32992066fabd94f4988a6a589c31a177, type: 3}
   rarity: 0
-  BonusText: 
+  BonusText: -5% Crate open distance.
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 01000000
+  bonusAmount: 1.05
   isActive: 0
-  index: 0
+  index: 15
+  albinoIndex: 4

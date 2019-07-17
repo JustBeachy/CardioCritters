@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 190511990747437092}
   - component: {fileID: 1454929948}
   m_Layer: 0
-  m_Name: snake
+  m_Name: Snake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,9 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 0807c5b67edbf459b8cb4f86f71ebf5e, type: 3}
   rarity: 1
-  BonusText: 
+  BonusText: Counts as 2 crafting materials instead of 1.
   Albino: 0
-  bonus: 0
+  bonus: 05000000
   bonusAmount: 0
   isActive: 0
-  index: 0
+  index: 3
+  albinoIndex: 3

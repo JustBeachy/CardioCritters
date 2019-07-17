@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9131928400982486170}
   - component: {fileID: 763648793}
   m_Layer: 0
-  m_Name: frog
+  m_Name: Frog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,9 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 92b79a875748f416c9819c1be0eddedb, type: 3}
   rarity: 0
-  BonusText: 
+  BonusText: +5% Extra gold. +5% extra XP
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 0200000003000000
+  bonusAmount: 1.05
   isActive: 0
   index: 0
+  albinoIndex: 3

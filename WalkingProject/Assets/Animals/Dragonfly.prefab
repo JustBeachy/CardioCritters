@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3431677367021525928}
   - component: {fileID: 287863712}
   m_Layer: 0
-  m_Name: dragonfly
+  m_Name: Dragonfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,9 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 83dc93111c7814d20a9d221745df76b5, type: 3}
   rarity: 0
-  BonusText: 
+  BonusText: +5% chance at finding albinos
   Albino: 0
-  bonus: 0
-  bonusAmount: 0
+  bonus: 04000000
+  bonusAmount: 13
   isActive: 0
-  index: 0
+  index: 10
+  albinoIndex: 3
