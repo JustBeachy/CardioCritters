@@ -1,27 +1,29 @@
 ﻿<Properties StartupConfiguration="{75EE972F-7F60-221F-7763-F084C22D4DD3}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CraftingOutputButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AnimateCrate.cs">
     <Files>
-      <File FileName="Assets/DistanceCalc.cs" Line="1" Column="1" />
-      <File FileName="Assets/AnimalStats.cs" Line="1" Column="1" />
-      <File FileName="Assets/Player.cs" Line="55" Column="9" />
-      <File FileName="Assets/Crate.cs" Line="1" Column="1" />
-      <File FileName="Assets/Crafting.cs" Line="1" Column="1" />
+      <File FileName="Assets/DistanceCalc.cs" Line="51" Column="4" />
+      <File FileName="Assets/AnimalStats.cs" Line="70" Column="31" />
+      <File FileName="Assets/Player.cs" Line="40" Column="29" />
+      <File FileName="Assets/Crate.cs" Line="52" Column="10" />
+      <File FileName="Assets/Crafting.cs" Line="52" Column="9" />
       <File FileName="Assets/AnimalLists.cs" Line="1" Column="1" />
-      <File FileName="Assets/Bonuses.cs" Line="1" Column="1" />
-      <File FileName="Assets/InventoryGUI.cs" Line="158" Column="21" />
-      <File FileName="Assets/ScreenState.cs" Line="1" Column="1" />
-      <File FileName="Assets/crateUI.cs" Line="1" Column="1" />
-      <File FileName="Assets/CurrentAnimalUI.cs" Line="1" Column="1" />
-      <File FileName="Assets/MoreInfoAnimal.cs" Line="1" Column="1" />
+      <File FileName="Assets/Bonuses.cs" Line="8" Column="55" />
+      <File FileName="Assets/InventoryGUI.cs" Line="140" Column="18" />
+      <File FileName="Assets/ScreenState.cs" Line="8" Column="76" />
+      <File FileName="Assets/crateUI.cs" Line="48" Column="117" />
+      <File FileName="Assets/CurrentAnimalUI.cs" Line="43" Column="44" />
+      <File FileName="Assets/MoreInfoAnimal.cs" Line="71" Column="13" />
       <File FileName="Assets/UISimpleDestroy.cs" Line="1" Column="1" />
       <File FileName="Assets/LoadInventory.cs" Line="1" Column="1" />
       <File FileName="Assets/ButtonAnimation.cs" Line="1" Column="1" />
-      <File FileName="Assets/CraftScreenTitle.cs" Line="1" Column="1" />
-      <File FileName="Assets/CraftingSlots.cs" Line="1" Column="1" />
+      <File FileName="Assets/CraftScreenTitle.cs" Line="31" Column="48" />
+      <File FileName="Assets/CraftingSlots.cs" Line="15" Column="6" />
       <File FileName="Assets/SimpleScreenStateDestroy.cs" Line="1" Column="1" />
       <File FileName="Assets/UIxpBar.cs" Line="27" Column="1" />
-      <File FileName="Assets/CraftingOutputButton.cs" Line="7" Column="12" />
+      <File FileName="Assets/CraftingOutputButton.cs" Line="12" Column="20" />
+      <File FileName="Assets/goldUI.cs" Line="13" Column="35" />
+      <File FileName="Assets/AnimateCrate.cs" Line="7" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

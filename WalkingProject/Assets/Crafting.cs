@@ -52,7 +52,7 @@ public class Crafting : MonoBehaviour
             popup.GetComponent<MoreInfoAnimal>().FillInfo(holder, true);//fill pop up screen
 
         }
-        if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
+        if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic|| AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
         {
             GameObject holder = AnimalLists.legendaries[Random.Range(0, AnimalLists.legendaries.Count - 1)];
             holder.GetComponent<AnimalStats>().Albino = isShiny;

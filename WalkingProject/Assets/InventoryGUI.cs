@@ -100,6 +100,7 @@ public class InventoryGUI : MonoBehaviour
             moreinfo.GetComponent<MoreInfoAnimal>().AnimalName.text = animalTiedToIcon.name;
             moreinfo.GetComponent<MoreInfoAnimal>().BonusText.text = animalTiedToIcon.GetComponent<AnimalStats>().BonusText;
             moreinfo.GetComponent<MoreInfoAnimal>().Rarity.text = rarity;
+            moreinfo.GetComponent<MoreInfoAnimal>().FillInfo(gameObject.GetComponent<InventoryGUI>().animalTiedToIcon,true);
             isClickedOn = true;
         }
 

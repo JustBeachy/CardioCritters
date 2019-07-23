@@ -14,6 +14,7 @@ public class Crate : MonoBehaviour
     public GameObject[] CrateModels;
     public GameObject child;
     bool flag = false;
+    
 
     //Reminder: Display DistanceToOpen with bonus
 
@@ -49,22 +50,23 @@ public class Crate : MonoBehaviour
             gameObject.transform.Rotate(new Vector3(0, 90, 0) * Time.deltaTime);
 
         }
+      
 
-        if (rarity == Rarity.Common)
+        if (rarity == Rarity.Common) //remove a 0 for testing
         {
-            distancetoopen = 1000;
+            distancetoopen = 100;
         }
         if (rarity == Rarity.Rare)
         {
-            distancetoopen = 2500;
+            distancetoopen = 250;
         }
         if (rarity == Rarity.Epic)
         {
-            distancetoopen = 6500;
+            distancetoopen = 650;
         }
         if (rarity == Rarity.Legendary)
         {
-            distancetoopen = 15000;
+            distancetoopen = 1500;
         }
 
         if(!flag)
