@@ -92,15 +92,12 @@ public class Player : MonoBehaviour
 
          
         }
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             CrateIntoInventory(0);
         }
 
-            if (Input.GetKeyDown(KeyCode.I))
-        {
-            gameObject.GetComponent<InventoryGUI>().LoadInventory();
-        }
+        
 
 
 
@@ -170,11 +167,14 @@ public class Player : MonoBehaviour
                 crateRarity.Add(r.GetComponent<Crate>().rarity); //hold crate rarity in save file
         }
 
-        //for (int g = 0; g < slots.Length; g++)
-        //{
-        //   if(slots[g]!=null)
-        //    slots[g] = crate;
-        //}
+        int parser2 = 0;
+        foreach (GameObject g in Zoo)
+        {
+            //Zoo[parser2].GetComponent<AnimalStats>().index = parser2; //assign index for easy save 
+            if(g.GetComponent<AnimalStats>().isActive)
+            selectedAnimalIndex = parser2; //re-assign selected animal for save (can change after crafting)
+            parser2++;
+        }
 
         Player saveFile = gameObject.GetComponent<Player>();
         saveFile.username = username;
@@ -253,6 +253,7 @@ public class Player : MonoBehaviour
 
             Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
             SelectBuddy(Zoo[PL.selectedAnimalIndex]);
+            
         }
     }
 

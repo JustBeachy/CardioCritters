@@ -43,8 +43,8 @@ public class MoreInfoAnimal : MonoBehaviour
 
         isAnimator = true;//for update
         animalPopup = ob;
-        var newCam = Instantiate(Camera, new Vector3(-900 * Player.CameraCount, 1000, 900), Quaternion.identity);//spawn camera
-        newCam.transform.Rotate(19, 0, 0);
+        var newCam = Instantiate(Camera, new Vector3(-900 * Player.CameraCount, 1000, 950), Quaternion.identity);//spawn camera
+        newCam.transform.Rotate(22, 0, 0);
         NewCamera = newCam;
         var CameraTexture = new RenderTexture(400, 400, 24); //make new rendertexture
         newCam.GetComponent<Camera>().targetTexture = CameraTexture; //assign rendertexture to camera
@@ -67,8 +67,8 @@ public class MoreInfoAnimal : MonoBehaviour
 
 
             animalPopup = ob;
-        var newCam = Instantiate(Camera, new Vector3(-900 * Player.CameraCount,1000, 900), Quaternion.identity);//spawn camera
-        newCam.transform.Rotate(19, 0, 0);
+        var newCam = Instantiate(Camera, new Vector3(-900 * Player.CameraCount,1000, 950), Quaternion.identity);//spawn camera
+        newCam.transform.Rotate(22, 0, 0);
         NewCamera = newCam;
         var CameraTexture = new RenderTexture(400, 400, 24); //make new rendertexture
         newCam.GetComponent<Camera>().targetTexture = CameraTexture; //assign rendertexture to camera
