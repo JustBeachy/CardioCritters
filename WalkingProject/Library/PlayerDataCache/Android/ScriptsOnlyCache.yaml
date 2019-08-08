@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - CraftingSlots
     - Crate
     - CurrentAnimalUI
+    - Daily30
     - DistanceCalc
     - InventoryGUI
     - LoadInventory
@@ -160,6 +161,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10732}
     - Class: 114
       Script: {instanceID: 10740}
+    - Class: 114
+      Script: {instanceID: 13558}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -993,7 +996,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 708c5e5735c08f6136fd561d01c757cb
+      Hash: a357bb9b06884a3171a50247c65d47b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1057,7 +1060,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 26fce44b74c7856f032ff847524e8ec6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Daily30
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alex/Desktop/CCAlpha.apk
+  playerPath: C:/Users/Alex/Desktop/CCAlpha2.apk

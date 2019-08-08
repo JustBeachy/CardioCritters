@@ -37,7 +37,7 @@ public class DistanceCalc : MonoBehaviour {
             else //after first run of location services
             {
                 distancemoved = LatLongDistance(Input.location.lastData.latitude, clat, Input.location.lastData.longitude, clong);
-                if (distancemoved <= 200 && distancemoved > 10)//check speed limits
+                if (distancemoved <= 200 && distancemoved > 20)//check speed limits
                 {
                     gameObject.GetComponent<Player>().ApplyDistance(distancemoved); //give distance to player total
                     clat = Input.location.lastData.latitude;

@@ -133,7 +133,7 @@ public class Crate : MonoBehaviour
                 player.GetComponent<Player>().slots[0]=player.GetComponent<Crafting>().CraftCrate();
            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
             popup.GetComponent<MoreInfoAnimal>().FillInfo(holder,true);//fill pop up screen
-            player.GetComponent<Player>().SaveGame();//save game
+            //player.GetComponent<Player>().SaveGame();//save game *disabled due to multiple saves at a time if more than 1 crate
             Destroy(gameObject);//destroy crate
 
         }

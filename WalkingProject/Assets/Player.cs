@@ -33,12 +33,14 @@ public class Player : MonoBehaviour
     public List<float> DistanceSaves = new List<float>();
     public float dailyDistance = 0;
     public int dayCount;
-    DateTime timeNow;
-    DateTime timeToCompare = new DateTime(2000, 1, 1);
+    public DateTime timeNow;
+    DateTime timeFromStart= new DateTime(1995,1,1);
     public float cooldown = 0;
     public float currentCooldown = 0;
     public List<int> crateIndex = new List<int>();
     public static int CameraCount = 0;
+    public float dailyTime = 0;
+    public bool dailyQuest = false;
 
     string path; 
 
@@ -55,15 +57,16 @@ public class Player : MonoBehaviour
     {
         //CrateIntoInventory(0);//put crate in 1st slot
         Load();
-        timeNow = DateTime.Today;
         
-        if ((timeNow - timeToCompare).Days!=dayCount)
+        timeNow = DateTime.Today;
+        if ((timeNow - timeFromStart).Days!=dayCount)//check to see if new day. -reset dailies
         {
-
-            Debug.Log("Welcome back, here's a prize for you!");//check to see if new day. -reset dailies
-
+            dailyDistance = 0;
+            dailyTime = 0;
+            dailyQuest = false;
         }
-      
+        
+        
 
         level = ((int)xp / 1000) + 1;
         prevLevel = level;
@@ -115,6 +118,7 @@ public class Player : MonoBehaviour
         
         totaldistance += dis;
         dailyDistance += dis;
+        dailyTime += .5f;
 
         foreach (GameObject c in slots)
         {
@@ -124,7 +128,7 @@ public class Player : MonoBehaviour
         }
         dis = 0;
 
-
+        SaveGame();
     }
 
     public void ActiveAnimal(GameObject anim)
@@ -178,7 +182,7 @@ public class Player : MonoBehaviour
 
         Player saveFile = gameObject.GetComponent<Player>();
         saveFile.username = username;
-        saveFile.dayCount = (timeNow - timeToCompare).Days;
+        saveFile.dayCount = (DateTime.Now - timeFromStart).Days;
         saveFile.xp = xp;
         saveFile.level = level;
         saveFile.Zoo = Zoo;
@@ -253,8 +257,10 @@ public class Player : MonoBehaviour
 
             Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
             SelectBuddy(Zoo[PL.selectedAnimalIndex]);
-            
+
         }
+        else
+            timeFromStart = DateTime.Today;
     }
 
     public void CheckLevelUp()

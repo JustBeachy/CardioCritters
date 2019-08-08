@@ -74,6 +74,7 @@
     <Compile Include="Assets\Crate.cs" />
     <Compile Include="Assets\crateUI.cs" />
     <Compile Include="Assets\CurrentAnimalUI.cs" />
+    <Compile Include="Assets\Daily30.cs" />
     <Compile Include="Assets\DistanceCalc.cs" />
     <Compile Include="Assets\goldUI.cs" />
     <Compile Include="Assets\InventoryGUI.cs" />
