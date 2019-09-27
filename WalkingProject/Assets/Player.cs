@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public int dayCount;
     public DateTime timeNow;
     DateTime timeFromStart= new DateTime(1995,1,1);
+    public DateTime AccessStart;
     public float cooldown = 0;
     public float currentCooldown = 0;
     public List<int> crateIndex = new List<int>();
@@ -65,7 +66,8 @@ public class Player : MonoBehaviour
             dailyTime = 0;
             dailyQuest = false;
         }
-        
+
+        AccessStart = timeFromStart;//gives time from start public access
         
 
         level = ((int)xp / 1000) + 1;
@@ -101,7 +103,7 @@ public class Player : MonoBehaviour
         }
 
         
-
+     
 
 
     }

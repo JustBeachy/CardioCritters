@@ -4,35 +4,56 @@ using UnityEngine;
 
 public class ButtonAnimation : MonoBehaviour
 {
-   
+    public int direction;
     float gotox, gotoy;
 
     // Start is called before the first frame update
     void Start()
     {
-        gotox = GetComponent<RectTransform>().localPosition.x;
-        gotoy = GetComponent<RectTransform>().localPosition.y;
+        gotoy = transform.localPosition.y;
+        gotox = transform.localPosition.x;
+       
 
-        GetComponent<RectTransform>().localPosition=new Vector3(0,0,0);
+        transform.localPosition=new Vector3(0,50,0);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        var xcheck = gameObject.GetComponent<RectTransform>().localPosition.x - gotox;
+        var xcheck = transform.localPosition.x;
 
-        if (xcheck-gotox>1)
+        if (direction == 1)
         {
-            gameObject.GetComponent<RectTransform>().localPosition += new Vector3((Mathf.Sign(gotox) * Time.deltaTime), 0, 0);
+            if (xcheck - gotox > 1)
+            {
+                transform.localPosition += new Vector3((Mathf.Sign(gotox) * 1200 * Time.deltaTime), 0, 0);
+            }
+        }
+        if (direction == 2)
+        {
+            if (xcheck - gotox < 1)
+            {
+                transform.localPosition += new Vector3((Mathf.Sign(gotox) * 1200 * Time.deltaTime), 0, 0);
+            }
         }
 
-        var ycheck = gameObject.GetComponent<RectTransform>().localPosition.y - gotoy;
+        var ycheck = transform.localPosition.y;
 
-        if (ycheck - gotoy > 1)
+        if (direction == 3)
         {
-            gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0,(Mathf.Sign(gotoy) * Time.deltaTime*100), 0);
+            if (ycheck - gotoy > 1)
+            {
+                transform.localPosition += new Vector3(0, (Mathf.Sign(gotoy) * 1200 * Time.deltaTime), 0);
+            }
         }
 
+        if (direction == 4)
+        {
+            if (ycheck - gotoy < 1)
+            {
+                transform.localPosition += new Vector3(0, (Mathf.Sign(gotoy) * 1200 * Time.deltaTime), 0);
+            }
+        }
     }
 }

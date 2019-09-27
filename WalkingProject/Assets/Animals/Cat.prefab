@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4891735}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Pet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,10 +58,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4fd68b0000489436dbf35e839da41ce4, type: 3}
+  - {fileID: 2100000, guid: 8f5f172d454081543a218e76b9aa01fa, type: 2}
   - {fileID: 2100006, guid: 4fd68b0000489436dbf35e839da41ce4, type: 3}
   - {fileID: 2100002, guid: 4fd68b0000489436dbf35e839da41ce4, type: 3}
-  - {fileID: 2100008, guid: 4fd68b0000489436dbf35e839da41ce4, type: 3}
+  - {fileID: 2100000, guid: ece83f10c7713fd47a368ed549bbe606, type: 2}
   - {fileID: 2100004, guid: 4fd68b0000489436dbf35e839da41ce4, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
