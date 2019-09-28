@@ -95,10 +95,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: d28b5996e16e8448387810a1462fd8ea, type: 3}
   rarity: 0
-  BonusText: +10% Extra XP
+  BonusText: 5% increased chance at finding albinos
   Albino: 0
   bonus: 04000000
-  bonusAmount: 1.1
+  bonusAmount: 1.05
   isActive: 0
   index: 16
   albinoIndex: 3

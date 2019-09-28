@@ -88,7 +88,7 @@ public class Crate : MonoBehaviour
 
         player.GetComponent<Player>().slots[index] = null; //delete crate from slot
 
-        if ((int)Random.Range(1,251-Bonuses.AbinoEasier) <=1) //check for albino
+        if ((int)Random.Range(1,(int)251/Bonuses.AbinoEasier) <=1) //check for albino
             isShiny = true;
 
         if (rarity==Rarity.Common)

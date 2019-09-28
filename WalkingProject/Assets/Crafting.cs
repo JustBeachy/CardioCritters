@@ -26,7 +26,7 @@ public class Crafting : MonoBehaviour
     {
         isShiny = forceShiny;
 
-        if ((int)Random.Range(1, 251 - Bonuses.AbinoEasier) <= 1) //check for albino
+        if ((int)Random.Range(1, (int) 251 / Bonuses.AbinoEasier) <= 1) //check for albino
             isShiny = true;
 
         if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)

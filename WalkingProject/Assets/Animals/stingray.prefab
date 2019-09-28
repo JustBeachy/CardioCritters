@@ -92,12 +92,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9553711b67c1445389cb6bd0e3863e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
-  rarity: 0
-  BonusText: 
+  Icon: {fileID: 21300000, guid: 12d86368c95296749839b9ba2e3bd99f, type: 3}
+  rarity: 1
+  BonusText: 10% increased chance at finding rarer crates
   Albino: 0
-  bonus: 
-  bonusAmount: 0
+  bonus: 00000000
+  bonusAmount: 10
   isActive: 0
   index: 0
-  albinoIndex: 0
+  albinoIndex: 2

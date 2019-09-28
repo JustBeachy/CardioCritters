@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806365292}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &3795393315452739146
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,10 +97,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 5ec51cb0e6bb04e358dff0ea506110d0, type: 3}
   rarity: 0
-  BonusText: +5% chance at rarer crates
+  BonusText: 5% increased chance at finding albinos
   Albino: 0
-  bonus: 00000000
-  bonusAmount: 5
+  bonus: 04000000
+  bonusAmount: 1.05
   isActive: 0
   index: 5
   albinoIndex: 5
