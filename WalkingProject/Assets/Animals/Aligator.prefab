@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 57915436653074476}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,10 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: c1acd68b384b70d4390134f53fe62709, type: 3}
   rarity: 1
-  BonusText: 5% increased chance at finding albinos
+  BonusText: 10% increased chance at finding albinos
   Albino: 0
   bonus: 04000000
-  bonusAmount: 1.05
-  isActive: 0
-  index: 0
+  bonusAmount: 1.1
+  isActive: 1
+  index: 84
   albinoIndex: 2

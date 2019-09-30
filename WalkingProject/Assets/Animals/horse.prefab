@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2789180400320516577}
   - component: {fileID: 1779955423218153281}
   m_Layer: 0
-  m_Name: horse
+  m_Name: Horse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4506413034591495485}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,5 +100,5 @@ MonoBehaviour:
   bonus: 01000000
   bonusAmount: 1.1
   isActive: 0
-  index: 0
+  index: 156
   albinoIndex: 3

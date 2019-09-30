@@ -24,9 +24,9 @@ public class Daily30 : MonoBehaviour
 
         if (dailytime < 30)
         {
-            CurrentTime.text = "<" + dailytime.ToString("0.#");
+            CurrentTime.text = dailytime.ToString("0.#") + " min.";
             BarFill.fillAmount = fillamt;
-            CurrentTime.transform.localPosition = new Vector2(120, (380 * fillamt) - 190);
+            //CurrentTime.transform.localPosition = new Vector2(120, (380 * fillamt) - 190);
 
             if (fillamt == 0)
                 CurrentTime.text = "";
@@ -37,7 +37,7 @@ public class Daily30 : MonoBehaviour
 
             BarFill.fillAmount = 1;
             CurrentTime.text = "Complete";
-            CurrentTime.transform.localPosition = new Vector2(120, 190);
+            //CurrentTime.transform.localPosition = new Vector2(120, 190);
             if (player.GetComponent<Player>().dailyQuest == false)
             {
                 player.GetComponent<Player>().dailyQuest = true;

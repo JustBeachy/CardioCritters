@@ -1072,7 +1072,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: Craft Animal
+  m_Text: Craft Critter
 --- !u!114 &1039789313
 MonoBehaviour:
   m_ObjectHideFlags: 0

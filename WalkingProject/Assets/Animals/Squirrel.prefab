@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1669232448}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,5 +101,5 @@ MonoBehaviour:
   bonus: 01000000
   bonusAmount: 1.05
   isActive: 0
-  index: 6
+  index: 157
   albinoIndex: 4

@@ -83,6 +83,7 @@
     <Compile Include="Assets\MoreInfoAnimal.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\ScreenState.cs" />
+    <Compile Include="Assets\SimpleCreate.cs" />
     <Compile Include="Assets\SimpleScreenStateDestroy.cs" />
     <Compile Include="Assets\UISimpleDestroy.cs" />
     <Compile Include="Assets\UIxpBar.cs" />

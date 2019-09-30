@@ -40,7 +40,7 @@ public class AnimalStats : MonoBehaviour
         {
             gameObject.GetComponent<MeshRenderer>().materials[albinoIndex].color = Color.white; //if albino, set certain material to white color.
            
-            if(bonusAmount<=4)
+            if(bonusAmount<=2.5)
             {
                 bonusAmount -= 1; //so the lower bonuses multiply correctly
             }

@@ -271,7 +271,7 @@ public class Player : MonoBehaviour
 
         if(prevLevel<level)
         {
-            gold += 10;
+            gold += Convert.ToInt32( 10*Bonuses.goldMultiplier);
             prevLevel = level;
             SaveGame();
         }

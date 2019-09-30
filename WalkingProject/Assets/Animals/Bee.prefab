@@ -97,8 +97,8 @@ MonoBehaviour:
   rarity: 0
   BonusText: +10% more gold income
   Albino: 0
-  bonus: 03000000
+  bonus: 02000000
   bonusAmount: 1.1
-  isActive: 0
-  index: 11
+  isActive: 1
+  index: 43
   albinoIndex: 3

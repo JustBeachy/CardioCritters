@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 91857484690866887}
   - component: {fileID: 2831322853870396244}
   m_Layer: 0
-  m_Name: shark
+  m_Name: Shark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1835922640085710363}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,5 +99,5 @@ MonoBehaviour:
   bonus: 04000000
   bonusAmount: 1.25
   isActive: 0
-  index: 0
+  index: 171
   albinoIndex: 2
