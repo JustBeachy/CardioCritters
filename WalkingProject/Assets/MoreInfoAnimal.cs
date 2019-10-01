@@ -21,6 +21,8 @@ public class MoreInfoAnimal : MonoBehaviour
     float currenttime = 0;
     bool isAnimator = false;
     public Image Fade;
+
+    public Text AlbinoText;
     
    
     // Start is called before the first frame update
@@ -90,6 +92,9 @@ public class MoreInfoAnimal : MonoBehaviour
                     Rarity.text = "Epic";
                 if (ob.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
                     Rarity.text = "Legendary";
+
+            if (ob.GetComponent<AnimalStats>().Albino)
+                AlbinoText.text = "Albino: bonus is doubled";
 
                 Title.text = "New Critter!";
             }

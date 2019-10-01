@@ -13,6 +13,7 @@ public class CurrentAnimalUI : MonoBehaviour
     Vector3 mouseClick = new Vector3(0, 0, 0);
     public GameObject CraftingOptions;
     public GameObject InventoryList;
+    public Text albinoBonusText;
    
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,15 @@ public class CurrentAnimalUI : MonoBehaviour
         //gameObject.GetComponent<Image>().sprite = AnimalModel;
         AnimalName.text = player.GetComponent<Player>().selectedAnimal.name;
         BonusText.text = player.GetComponent<Player>().selectedAnimal.GetComponent<AnimalStats>().BonusText;
+
+        if(AnimalModel.GetComponent<AnimalStats>().Albino)
+        {
+            albinoBonusText.text = "Albino: bonus is doubled";
+        }
+        else
+        {
+            albinoBonusText.text = "";
+        }
     }
 
     public void MakeCraftingOptions() //makes the crafting selection buttons

@@ -62,6 +62,7 @@ public void CraftAnimal()
                 GameObject newAlbino = Crafting.AnimalCraft[0];
                 newAlbino.GetComponent<AnimalStats>().Albino = true;
                 player.GetComponent<Player>().Zoo.Add(newAlbino);
+                player.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
 
                 foreach (GameObject cm in Crafting.AnimalCraft) //delete the crafting materials
                 {

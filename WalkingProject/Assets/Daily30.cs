@@ -41,7 +41,7 @@ public class Daily30 : MonoBehaviour
             if (player.GetComponent<Player>().dailyQuest == false)
             {
                 player.GetComponent<Player>().dailyQuest = true;
-                player.GetComponent<Player>().gold += Mathf.RoundToInt(5 * Bonuses.goldMultiplier);
+                player.GetComponent<Player>().gold += Mathf.CeilToInt(5 * Bonuses.goldMultiplier);
                 player.GetComponent<Player>().SaveGame();
             }
            

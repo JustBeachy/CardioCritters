@@ -1,23 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SimpleCreate : MonoBehaviour
+public class GoldText : MonoBehaviour
 {
-    public GameObject ObjectToCreate;
+    public Text Goldtext;
+    public int AmountToDisplay;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    public void CreateObject()
-    {
-        Instantiate(ObjectToCreate);
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Goldtext.text = (Mathf.CeilToInt(AmountToDisplay * Bonuses.goldMultiplier)).ToString();
     }
 }

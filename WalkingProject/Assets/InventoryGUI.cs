@@ -17,6 +17,7 @@ public class InventoryGUI : MonoBehaviour
     public GameObject SelectionScreen;
     public string rarity;
     bool isClickedOn = false;
+    public Text albinoText;
    
 
     
@@ -153,7 +154,7 @@ public class InventoryGUI : MonoBehaviour
 
                             if(toList.GetComponent<InventoryGUI>().animalTiedToIcon.GetComponent<AnimalStats>().Albino)
                             {
-                                toList.GetComponent<Outline>().effectColor = Color.black;
+                                toList.GetComponent<InventoryGUI>().albinoText.text = "Albino";
                             }
                             
                             

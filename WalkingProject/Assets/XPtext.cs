@@ -1,23 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SimpleCreate : MonoBehaviour
+public class XPtext : MonoBehaviour
 {
-    public GameObject ObjectToCreate;
+    public Text XPtxt;
+    public int AmountToDisplay;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-    public void CreateObject()
-    {
-        Instantiate(ObjectToCreate);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        XPtxt.text = "+"+((int)(AmountToDisplay * Bonuses.xpMultiplier)).ToString()+" xp";
     }
 }

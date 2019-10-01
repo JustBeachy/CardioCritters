@@ -40,16 +40,31 @@ public class AnimalStats : MonoBehaviour
         {
             gameObject.GetComponent<MeshRenderer>().materials[albinoIndex].color = Color.white; //if albino, set certain material to white color.
            
-            if(bonusAmount<=2.5)
+           
+
+        }
+    }
+
+    public void DoubleBonus()
+    {
+        if(Albino)
+        {
+            if (bonusAmount <= 2.5)
             {
                 bonusAmount -= 1; //so the lower bonuses multiply correctly
             }
             bonusAmount *= 2;
+            if (bonusAmount <= 2.5)
+            {
+                bonusAmount += 1;
+            }
         }
     }
 
     public void ApplyBonus()
     {
+        DoubleBonus();
+
         for (int i = 0; i < bonus.Count; i++)
         {
             if (bonus[i] == Bonus.RarerCrates)
@@ -70,5 +85,6 @@ public class AnimalStats : MonoBehaviour
             if (bonus[i] == Bonus.ExtraGold)
                 Bonuses.goldMultiplier = bonusAmount;
         }
+
     }
 }

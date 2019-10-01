@@ -11,6 +11,7 @@ public class crateUI : MonoBehaviour
     public Text crateText;
     public Image progressBar;
     public Sprite Empty;
+    public Text XPtext;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +29,25 @@ public class crateUI : MonoBehaviour
     public Sprite GetSplash()
     {
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Common) //check specific crate slot's rarity
+        {
+            XPtext.text = "+" + ((int)(100 * Bonuses.xpMultiplier)).ToString()+" xp";//100, 250, 650,1500
             return Ccrate;
+        }
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Rare) //check specific crate slot's rarity
+        {
+            XPtext.text = "+" + ((int)(250 * Bonuses.xpMultiplier)).ToString() + " xp";
             return Rcrate;
+        }
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Epic) //check specific crate slot's rarity
+        {
+            XPtext.text = "+" + ((int)(650 * Bonuses.xpMultiplier)).ToString() + " xp";
             return Ecrate;
+        }
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Legendary) //check specific crate slot's rarity
+        {
+            XPtext.text = "+"+((int)(1500 * Bonuses.xpMultiplier)).ToString() + " xp";
             return Lcrate;
+        }
 
         return Ccrate;
     }
@@ -55,6 +68,7 @@ public class crateUI : MonoBehaviour
             gameObject.GetComponent<Image>().sprite = Empty;
             crateText.text = "Empty";
             progressBar.fillAmount = 0;
+            XPtext.text = "";
         }
 
     }

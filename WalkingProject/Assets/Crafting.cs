@@ -34,7 +34,7 @@ public class Crafting : MonoBehaviour
             GameObject holder = AnimalLists.rares[Random.Range(0, AnimalLists.rares.Count - 1)];
             holder.GetComponent<AnimalStats>().Albino = isShiny;
             gameObject.GetComponent<Player>().Zoo.Add(holder);//craft a new rare animal
-            gameObject.GetComponent<Player>().xp += 250 * Bonuses.xpMultiplier;
+            gameObject.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
 
             var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
@@ -57,7 +57,7 @@ public class Crafting : MonoBehaviour
             GameObject holder = AnimalLists.legendaries[Random.Range(0, AnimalLists.legendaries.Count - 1)];
             holder.GetComponent<AnimalStats>().Albino = isShiny;
             gameObject.GetComponent<Player>().Zoo.Add(holder);//craft a new legendary animal   
-            gameObject.GetComponent<Player>().xp += 1000 * Bonuses.xpMultiplier;
+            gameObject.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
 
             var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
@@ -131,7 +131,7 @@ public class Crafting : MonoBehaviour
 
         
 
-        gameObject.GetComponent<Player>().xp += 50*Bonuses.xpMultiplier; // move to where crafting occurs since infinity slot uses this method
+        //gameObject.GetComponent<Player>().xp += 50*Bonuses.xpMultiplier; // move to where crafting occurs since infinity slot uses this method
         gameObject.GetComponent<Player>().CheckLevelUp();
         newCrate.GetComponent<Crate>().rarity = createCrate.GetComponent<Crate>().rarity;
         return createCrate; 
