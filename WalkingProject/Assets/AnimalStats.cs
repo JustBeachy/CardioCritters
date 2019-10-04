@@ -28,7 +28,7 @@ public class AnimalStats : MonoBehaviour
     {
         if(gameObject.tag=="Pet"||gameObject.tag=="PopUp")
         {
-            gameObject.transform.Rotate(new Vector3(0, 90, 0)*Time.deltaTime);
+            gameObject.transform.Rotate(new Vector3(0, 90, 0)*Time.deltaTime,Space.World);
         }
     }
 

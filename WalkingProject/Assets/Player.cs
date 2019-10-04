@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public float prevLevel = 0;
     public float totaldistance = 0;
     public bool stepMode = false;
+    public List<string> AnimalSaves = new List<string>();
     public List<Crate.Rarity> crateRarity = new List<Crate.Rarity>();
     public List<GameObject> Zoo = new List<GameObject>();
     public List<bool> ShinyFinder = new List<bool>();
@@ -150,6 +151,7 @@ public class Player : MonoBehaviour
         foreach (GameObject animal in Zoo)
         {
             ShinyFinder.Add(animal.GetComponent<AnimalStats>().Albino);//hold shiny trait in save file
+            AnimalSaves.Add(animal.name); //Add animal name to save file
         }
 
 
@@ -193,6 +195,8 @@ public class Player : MonoBehaviour
         saveFile.height = height;
         saveFile.gold = gold;
         saveFile.dailyDistance = dailyDistance;
+        saveFile.dailyTime = dailyTime;
+        saveFile.dailyQuest = dailyQuest;
 
         string json = JsonUtility.ToJson(saveFile);
         print(json);
@@ -207,6 +211,8 @@ public class Player : MonoBehaviour
         crateIndex.TrimExcess();
         crateRarity.Clear();
         crateRarity.TrimExcess();
+        AnimalSaves.Clear();
+        AnimalSaves.TrimExcess();
 
 
     }
@@ -221,13 +227,24 @@ public class Player : MonoBehaviour
             dayCount = PL.dayCount;
             xp = PL.xp;
             level = PL.level;
-            Zoo = PL.Zoo;
+            Zoo = new List<GameObject>();
             slots = PL.slots;
             totaldistance = PL.totaldistance;
             height = PL.height;
             gold = PL.gold;
             dailyDistance = PL.dailyDistance;
+            dailyTime = PL.dailyTime;
+            dailyQuest = PL.dailyQuest;
             //may need to add more properties to load in
+
+            foreach (string name in PL.AnimalSaves)
+            {
+                for (int g = 0; g < AnimalLists.AllAnimals.Count; g++)
+                {
+                    if (name == AnimalLists.AllAnimals[g].name)
+                        Zoo.Add(AnimalLists.AllAnimals[g]);//add animal based on name to zoo
+                }
+            }
 
             for (int i = 0; i < PL.crateIndex.Count; i++)
             {
@@ -260,6 +277,7 @@ public class Player : MonoBehaviour
             Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
             SelectBuddy(Zoo[PL.selectedAnimalIndex]);
 
+            
         }
         else
             timeFromStart = DateTime.Today;

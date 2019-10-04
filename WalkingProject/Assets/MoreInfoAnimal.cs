@@ -51,7 +51,7 @@ public class MoreInfoAnimal : MonoBehaviour
         var CameraTexture = new RenderTexture(400, 400, 24); //make new rendertexture
         newCam.GetComponent<Camera>().targetTexture = CameraTexture; //assign rendertexture to camera
         RT.texture = CameraTexture; //assignt rendertexture to raw image
-        var camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), Quaternion.identity); //spawn new pet to camera
+        var camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), ob.transform.rotation); //spawn new pet to camera
         camIt.tag = "Animate";
         Player.CameraCount++;
 
@@ -75,7 +75,7 @@ public class MoreInfoAnimal : MonoBehaviour
         var CameraTexture = new RenderTexture(400, 400, 24); //make new rendertexture
         newCam.GetComponent<Camera>().targetTexture = CameraTexture; //assign rendertexture to camera
         RT.texture = CameraTexture; //assignt rendertexture to raw image
-        var camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), Quaternion.identity); //spawn new pet to camera
+        var camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), ob.transform.rotation); //spawn new pet to camera
         camIt.tag = "PopUp";
         Player.CameraCount++;
 
@@ -94,7 +94,7 @@ public class MoreInfoAnimal : MonoBehaviour
                     Rarity.text = "Legendary";
 
             if (ob.GetComponent<AnimalStats>().Albino)
-                AlbinoText.text = "Albino: bonus is doubled";
+                AlbinoText.text = "Albino: Extra " + BonusText.text;
 
                 Title.text = "New Critter!";
             }
@@ -200,6 +200,7 @@ public class MoreInfoAnimal : MonoBehaviour
                 Destroy(NewCamera);
                 Destroy(RT);
                 Destroy(gameObject);
+                isAnimator = false;
             }
         }
     }

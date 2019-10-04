@@ -46,7 +46,7 @@ public class CurrentAnimalUI : MonoBehaviour
 
         if(AnimalModel.GetComponent<AnimalStats>().Albino)
         {
-            albinoBonusText.text = "Albino: bonus is doubled";
+            albinoBonusText.text = "Albino: Extra "+BonusText.text;
         }
         else
         {

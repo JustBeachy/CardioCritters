@@ -14,7 +14,7 @@ public class Crate : MonoBehaviour
     public GameObject[] CrateModels;
     public GameObject child;
     bool flag = false;
-    
+    public GameObject animateTheCrate;
 
     //Reminder: Display DistanceToOpen with bonus
 
@@ -124,7 +124,7 @@ public class Crate : MonoBehaviour
     {
         currentdistance += dis;
 
-        if(currentdistance>=distancetoopen/Bonuses.FasterCrates)
+        if(currentdistance>=distancetoopen/Bonuses.FasterCrates) //if crate should open
         {
             GameObject holder = OpenCrate();
             holder.GetComponent<AnimalStats>().Albino = isShiny;//make a holder to assign albino chance
@@ -132,7 +132,9 @@ public class Crate : MonoBehaviour
             if (player.GetComponent<Player>().slots[0] == null)//give new crate if in infinity slot
                 player.GetComponent<Player>().slots[0]=player.GetComponent<Crafting>().CraftCrate();
            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
-            popup.GetComponent<MoreInfoAnimal>().FillInfo(holder,true);//fill pop up screen
+           var crateAnim = Instantiate(animateTheCrate, GameObject.FindWithTag("Canvas").transform);//make crate animationpopup screen
+           popup.GetComponent<MoreInfoAnimal>().FillInfo(holder,true);//fill pop up screen
+           crateAnim.GetComponent<CrateAnimation>().CrateOpeningAnimation(CrateModels[(int)gameObject.GetComponent<Crate>().rarity]); //fill crate animation
             //player.GetComponent<Player>().SaveGame();//save game *disabled due to multiple saves at a time if more than 1 crate
             Destroy(gameObject);//destroy crate
 

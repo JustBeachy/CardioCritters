@@ -98,7 +98,7 @@ MonoBehaviour:
   BonusText: 5% reduced distance needed to open crates
   Albino: 0
   bonus: 01000000
-  bonusAmount: 1.05
+  bonusAmount: 1.1999998
   isActive: 0
-  index: 9
+  index: 2
   albinoIndex: 3

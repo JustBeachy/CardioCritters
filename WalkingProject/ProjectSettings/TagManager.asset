@@ -12,6 +12,7 @@ TagManager:
   - PopUp
   - CameraCount
   - BatterySaver
+  - Animate
   layers:
   - Default
   - TransparentFX

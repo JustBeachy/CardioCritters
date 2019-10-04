@@ -64,7 +64,6 @@
   <ItemGroup>
     <Compile Include="Assets\AnimalLists.cs" />
     <Compile Include="Assets\AnimalStats.cs" />
-    <Compile Include="Assets\AnimateCrate.cs" />
     <Compile Include="Assets\Bonuses.cs" />
     <Compile Include="Assets\ButtonAnimation.cs" />
     <Compile Include="Assets\Crafting.cs" />
@@ -72,6 +71,7 @@
     <Compile Include="Assets\CraftingSlots.cs" />
     <Compile Include="Assets\CraftScreenTitle.cs" />
     <Compile Include="Assets\Crate.cs" />
+    <Compile Include="Assets\CrateAnimation.cs" />
     <Compile Include="Assets\crateUI.cs" />
     <Compile Include="Assets\CurrentAnimalUI.cs" />
     <Compile Include="Assets\Daily30.cs" />
@@ -83,6 +83,7 @@
     <Compile Include="Assets\LoadInventory.cs" />
     <Compile Include="Assets\MoreInfoAnimal.cs" />
     <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\RotatingBG.cs" />
     <Compile Include="Assets\ScreenState.cs" />
     <Compile Include="Assets\SimpleCreate.cs" />
     <Compile Include="Assets\SimpleScreenStateDestroy.cs" />
