@@ -38,8 +38,8 @@ public class Crate : MonoBehaviour
         ApplyRarity();
 
         
-       
-        
+
+
     }
 
     // Update is called once per frame
@@ -71,8 +71,8 @@ public class Crate : MonoBehaviour
 
         if(!flag)
         {
-            Instantiate(CrateModels[(int)gameObject.GetComponent<Crate>().rarity],gameObject.transform);
             flag = true;
+            Instantiate(CrateModels[(int)gameObject.GetComponent<Crate>().rarity], gameObject.transform);
         }
 
 

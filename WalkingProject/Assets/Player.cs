@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     public float dailyDistance = 0;
     public int dayCount;
     public DateTime timeNow;
-    DateTime timeFromStart= new DateTime(1995,1,1);
+    DateTime timeFromStart=new DateTime(2018,11,11);
     public DateTime AccessStart;
     public float cooldown = 0;
     public float currentCooldown = 0;
@@ -54,11 +54,12 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         path = Application.persistentDataPath + "/SaveFile.json"; //"Macintosh HD\\Users\\abeach\\Desktop\\SaveFile.json";
+        Load();
     }
     void Start()
     {
         //CrateIntoInventory(0);//put crate in 1st slot
-        Load();
+        
         
         timeNow = DateTime.Today;
         if ((timeNow - timeFromStart).Days!=dayCount)//check to see if new day. -reset dailies
@@ -66,9 +67,10 @@ public class Player : MonoBehaviour
             dailyDistance = 0;
             dailyTime = 0;
             dailyQuest = false;
+            SaveGame();
         }
 
-        AccessStart = timeFromStart;//gives time from start public access
+        
         
 
         level = ((int)xp / 1000) + 1;
@@ -274,13 +276,15 @@ public class Player : MonoBehaviour
                 print(slots[j].GetComponent<Crate>().rarity);
             }
 
-            Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
-            SelectBuddy(Zoo[PL.selectedAnimalIndex]);
-
+            if (Zoo.Count > 0)
+            {
+                Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
+                SelectBuddy(Zoo[PL.selectedAnimalIndex], false);//set buddy and set save to false
+            }
             
         }
-        else
-            timeFromStart = DateTime.Today;
+        //else
+            //timeFromStart = DateTime.Today;
     }
 
     public void CheckLevelUp()
@@ -312,7 +316,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void SelectBuddy(GameObject selected)
+    public void SelectBuddy(GameObject selected, bool SaveAfter=true)
     {
 
         //* add check for new day (if)
@@ -324,6 +328,7 @@ public class Player : MonoBehaviour
         selectedAnimal.GetComponent<AnimalStats>().ApplyBonus();
         var camIt = Instantiate(selectedAnimal, new Vector3(900, 900, 1200), Quaternion.identity); //spawn new pet to camera
         camIt.tag = "Pet";
+        if(SaveAfter) //sometimes don't want to save (like on load -causes daily time bug)
         SaveGame();
     }
 

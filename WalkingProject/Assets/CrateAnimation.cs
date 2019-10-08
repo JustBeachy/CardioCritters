@@ -35,7 +35,7 @@ public class CrateAnimation : MonoBehaviour
         CameraTexture = new RenderTexture(400, 400, 24); //make new rendertexture
         newCam.GetComponent<Camera>().targetTexture = CameraTexture; //assign rendertexture to camera
         RT.texture = CameraTexture; //assignt rendertexture to raw image
-        camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), Quaternion.identity); //spawn crate to camera
+        camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), Quaternion.Euler(0,180,0)); //spawn crate to camera
         camIt.tag = "PopUp";
         Player.CameraCount++;
 
