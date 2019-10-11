@@ -3,28 +3,30 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AnimalLists
     - AnimalStats
-    - AnimateCrate
     - Bonuses
+    - ButtonAnimation
     - CraftScreenTitle
     - Crafting
     - CraftingOutputButton
     - CraftingSlots
     - Crate
+    - CrateAnimation
     - CurrentAnimalUI
     - Daily30
     - DistanceCalc
+    - GoldText
     - InventoryGUI
     - LoadInventory
     - MoreInfoAnimal
     - Player
     - ScreenState
+    - SimpleCreate
     - SimpleScreenStateDestroy
     - UISimpleDestroy
     - UIxpBar
+    - XPtext
     - crateUI
     - goldUI
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -39,9 +41,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -86,83 +88,95 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9358}
     - Class: 114
-      Script: {instanceID: 9378}
+      Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9394}
+      Script: {instanceID: 9370}
+    - Class: 114
+      Script: {instanceID: 9382}
     - Class: 114
       Script: {instanceID: 9398}
     - Class: 114
-      Script: {instanceID: 9414}
+      Script: {instanceID: 9402}
     - Class: 114
-      Script: {instanceID: 9416}
+      Script: {instanceID: 9418}
     - Class: 114
-      Script: {instanceID: 9440}
-    - Class: 114
-      Script: {instanceID: 9442}
+      Script: {instanceID: 9420}
     - Class: 114
       Script: {instanceID: 9444}
     - Class: 114
+      Script: {instanceID: 9446}
+    - Class: 114
       Script: {instanceID: 9448}
     - Class: 114
-      Script: {instanceID: 9454}
+      Script: {instanceID: 9452}
     - Class: 114
-      Script: {instanceID: 9456}
+      Script: {instanceID: 9458}
     - Class: 114
-      Script: {instanceID: 9462}
+      Script: {instanceID: 9460}
     - Class: 114
-      Script: {instanceID: 9470}
+      Script: {instanceID: 9466}
     - Class: 114
       Script: {instanceID: 9474}
     - Class: 114
-      Script: {instanceID: 9484}
+      Script: {instanceID: 9478}
     - Class: 114
       Script: {instanceID: 9488}
     - Class: 114
-      Script: {instanceID: 9490}
+      Script: {instanceID: 9492}
+    - Class: 114
+      Script: {instanceID: 9494}
     - Class: 114
       Script: {instanceID: 9498}
     - Class: 114
-      Script: {instanceID: 9500}
+      Script: {instanceID: 9502}
     - Class: 114
-      Script: {instanceID: 9646}
+      Script: {instanceID: 9504}
     - Class: 114
-      Script: {instanceID: 9708}
+      Script: {instanceID: 9650}
     - Class: 114
-      Script: {instanceID: 9820}
+      Script: {instanceID: 9712}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9848}
     - Class: 114
-      Script: {instanceID: 9888}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 9964}
+      Script: {instanceID: 9894}
     - Class: 114
-      Script: {instanceID: 10000}
+      Script: {instanceID: 9970}
     - Class: 114
-      Script: {instanceID: 10010}
+      Script: {instanceID: 10006}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 10016}
+    - Class: 114
+      Script: {instanceID: 10038}
     - Class: 114
       Script: {instanceID: 10102}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10344}
+      Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10352}
     - Class: 114
-      Script: {instanceID: 10506}
+      Script: {instanceID: 10366}
     - Class: 114
-      Script: {instanceID: 10680}
+      Script: {instanceID: 10514}
     - Class: 114
-      Script: {instanceID: 10694}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 10728}
+      Script: {instanceID: 10690}
     - Class: 114
-      Script: {instanceID: 10732}
+      Script: {instanceID: 10704}
     - Class: 114
-      Script: {instanceID: 10740}
+      Script: {instanceID: 10738}
     - Class: 114
-      Script: {instanceID: 13558}
+      Script: {instanceID: 10742}
+    - Class: 114
+      Script: {instanceID: 10750}
+    - Class: 114
+      Script: {instanceID: 10808}
+    - Class: 114
+      Script: {instanceID: 13282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -192,7 +206,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: fd642b621c8f5ef18ee4f7da3c953944
+      Hash: 10a50047bd32252726ace39d016fc22f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CurrentAnimalUI
@@ -234,6 +248,18 @@ ScriptsOnlyBuild:
     className: ArmModel
   - hash:
       serializedVersion: 2
+      Hash: 051b99a59d924d2ca74511468831d240
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GoldText
+  - hash:
+      serializedVersion: 2
+      Hash: 26fce44b74c7856f032ff847524e8ec6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Daily30
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -252,7 +278,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: f631fb13c128db4e513e7d604ff13613
+      Hash: faa28e584019b1cdb11ca36dbf2bb5eb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoreInfoAnimal
@@ -474,6 +500,18 @@ ScriptsOnlyBuild:
     className: NetworkTransform
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -666,7 +704,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 60e37e282171aae561a65bec5c1f936a
+      Hash: 06a6b6149f8e6dc439c0ab70b48e6944
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: crateUI
@@ -714,12 +752,6 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
-      Hash: f07556d5f4d3db9cd9efbb171e4213a4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AnimateCrate
-  - hash:
-      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -744,10 +776,22 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 84b698e5d445a8bda024cfa79e267491
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleCreate
+  - hash:
+      serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 7c960d8192afe99c4b4369d8caf5b531
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotatingBG
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -804,7 +848,7 @@ ScriptsOnlyBuild:
     className: UISimpleDestroy
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 9617c9ff8d2ca7af8db5e25d05ca9a8c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonAnimation
@@ -930,6 +974,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 7dbee42422aaaeb44e41a6b7c57c1862
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FitnessStats
+  - hash:
+      serializedVersion: 2
       Hash: c422427c344df64477913652eaabcc53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -960,10 +1010,16 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 29e9b44ebe5917ba769dcd547b9f658b
+      Hash: 6b5e4d3bfb4c0feb53495955f3ce6693
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Crate
+  - hash:
+      serializedVersion: 2
+      Hash: 38d4c268d0e67cc6b36a4e67dcfe9b14
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: XPtext
   - hash:
       serializedVersion: 2
       Hash: 1dcb82730d983b77cec736c6ef19f814
@@ -996,7 +1052,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: a357bb9b06884a3171a50247c65d47b8
+      Hash: 531e153405faf9d365bed32ec456cf80
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1026,7 +1082,7 @@ ScriptsOnlyBuild:
     className: goldUI
   - hash:
       serializedVersion: 2
-      Hash: 3c5fe1e986fd8897666e542f06347ac2
+      Hash: a119cc2ae00d81b7bc1ffbf16fdb46d3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryGUI
@@ -1056,17 +1112,17 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: ad50d22625d02451dd80674c4b32f775
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CrateAnimation
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 26fce44b74c7856f032ff847524e8ec6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Daily30
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alex/Desktop/CCAlpha2.apk
+  playerPath: C:/Users/Alex/Desktop/CCBeta.apk

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class DistanceCalc : MonoBehaviour {
 
@@ -10,15 +11,46 @@ public class DistanceCalc : MonoBehaviour {
     float clat = 0;
     float clong = 0;
     float distancemoved = 0;
-   
+
 
     // Use this for initialization
-    void Start () {
+    IEnumerator Start()
+    {
+        
+        // First, check if user has location service enabled
+        if (!Input.location.isEnabledByUser)
+            yield break;
+
+        // Start service before querying location
         Input.location.Start();
+
+        // Wait until service initializes
+        int maxWait = 20;
+        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+        {
+            yield return new WaitForSeconds(1);
+            maxWait--;
+        }
+
+        // Service didn't initialize in 20 seconds
+        if (maxWait < 1)
+        {
+            Start();//retry
+            print("Timed out");
+            yield break;
+        }
+
+        // Connection has failed
+        if (Input.location.status == LocationServiceStatus.Failed)
+        {
+            Permission.RequestUserPermission(Permission.FineLocation); //ask to allow location services
+            print("Unable to determine device location");
+            yield break;
+        }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+        // Update is called once per frame
+        void Update () {
         if (Input.location.status != LocationServiceStatus.Initializing)
         {
             currentTime += Time.deltaTime;
