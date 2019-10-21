@@ -15,6 +15,11 @@ public class SimpleCreate : MonoBehaviour
         Instantiate(ObjectToCreate);
     }
 
+    public void CreateObjectWithParent()
+    {
+        Instantiate(ObjectToCreate,transform.parent);
+    }
+
     // Update is called once per frame
     void Update()
     {

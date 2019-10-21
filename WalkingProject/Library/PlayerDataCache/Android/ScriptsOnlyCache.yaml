@@ -176,7 +176,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10808}
     - Class: 114
-      Script: {instanceID: 13282}
+      Script: {instanceID: 13312}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1125,4 +1125,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alex/Desktop/CCBeta.apk
+  playerPath: C:/Users/Alex/Desktop/CCBeta2.apk
