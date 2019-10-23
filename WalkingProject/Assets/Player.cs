@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
     public static int CameraCount = 0;
     public float dailyTime = 0;
     public bool dailyQuest = false;
+    public GameObject CrateSlotsFullMessage;
 
     string path; 
 
@@ -153,7 +154,8 @@ public class Player : MonoBehaviour
         foreach (GameObject animal in Zoo)
         {
             ShinyFinder.Add(animal.GetComponent<AnimalStats>().Albino);//hold shiny trait in save file
-            AnimalSaves.Add(animal.name); //Add animal name to save file
+            string trimmed= animal.name.Replace("Albino ", ""); //trim file name for albinos
+            AnimalSaves.Add(trimmed); //Add animal name to save file
         }
 
 
@@ -256,7 +258,8 @@ public class Player : MonoBehaviour
 
             for (int z = 0; z < PL.ShinyFinder.Count; z++)
             {
-                Zoo[z].GetComponent<AnimalStats>().Albino = PL.ShinyFinder[z];//load in albino trait
+                if (PL.ShinyFinder[z])
+                    Zoo[z] = Zoo[z].GetComponent<AnimalStats>().albinoform; //load in albino version
             }
 
             for (int j = 0; j < PL.DistanceSaves.Count; j++)
@@ -273,7 +276,7 @@ public class Player : MonoBehaviour
             for (int j = 0; j < PL.crateRarity.Count; j++)
             {
                 slots[j].GetComponent<Crate>().rarity = (Crate.Rarity)PL.crateRarity[j];//load in rarity for crates
-                print(slots[j].GetComponent<Crate>().rarity);
+                
             }
 
             if (Zoo.Count > 0)
@@ -299,26 +302,38 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void CrateIntoInventory(int slotindex)
+    public void CrateIntoInventory(int slotindex, int forcecraterarity=-1)
     {
         if (slotindex < slots.Length)
         {
             if (slots[slotindex] == null)
             {
-                GameObject makecrate = gameObject.GetComponent<Crafting>().CraftCrate();
+                GameObject makecrate;
+                if (slotindex==0)
+                    makecrate = gameObject.GetComponent<Crafting>().CraftCrate(forcecraterarity,false);//no notification when making crate
+                else
+                    makecrate = gameObject.GetComponent<Crafting>().CraftCrate(forcecraterarity);//notification when making crate
+
                 makecrate.GetComponent<Crate>().index = slotindex; //assign index so crate can delete itself out of list
                 slots[slotindex] = makecrate;
                 SaveGame();
             }
             else
-                CrateIntoInventory(slotindex + 1); //fill in any empty slots
+                CrateIntoInventory(slotindex + 1,forcecraterarity); //retry - fill in any empty slots
+        }
+        else
+        {
+            Instantiate(CrateSlotsFullMessage,GameObject.FindGameObjectWithTag("Canvas").transform);//tell user crates are full
         }
 
     }
 
     public void SelectBuddy(GameObject selected, bool SaveAfter=true)
     {
-
+        foreach (GameObject a in Zoo)
+        {
+            a.GetComponent<AnimalStats>().isActive = false; //clear active state of others
+        }
         //* add check for new day (if)
         Bonuses.ClearBonuses();
         Destroy(GameObject.FindWithTag("Pet"));///remove old pet from camera
@@ -326,7 +341,7 @@ public class Player : MonoBehaviour
         selectedAnimal = selected;
         selectedAnimal.GetComponent<AnimalStats>().isActive = true;
         selectedAnimal.GetComponent<AnimalStats>().ApplyBonus();
-        var camIt = Instantiate(selectedAnimal, new Vector3(900, 900, 1200), Quaternion.identity); //spawn new pet to camera
+        var camIt = Instantiate(selectedAnimal, new Vector3(900, 900, 1200), selectedAnimal.transform.rotation); //spawn new pet to camera
         camIt.tag = "Pet";
         if(SaveAfter) //sometimes don't want to save (like on load -causes daily time bug)
         SaveGame();

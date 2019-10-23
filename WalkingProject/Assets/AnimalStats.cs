@@ -16,6 +16,8 @@ public class AnimalStats : MonoBehaviour
     public bool isActive = false;
     public int index = 0;
     public int albinoIndex = 0;
+    public GameObject albinoform;
+    public GameObject normalform;
     // Start is called before the first frame update
     void Start()
     {

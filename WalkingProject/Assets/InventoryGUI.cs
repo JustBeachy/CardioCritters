@@ -137,11 +137,13 @@ public class InventoryGUI : MonoBehaviour
             for (int i = 0; i < AnimalLists.AllAnimals.Count; i++) //loop through animal dictionary
             {
 
-                if (zooList.Contains(AnimalLists.AllAnimals[i]))
+                if (zooList.Contains(AnimalLists.AllAnimals[i])||
+                    zooList.Contains(AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform))
                 {
                     foreach (GameObject sameAnim in zooList) //loop through inventory
                     {
-                        if (sameAnim == AnimalLists.AllAnimals[i]&&sameAnim.GetComponent<AnimalStats>().isActive==false) //if animal is in dictionary and is not the pet
+                        if (sameAnim == AnimalLists.AllAnimals[i]&&sameAnim.GetComponent<AnimalStats>().isActive==false||
+                            sameAnim == AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform && sameAnim.GetComponent<AnimalStats>().isActive == false)//if animal is in dictionary and is not the pet
                         {
                             var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
                             toList.GetComponent<InventoryGUI>().animalTiedToIcon = sameAnim; //tie animal to icon for sorting and clicking
@@ -164,7 +166,7 @@ public class InventoryGUI : MonoBehaviour
                     }
                     parser = 0;
                 }
-                else
+               /* else
                 {
                     if (showUnknown&&ScreenState.currentScreen==ScreenState.Screen.AnimalSelect)
                     {
@@ -176,7 +178,7 @@ public class InventoryGUI : MonoBehaviour
                         toList.transform.parent = transform.parent;
                     }
 
-                }
+                }*/
             }
 
         }

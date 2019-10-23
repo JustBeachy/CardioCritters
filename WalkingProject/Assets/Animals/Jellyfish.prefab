@@ -99,5 +99,7 @@ MonoBehaviour:
   bonus: 00000000
   bonusAmount: 10
   isActive: 0
-  index: 109
+  index: 31
   albinoIndex: 2
+  albinoform: {fileID: 269882084, guid: 0af4aa6e5ef934f4fb6a93678a5f1144, type: 3}
+  normalform: {fileID: 0}

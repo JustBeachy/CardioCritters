@@ -85,6 +85,8 @@ public class Crate : MonoBehaviour
 
     public GameObject OpenCrate()
     {
+        Crafting.AnimalCraft.Clear();//prevents crafting cancel bug
+        Crafting.AnimalCraft.TrimExcess();
 
         player.GetComponent<Player>().slots[index] = null; //delete crate from slot
 
@@ -130,7 +132,7 @@ public class Crate : MonoBehaviour
             holder.GetComponent<AnimalStats>().Albino = isShiny;//make a holder to assign albino chance
             player.GetComponent<Player>().Zoo.Add(holder);//unbox crate and add to inventory
             if (player.GetComponent<Player>().slots[0] == null)//give new crate if in infinity slot
-                player.GetComponent<Player>().slots[0]=player.GetComponent<Crafting>().CraftCrate();
+                player.GetComponent<Player>().slots[0]=player.GetComponent<Crafting>().CraftCrate(-1,false);//mute notification on infini slot
            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
            var crateAnim = Instantiate(animateTheCrate, GameObject.FindWithTag("Canvas").transform);//make crate animationpopup screen
            popup.GetComponent<MoreInfoAnimal>().FillInfo(holder,true);//fill pop up screen

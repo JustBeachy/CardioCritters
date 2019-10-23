@@ -60,7 +60,7 @@ public void CraftAnimal()
             {
                 player = GameObject.FindGameObjectWithTag("Player");
                 GameObject newAlbino = Crafting.AnimalCraft[0];
-                newAlbino.GetComponent<AnimalStats>().Albino = true;
+                newAlbino = newAlbino.GetComponent<AnimalStats>().albinoform;
                 player.GetComponent<Player>().Zoo.Add(newAlbino);
                 player.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
 

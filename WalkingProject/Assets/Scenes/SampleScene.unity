@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goldtext: {fileID: 572403240}
-  AmountToDisplay: 5
+  AmountToDisplay: 10
 --- !u!1 &58368739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,6 +2833,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_RichText
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1216802483053546554, guid: 4b1f852356f48b44bb588a803655e54c,
+        type: 3}
+      propertyPath: m_Text
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1216802483630433624, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3728,6 +3733,12 @@ PrefabInstance:
       propertyPath: crate
       value: 
       objectReference: {fileID: 294045682}
+    - target: {fileID: 6696748421752580502, guid: f0ace63e2729d49e8b632751b76950c9,
+        type: 3}
+      propertyPath: CrateSlotsFullMessage
+      value: 
+      objectReference: {fileID: 3396722927125828547, guid: f67dea64e36096645a815c4dbc740f4e,
+        type: 3}
     - target: {fileID: 6696748421752580503, guid: f0ace63e2729d49e8b632751b76950c9,
         type: 3}
       propertyPath: newCrate

@@ -32,7 +32,8 @@ public class Crafting : MonoBehaviour
         if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common)
         {
             GameObject holder = AnimalLists.rares[Random.Range(0, AnimalLists.rares.Count - 1)];
-            holder.GetComponent<AnimalStats>().Albino = isShiny;
+            if (isShiny)
+                holder = holder.GetComponent<AnimalStats>().albinoform;
             gameObject.GetComponent<Player>().Zoo.Add(holder);//craft a new rare animal
             gameObject.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
@@ -43,7 +44,8 @@ public class Crafting : MonoBehaviour
         if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
         {
             GameObject holder = AnimalLists.epics[Random.Range(0, AnimalLists.epics.Count - 1)];
-            holder.GetComponent<AnimalStats>().Albino = isShiny;
+            if (isShiny)
+                holder = holder.GetComponent<AnimalStats>().albinoform;
             gameObject.GetComponent<Player>().Zoo.Add(holder);//craft a new epic animal
             gameObject.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
@@ -55,7 +57,8 @@ public class Crafting : MonoBehaviour
         if (AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic|| AnimalCraft[0].GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
         {
             GameObject holder = AnimalLists.legendaries[Random.Range(0, AnimalLists.legendaries.Count - 1)];
-            holder.GetComponent<AnimalStats>().Albino = isShiny;
+            if (isShiny)
+                holder = holder.GetComponent<AnimalStats>().albinoform;
             gameObject.GetComponent<Player>().Zoo.Add(holder);//craft a new legendary animal   
             gameObject.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
             gameObject.GetComponent<Player>().CheckLevelUp();
@@ -85,27 +88,31 @@ public class Crafting : MonoBehaviour
 
     }
 
-    public GameObject CraftCrate()
+    public GameObject CraftCrate(int forcerarity = -1,bool notification=true)
     {
+        float random = 0;
         var createCrate = Instantiate(newCrate);
-        float random = Random.Range(1+Bonuses.RarerCrates,101);
 
-        if (random <= 70)
+        if (forcerarity != -1)//if not forcing rarity
+            random = Random.Range(1 + Bonuses.RarerCrates, 101);
+        
+
+        if (random <= 70||forcerarity==1)
         {
             createCrate.GetComponent<Crate>().rarity = Crate.Rarity.Common;
            
         }
-        if (random > 70 && random <= 95)
+        if ((random > 70 && random <= 95) || forcerarity == 2)
         {
             createCrate.GetComponent<Crate>().rarity = Crate.Rarity.Rare;
 
         }
-        if (random > 95 && random <= 99)
+        if ((random > 95 && random <= 99) || forcerarity == 3)
         {
             createCrate.GetComponent<Crate>().rarity = Crate.Rarity.Epic;
 
         }
-        if (random >= 100)
+        if (random >= 100 || forcerarity == 4)
         {
             createCrate.GetComponent<Crate>().rarity = Crate.Rarity.Legendary;
 
@@ -125,10 +132,12 @@ public class Crafting : MonoBehaviour
         AnimalCraft.Clear();//clear crafting list
         AnimalCraft.TrimExcess();
 
-        var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
-        // Instantiate(popup.GetComponent<Crate>().CrateModels[(int)popup.GetComponent<Crate>().rarity], GameObject.FindWithTag("Canvas").transform); //make crate model as child
-        popup.GetComponent<MoreInfoAnimal>().FillInfo(createCrate, false);//fill pop up screen
-
+        if (notification)
+        {
+            var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
+                                                                                             // Instantiate(popup.GetComponent<Crate>().CrateModels[(int)popup.GetComponent<Crate>().rarity], GameObject.FindWithTag("Canvas").transform); //make crate model as child
+            popup.GetComponent<MoreInfoAnimal>().FillInfo(createCrate, false);//fill pop up screen
+        }
         
 
         //gameObject.GetComponent<Player>().xp += 50*Bonuses.xpMultiplier; // move to where crafting occurs since infinity slot uses this method

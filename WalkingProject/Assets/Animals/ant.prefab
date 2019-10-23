@@ -101,3 +101,6 @@ MonoBehaviour:
   isActive: 0
   index: 5
   albinoIndex: 2
+  albinoform: {fileID: 3719944729178003257, guid: f129dd0711d6ae34c871d2b57902a2aa,
+    type: 3}
+  normalform: {fileID: 0}

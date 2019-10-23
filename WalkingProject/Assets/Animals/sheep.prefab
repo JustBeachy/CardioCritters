@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3272939967817893895}
   - component: {fileID: 6006898103037565254}
   m_Layer: 0
-  m_Name: sheep
+  m_Name: Sheep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,5 +100,8 @@ MonoBehaviour:
   bonus: 04000000
   bonusAmount: 1.1
   isActive: 0
-  index: 0
+  index: 4
   albinoIndex: 2
+  albinoform: {fileID: 3843549070188936411, guid: 7f791c40803e3fa429664ca3aaea00d5,
+    type: 3}
+  normalform: {fileID: 0}
