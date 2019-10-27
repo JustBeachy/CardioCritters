@@ -10,7 +10,8 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameObject.Find("Tut6(Clone)") != null)
+            Destroy(GameObject.Find("Tut6(Clone)"));
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class Shop : MonoBehaviour
         {
             if (player.GetComponent<Player>().slots[0] == null|| player.GetComponent<Player>().slots[1] == null || player.GetComponent<Player>().slots[2] == null) //check if empty slot before subtracting gold
                 player.GetComponent<Player>().gold -= goldCost;
-            player.GetComponent<Player>().CrateIntoInventory(0, crateRarity);
+            player.GetComponent<Player>().CrateIntoInventory(1, crateRarity);
             
             
         }

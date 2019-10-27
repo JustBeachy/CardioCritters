@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public string username = "";
     public GameObject selectedAnimal;
     public float height = 0;
-    public int gold = 0;
+    public int gold = 100;
     public float xp = 0;
     public int level = 0;
     public float steps = 0;
@@ -44,6 +44,8 @@ public class Player : MonoBehaviour
     public float dailyTime = 0;
     public bool dailyQuest = false;
     public GameObject CrateSlotsFullMessage;
+    public bool tutorialDone = false;
+    public GameObject tutorial;
 
     string path; 
 
@@ -68,7 +70,7 @@ public class Player : MonoBehaviour
             dailyDistance = 0;
             dailyTime = 0;
             dailyQuest = false;
-            SaveGame();
+            
         }
 
         
@@ -112,24 +114,25 @@ public class Player : MonoBehaviour
 
     }
 
-    public void ApplyDistance(float dis)
+    public void ApplyDistance(float dis, bool forceAnt = false)
     {
-
-        if (stepMode)
+        if (!forceAnt) //dont add to stats from tutorial force
         {
-            dis = ConvertToDistance(steps);
-            steps = 0;
-        }
-        
-        
-        totaldistance += dis;
-        dailyDistance += dis;
-        dailyTime += .5f;
+            if (stepMode)
+            {
+                dis = ConvertToDistance(steps);
+                steps = 0;
+            }
 
+
+            totaldistance += dis;
+            dailyDistance += dis;
+            dailyTime += .5f;
+        }
         foreach (GameObject c in slots)
         {
             if(c!=null)
-            c.GetComponent<Crate>().ApplyDistance(dis);//give distance to crates
+            c.GetComponent<Crate>().ApplyDistance(dis,forceAnt);//give distance to crates
 
         }
         dis = 0;
@@ -201,6 +204,7 @@ public class Player : MonoBehaviour
         saveFile.dailyDistance = dailyDistance;
         saveFile.dailyTime = dailyTime;
         saveFile.dailyQuest = dailyQuest;
+        saveFile.tutorialDone = tutorialDone;
 
         string json = JsonUtility.ToJson(saveFile);
         print(json);
@@ -239,6 +243,7 @@ public class Player : MonoBehaviour
             dailyDistance = PL.dailyDistance;
             dailyTime = PL.dailyTime;
             dailyQuest = PL.dailyQuest;
+            tutorialDone = PL.tutorialDone;
             //may need to add more properties to load in
 
             foreach (string name in PL.AnimalSaves)
@@ -276,7 +281,7 @@ public class Player : MonoBehaviour
             for (int j = 0; j < PL.crateRarity.Count; j++)
             {
                 slots[j].GetComponent<Crate>().rarity = (Crate.Rarity)PL.crateRarity[j];//load in rarity for crates
-                
+
             }
 
             if (Zoo.Count > 0)
@@ -284,10 +289,13 @@ public class Player : MonoBehaviour
                 Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
                 SelectBuddy(Zoo[PL.selectedAnimalIndex], false);//set buddy and set save to false
             }
-            
+
         }
-        //else
-            //timeFromStart = DateTime.Today;
+        else
+        {
+            Instantiate(tutorial);//start tutorial
+            gold = 100;
+        }
     }
 
     public void CheckLevelUp()

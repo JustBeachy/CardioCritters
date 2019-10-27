@@ -13,6 +13,7 @@ TagManager:
   - CameraCount
   - BatterySaver
   - Animate
+  - TM
   layers:
   - Default
   - TransparentFX

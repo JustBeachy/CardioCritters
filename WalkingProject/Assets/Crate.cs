@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class Crate : MonoBehaviour
 {
@@ -54,19 +55,19 @@ public class Crate : MonoBehaviour
 
         if (rarity == Rarity.Common) //remove a 0 for testing
         {
-            distancetoopen = 100;
+            distancetoopen = 500;
         }
         if (rarity == Rarity.Rare)
         {
-            distancetoopen = 250;
+            distancetoopen = 1000;
         }
         if (rarity == Rarity.Epic)
         {
-            distancetoopen = 650;
+            distancetoopen = 4000;
         }
         if (rarity == Rarity.Legendary)
         {
-            distancetoopen = 1500;
+            distancetoopen = 15000;
         }
 
         if(!flag)
@@ -83,12 +84,17 @@ public class Crate : MonoBehaviour
       
     }
 
-    public GameObject OpenCrate()
+    public GameObject OpenCrate(bool forceAnt=false)
     {
+        
+
         Crafting.AnimalCraft.Clear();//prevents crafting cancel bug
         Crafting.AnimalCraft.TrimExcess();
 
         player.GetComponent<Player>().slots[index] = null; //delete crate from slot
+
+        if (forceAnt)//force ant for tutorial
+            return commons[0];
 
         if ((int)Random.Range(1,(int)251/Bonuses.AbinoEasier) <=1) //check for albino
             isShiny = true;
@@ -122,13 +128,14 @@ public class Crate : MonoBehaviour
 
     }
 
-    public void ApplyDistance(float dis)
+    public void ApplyDistance(float dis,bool forceAnt=false)
     {
         currentdistance += dis;
 
         if(currentdistance>=distancetoopen/Bonuses.FasterCrates) //if crate should open
         {
-            GameObject holder = OpenCrate();
+            Handheld.Vibrate();
+            GameObject holder = OpenCrate(forceAnt);
             holder.GetComponent<AnimalStats>().Albino = isShiny;//make a holder to assign albino chance
             player.GetComponent<Player>().Zoo.Add(holder);//unbox crate and add to inventory
             if (player.GetComponent<Player>().slots[0] == null)//give new crate if in infinity slot

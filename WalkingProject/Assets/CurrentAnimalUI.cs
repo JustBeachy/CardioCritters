@@ -14,6 +14,7 @@ public class CurrentAnimalUI : MonoBehaviour
     public GameObject CraftingOptions;
     public GameObject InventoryList;
     public Text albinoBonusText;
+    public GameObject TutorialManager;
    
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,11 @@ public class CurrentAnimalUI : MonoBehaviour
     public void MakeCraftingOptions() //makes the crafting selection buttons
     {
         Instantiate(CraftingOptions, transform.parent);
+
+        if (GameObject.Find("Tut3(Clone)") != null)
+        {
+            TutorialManager.GetComponent<Tutorial>().NextStep();//go to next tutorial step
+        }
     }
 
     public void SetScreenState(int state) //set screen state from buttons on the crafting select menu
@@ -68,6 +74,11 @@ public class CurrentAnimalUI : MonoBehaviour
     {
         var inv =Instantiate(InventoryList);
         inv.transform.SetParent(GameObject.FindWithTag("Canvas").transform,false);
+
+        if (GameObject.Find("Tut4(Clone)") != null)
+        {
+            TutorialManager.GetComponent<Tutorial>().NextStep();//go to next tutorial step
+        }
     }
 
 }

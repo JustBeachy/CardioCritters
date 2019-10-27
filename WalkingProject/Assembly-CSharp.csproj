@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\AnimalLists.cs" />
     <Compile Include="Assets\AnimalStats.cs" />
+    <Compile Include="Assets\ArrowAnimation.cs" />
     <Compile Include="Assets\Bonuses.cs" />
     <Compile Include="Assets\ButtonAnimation.cs" />
     <Compile Include="Assets\Crafting.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\CurrentAnimalUI.cs" />
     <Compile Include="Assets\Daily30.cs" />
     <Compile Include="Assets\DistanceCalc.cs" />
+    <Compile Include="Assets\Donate.cs" />
     <Compile Include="Assets\FitnessStats.cs" />
     <Compile Include="Assets\GoldText.cs" />
     <Compile Include="Assets\goldUI.cs" />
@@ -88,6 +90,8 @@
     <Compile Include="Assets\Shop.cs" />
     <Compile Include="Assets\SimpleCreate.cs" />
     <Compile Include="Assets\SimpleScreenStateDestroy.cs" />
+    <Compile Include="Assets\Tutorial.cs" />
+    <Compile Include="Assets\TutorialPickOne.cs" />
     <Compile Include="Assets\UISimpleDestroy.cs" />
     <Compile Include="Assets\UIxpBar.cs" />
     <Compile Include="Assets\XPtext.cs" />

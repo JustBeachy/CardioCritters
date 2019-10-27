@@ -11,7 +11,8 @@ public class CraftingOutputButton : MonoBehaviour
     public int amountToCraft;
     int parser = 0;
     public GameObject popUpScreen;
-
+    public GameObject ScrollView;
+    public GameObject TutorialManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +42,16 @@ public class CraftingOutputButton : MonoBehaviour
     {
         if (cancraft)
         {
+            if (GameObject.Find("Tut5(Clone)") != null)
+            {
+                TutorialManager = GameObject.FindGameObjectWithTag("TM");
+                TutorialManager.GetComponent<Tutorial>().FinalStep();//go to final tutorial step
+            }
+
             player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponent<Player>().CrateIntoInventory(0);
+            player.GetComponent<Player>().CrateIntoInventory(1);
+            ScrollView = GameObject.FindGameObjectWithTag("ScrollView");
+            Destroy(ScrollView);
         }
     }
 

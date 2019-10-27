@@ -3527,19 +3527,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2138915788}
-    - target: {fileID: 264088984, guid: 2c6fa2e068bdb496ba13668849728e6f, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 5234747712926620744, guid: 2c6fa2e068bdb496ba13668849728e6f,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 264088982, guid: 2c6fa2e068bdb496ba13668849728e6f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 700
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c6fa2e068bdb496ba13668849728e6f, type: 3}
 --- !u!1001 &5581565419252478471
@@ -3738,6 +3725,12 @@ PrefabInstance:
       propertyPath: CrateSlotsFullMessage
       value: 
       objectReference: {fileID: 3396722927125828547, guid: f67dea64e36096645a815c4dbc740f4e,
+        type: 3}
+    - target: {fileID: 6696748421752580502, guid: f0ace63e2729d49e8b632751b76950c9,
+        type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 5273875157479979354, guid: 1496d7c517a7c4e4f92f0851170e002a,
         type: 3}
     - target: {fileID: 6696748421752580503, guid: f0ace63e2729d49e8b632751b76950c9,
         type: 3}

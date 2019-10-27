@@ -21,7 +21,7 @@ public class MoreInfoAnimal : MonoBehaviour
     float currenttime = 0;
     bool isAnimator = false;
     public Image Fade;
-
+    GameObject TutorialManager;
     public Text AlbinoText;
     
    
@@ -156,10 +156,13 @@ public class MoreInfoAnimal : MonoBehaviour
             if ((ScreenState.currentScreen == ScreenState.Screen.CraftCrate && Crafting.AnimalCraft.Count < 2)
                 ||(ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal || ScreenState.currentScreen == ScreenState.Screen.CraftAnimal) 
                 && Crafting.AnimalCraft.Count < 5)//dont overflow other crafting list
-            {
+        {
                 Crafting.AnimalCraft.Add(whoCreatedMe.GetComponent<InventoryGUI>().animalTiedToIcon);//may need to add index to animal to track it
                 Destroy(whoCreatedMe);
-            }
+
+           
+            
+        }
 
         if (ScreenState.currentScreen == ScreenState.Screen.AnimalSelect)
         {

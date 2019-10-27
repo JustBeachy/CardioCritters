@@ -93,7 +93,7 @@ public class Crafting : MonoBehaviour
         float random = 0;
         var createCrate = Instantiate(newCrate);
 
-        if (forcerarity != -1)//if not forcing rarity
+        if (forcerarity == -1)//if not forcing rarity
             random = Random.Range(1 + Bonuses.RarerCrates, 101);
         
 
@@ -127,7 +127,11 @@ public class Crafting : MonoBehaviour
                 a.GetComponent<AnimalStats>().index = parser; //assign index to animals so they can delete themselves in crafting (fixed an issue with removeAt)
                 parser++;
             }
+            
             gameObject.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
+            //if (gameObject.GetComponent<Player>().Zoo.Count<2)
+            if(cm.GetComponent<AnimalStats>().bonus[0]==AnimalStats.Bonus.Crafting2x) //only run once if 2x craft bonus
+                break;
         }
         AnimalCraft.Clear();//clear crafting list
         AnimalCraft.TrimExcess();
