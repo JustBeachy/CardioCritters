@@ -16,10 +16,16 @@ public class DistanceCalc : MonoBehaviour {
     // Use this for initialization
     IEnumerator Start()
     {
-        
+        Screen.sleepTimeout = SleepTimeout.NeverSleep; //never sleep
+
+        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation)) //check if they allowed location.
+        Permission.RequestUserPermission(Permission.FineLocation);
+
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
             yield break;
+        
+            
 
         // Start service before querying location
         Input.location.Start();
@@ -59,6 +65,11 @@ public class DistanceCalc : MonoBehaviour {
 
         if(currentTime>timer)
         {
+            if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation)) //check if they allowed location.
+            {
+                Permission.RequestUserPermission(Permission.FineLocation);
+                Start();
+            }
             if (!started) //first run of location services
             {
                 clat = Input.location.lastData.latitude;

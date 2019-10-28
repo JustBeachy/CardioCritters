@@ -632,3 +632,14 @@ B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp.csproj.C
 B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp.dll
 B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp.pdb
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\Apple.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\Editor.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\FacebookStore.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\Purchasing.Common.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\Security.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\Stores.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\Tizen.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\UDP.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\UnityEngine.Purchasing.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\winrt.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

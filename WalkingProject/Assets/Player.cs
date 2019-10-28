@@ -83,34 +83,34 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            //gameObject.GetComponent<Crafting>().CraftAnimal(Zoo.ToArray());
-            SaveGame();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            //LoadGame.Load();
-            Load();//LoadGame.PL);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-
-           
-                
-               ApplyDistance(100);//give distance to crates
+        /* if(Input.GetKeyDown(KeyCode.Space))
+         {
+             //gameObject.GetComponent<Crafting>().CraftAnimal(Zoo.ToArray());
+             SaveGame();
+         }
+         if (Input.GetKeyDown(KeyCode.L))
+         {
+             //LoadGame.Load();
+             Load();//LoadGame.PL);
+         }
+         if (Input.GetKeyDown(KeyCode.C))
+         {
 
 
-         
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            CrateIntoInventory(0);
-        }
 
-        
-     
+                ApplyDistance(100);//give distance to crates
 
+
+
+         }
+         if (Input.GetKeyDown(KeyCode.Escape))
+         {
+             CrateIntoInventory(0);
+         }
+
+         *///cheats disabled
+
+       
 
     }
 
@@ -196,7 +196,6 @@ public class Player : MonoBehaviour
         saveFile.dayCount = (DateTime.Now - timeFromStart).Days;
         saveFile.xp = xp;
         saveFile.level = level;
-        saveFile.Zoo = Zoo;
         saveFile.slots = slots;
         saveFile.totaldistance = totaldistance;
         saveFile.height = height;
@@ -209,7 +208,7 @@ public class Player : MonoBehaviour
         string json = JsonUtility.ToJson(saveFile);
         print(json);
         File.WriteAllText(@path, json);
-        //File.WriteAllText(@path, EncryptDecrypt(json,1)); //comment out for testing -encryption
+        File.WriteAllText(@path, EncryptDecrypt(json,1337)); //comment out for testing -encryption
 
         ShinyFinder.Clear(); //remove the temp values in the save lists
         ShinyFinder.TrimExcess();
@@ -229,7 +228,7 @@ public class Player : MonoBehaviour
         if (File.Exists(@path))
         {
             string loadedString = File.ReadAllText(@path);
-            //loadedString=EncryptDecrypt(loadedString, 1); //comment out for testing -encryption
+            loadedString=EncryptDecrypt(loadedString, 1337); //comment out for testing -encryption
             JsonUtility.FromJsonOverwrite(loadedString, PL);
             username = PL.username;
             dayCount = PL.dayCount;

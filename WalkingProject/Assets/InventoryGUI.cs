@@ -142,8 +142,8 @@ public class InventoryGUI : MonoBehaviour
                 {
                     foreach (GameObject sameAnim in zooList) //loop through inventory
                     {
-                        if (sameAnim == AnimalLists.AllAnimals[i]&&sameAnim.GetComponent<AnimalStats>().isActive==false||
-                            sameAnim == AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform && sameAnim.GetComponent<AnimalStats>().isActive == false)//if animal is in dictionary and is not the pet
+                        if (sameAnim == AnimalLists.AllAnimals[i]||
+                            sameAnim == AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform)//if animal is in dictionary and is not the pet
                         {
                             var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
                             toList.GetComponent<InventoryGUI>().animalTiedToIcon = sameAnim; //tie animal to icon for sorting and clicking

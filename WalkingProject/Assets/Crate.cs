@@ -63,11 +63,11 @@ public class Crate : MonoBehaviour
         }
         if (rarity == Rarity.Epic)
         {
-            distancetoopen = 4000;
+            distancetoopen = 1500;
         }
         if (rarity == Rarity.Legendary)
         {
-            distancetoopen = 15000;
+            distancetoopen = 2000;
         }
 
         if(!flag)
