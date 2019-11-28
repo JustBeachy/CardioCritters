@@ -108,7 +108,6 @@ GameObject:
   - component: {fileID: 6485407226561811644}
   - component: {fileID: 6485407226561811647}
   - component: {fileID: 6637667066953661502}
-  - component: {fileID: 733427016016080070}
   m_Layer: 5
   m_Name: ListItem
   m_TagString: ListItem
@@ -255,21 +254,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &733427016016080070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6485407226561811633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 4, y: -4}
-  m_UseGraphicAlpha: 1
 --- !u!1 &6982212639173717533
 GameObject:
   m_ObjectHideFlags: 0

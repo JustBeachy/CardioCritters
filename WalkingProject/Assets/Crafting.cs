@@ -8,7 +8,7 @@ public class Crafting : MonoBehaviour
     public static List<GameObject> AnimalCraft = new List<GameObject>();
     bool isShiny = false;
     public GameObject popUpScreen;
-    
+    bool dontRepeat = true;
    
     // Start is called before the first frame update
     void Start()
@@ -70,15 +70,26 @@ public class Crafting : MonoBehaviour
 
         foreach (GameObject cm in AnimalCraft) //delete the crafting materials
         {
+            if (!dontRepeat && cm.GetComponent<AnimalStats>().bonus[0] == AnimalStats.Bonus.Crafting2x)//skip 1 iteration if bonus = 2x crafting
+            {
+                dontRepeat = true;
+                continue;
+            }
+
             int parser = 0;
             foreach (GameObject a in GetComponent<Player>().Zoo)
             {
 
                 a.GetComponent<AnimalStats>().index = parser; //assign index to animals so they can delete themselves in crafting (fixed an issue with removeAt)
                 parser++;
+
             }
             gameObject.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
+            dontRepeat = false;
+
+           
         }
+        dontRepeat = true;
         AnimalCraft.Clear();//clear crafting list
         AnimalCraft.TrimExcess();
 

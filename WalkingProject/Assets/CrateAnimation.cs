@@ -66,8 +66,8 @@ public class CrateAnimation : MonoBehaviour
                 tempColor.a += .6f * Time.deltaTime;
                 BG.color = tempColor; //tint screen
             }
-            spin *= 146*Time.deltaTime;
-            camIt.transform.Rotate(new Vector3(0, spin * Time.deltaTime));
+            
+            camIt.transform.Rotate(new Vector3(0, Mathf.Pow(timer+3,2)));
 
         }
         else

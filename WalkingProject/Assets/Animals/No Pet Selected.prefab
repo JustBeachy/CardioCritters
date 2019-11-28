@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4352037830322588738}
   - component: {fileID: 5108023446554204102}
   m_Layer: 0
-  m_Name: Zebra 1
+  m_Name: No Pet Selected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

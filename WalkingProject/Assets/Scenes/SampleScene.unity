@@ -2907,12 +2907,12 @@ PrefabInstance:
     - target: {fileID: 1216802483630433624, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -110
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 1216802483630433624, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1216802483630433624, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
@@ -3075,7 +3075,7 @@ PrefabInstance:
     - target: {fileID: 1216802482822983731, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 70
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1216802482822983731, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
@@ -3100,7 +3100,7 @@ PrefabInstance:
     - target: {fileID: 3394476691932841986, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3394476691932841986, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
@@ -3136,6 +3136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216802482021342722, guid: 4b1f852356f48b44bb588a803655e54c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 913803815, guid: 4b1f852356f48b44bb588a803655e54c, type: 3}
@@ -3533,6 +3538,41 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2138915788}
+    - target: {fileID: 5903127899093952195, guid: 2c6fa2e068bdb496ba13668849728e6f,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: b413955cd1d2a4161b15f142ac6530a3, type: 2}
+    - target: {fileID: 5234747712554033793, guid: 2c6fa2e068bdb496ba13668849728e6f,
+        type: 3}
+      propertyPath: m_Text
+      value: Animal Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234747712554033793, guid: 2c6fa2e068bdb496ba13668849728e6f,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234747712554033793, guid: 2c6fa2e068bdb496ba13668849728e6f,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234747712554033793, guid: 2c6fa2e068bdb496ba13668849728e6f,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234747712554033792, guid: 2c6fa2e068bdb496ba13668849728e6f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234747712554033792, guid: 2c6fa2e068bdb496ba13668849728e6f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c6fa2e068bdb496ba13668849728e6f, type: 3}
 --- !u!1001 &5581565419252478471
@@ -3757,7 +3797,7 @@ PrefabInstance:
     - target: {fileID: 6696748421752580488, guid: f0ace63e2729d49e8b632751b76950c9,
         type: 3}
       propertyPath: lrares.Array.size
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6696748421752580488, guid: f0ace63e2729d49e8b632751b76950c9,
         type: 3}
@@ -4067,6 +4107,12 @@ PrefabInstance:
       propertyPath: llegendaries.Array.data[1]
       value: 
       objectReference: {fileID: 7793476913363199518, guid: d89bc201dbe6acb44933fbbd0c2c70bb,
+        type: 3}
+    - target: {fileID: 6696748421752580488, guid: f0ace63e2729d49e8b632751b76950c9,
+        type: 3}
+      propertyPath: lrares.Array.data[15]
+      value: 
+      objectReference: {fileID: 354465606796240242, guid: 22eba65f701ded448acf5614a506d37e,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ace63e2729d49e8b632751b76950c9, type: 3}

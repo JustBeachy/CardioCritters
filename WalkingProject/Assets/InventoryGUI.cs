@@ -145,6 +145,8 @@ public class InventoryGUI : MonoBehaviour
                         if (sameAnim == AnimalLists.AllAnimals[i]||
                             sameAnim == AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform)//if animal is in dictionary and is not the pet
                         {
+                            if (ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal && sameAnim.GetComponent<AnimalStats>().Albino == true) //skip if albino form in albino crafting
+                                continue;
                             var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
                             toList.GetComponent<InventoryGUI>().animalTiedToIcon = sameAnim; //tie animal to icon for sorting and clicking
                             toList.GetComponent<InventoryGUI>().rarity = SetRarityText(toList); //set raarity text

@@ -13,6 +13,7 @@ public class CraftingOutputButton : MonoBehaviour
     public GameObject popUpScreen;
     public GameObject ScrollView;
     public GameObject TutorialManager;
+    int run3times = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,13 +83,17 @@ public void CraftAnimal()
                         a.GetComponent<AnimalStats>().index = parser; //assign index to animals so they can delete themselves in crafting (fixed an issue with removeAt)
                         parser++;
                     }
+                    if (run3times >= 3)//exit out of loop early if albinos
+                        break;
                     player.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
+                    run3times++;
                 }
                 Crafting.AnimalCraft.Clear();//clear crafting list
                 Crafting.AnimalCraft.TrimExcess();
 
                 var popup = Instantiate(popUpScreen, GameObject.FindWithTag("Canvas").transform);//make popup screen
                 popup.GetComponent<MoreInfoAnimal>().FillInfo(newAlbino, true);//fill pop up screen
+                run3times = 0;
             }
             player.GetComponent<Player>().SaveGame();
         }

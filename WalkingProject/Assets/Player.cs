@@ -57,13 +57,15 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         path = Application.persistentDataPath + "/SaveFile.json"; //"Macintosh HD\\Users\\abeach\\Desktop\\SaveFile.json";
-        Load();
+        
     }
     void Start()
     {
+        Load();
         //CrateIntoInventory(0);//put crate in 1st slot
-        
-        
+        //Application.targetFrameRate = 60;
+        //QualitySettings.vSyncCount = 0;
+
         timeNow = DateTime.Today;
         if ((timeNow - timeFromStart).Days!=dayCount)//check to see if new day. -reset dailies
         {
@@ -83,7 +85,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* if(Input.GetKeyDown(KeyCode.Space))
+         if(Input.GetKeyDown(KeyCode.Space))
          {
              //gameObject.GetComponent<Crafting>().CraftAnimal(Zoo.ToArray());
              SaveGame();
@@ -108,7 +110,7 @@ public class Player : MonoBehaviour
              CrateIntoInventory(0);
          }
 
-         *///cheats disabled
+         //cheats disabled
 
        
 
@@ -221,81 +223,99 @@ public class Player : MonoBehaviour
         AnimalSaves.Clear();
         AnimalSaves.TrimExcess();
 
+        print("game saved");
 
     }
     public void Load()
     {
-        if (File.Exists(@path))
-        {
-            string loadedString = File.ReadAllText(@path);
-            loadedString=EncryptDecrypt(loadedString, 1337); //comment out for testing -encryption
-            JsonUtility.FromJsonOverwrite(loadedString, PL);
-            username = PL.username;
-            dayCount = PL.dayCount;
-            xp = PL.xp;
-            level = PL.level;
-            Zoo = new List<GameObject>();
-            slots = PL.slots;
-            totaldistance = PL.totaldistance;
-            height = PL.height;
-            gold = PL.gold;
-            dailyDistance = PL.dailyDistance;
-            dailyTime = PL.dailyTime;
-            dailyQuest = PL.dailyQuest;
-            tutorialDone = PL.tutorialDone;
-            //may need to add more properties to load in
-
-            foreach (string name in PL.AnimalSaves)
+        try {
+            if (File.Exists(@path))
             {
-                for (int g = 0; g < AnimalLists.AllAnimals.Count; g++)
+                string loadedString = File.ReadAllText(@path);
+                loadedString = EncryptDecrypt(loadedString, 1337); //comment out for testing -encryption
+                JsonUtility.FromJsonOverwrite(loadedString, PL);
+                username = PL.username;
+                dayCount = PL.dayCount;
+                xp = PL.xp;
+                level = PL.level;
+                Zoo = new List<GameObject>();
+                //slots = PL.slots;
+                totaldistance = PL.totaldistance;
+                height = PL.height;
+                gold = PL.gold;
+                dailyDistance = PL.dailyDistance;
+                dailyTime = PL.dailyTime;
+                dailyQuest = PL.dailyQuest;
+                tutorialDone = PL.tutorialDone;
+                //may need to add more properties to load in
+
+                foreach (string name in PL.AnimalSaves)
                 {
-                    if (name == AnimalLists.AllAnimals[g].name)
-                        Zoo.Add(AnimalLists.AllAnimals[g]);//add animal based on name to zoo
+                   
+                    for (int g = 0; g < AnimalLists.AllAnimals.Count; g++)
+                    {
+                        
+                        if (name == AnimalLists.AllAnimals[g].name)
+                        {
+                            Zoo.Add(AnimalLists.AllAnimals[g]);//add animal based on name to zoo
+                            
+                        }
+                    }
                 }
+                
+                for (int i = 0; i < PL.crateIndex.Count; i++)
+                {
+
+                    slots[i] = Instantiate(crate); //assign blank crate to slots 
+                }
+
+                for (int z = 0; z < PL.ShinyFinder.Count; z++)
+                {
+                    if (PL.ShinyFinder[z])
+                        Zoo[z] = Zoo[z].GetComponent<AnimalStats>().albinoform; //load in albino version
+                }
+
+                for (int j = 0; j < PL.DistanceSaves.Count; j++)
+                {
+
+                    slots[j].GetComponent<Crate>().currentdistance = PL.DistanceSaves[j];//load in distance for crates
+                }
+
+                for (int j = 0; j < PL.crateIndex.Count; j++)
+                {
+                    slots[j].GetComponent<Crate>().index = j;//PL.crateIndex[j];//set index for crates
+                }
+
+                for (int j = 0; j < PL.crateRarity.Count; j++)
+                {
+                    slots[j].GetComponent<Crate>().rarity = (Crate.Rarity)PL.crateRarity[j];//load in rarity for crates
+
+                }
+
+                if (Zoo.Count > 0)
+                {
+                    Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
+                    SelectBuddy(Zoo[PL.selectedAnimalIndex], false);//set buddy and set save to false
+                }
+                
             }
-
-            for (int i = 0; i < PL.crateIndex.Count; i++)
+            else
             {
-
-                slots[i] = Instantiate(crate); //assign blank crate to slots 
-            }
-
-            for (int z = 0; z < PL.ShinyFinder.Count; z++)
-            {
-                if (PL.ShinyFinder[z])
-                    Zoo[z] = Zoo[z].GetComponent<AnimalStats>().albinoform; //load in albino version
-            }
-
-            for (int j = 0; j < PL.DistanceSaves.Count; j++)
-            {
-
-                slots[j].GetComponent<Crate>().currentdistance = PL.DistanceSaves[j];//load in distance for crates
-            }
-
-            for (int j = 0; j < PL.crateIndex.Count; j++)
-            {
-                slots[j].GetComponent<Crate>().index = j;//PL.crateIndex[j];//set index for crates
-            }
-
-            for (int j = 0; j < PL.crateRarity.Count; j++)
-            {
-                slots[j].GetComponent<Crate>().rarity = (Crate.Rarity)PL.crateRarity[j];//load in rarity for crates
-
-            }
-
-            if (Zoo.Count > 0)
-            {
-                Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
-                SelectBuddy(Zoo[PL.selectedAnimalIndex], false);//set buddy and set save to false
+                Instantiate(tutorial);//start tutorial
+                gold = 100;
             }
 
         }
-        else
+        catch (Exception e)
         {
-            Instantiate(tutorial);//start tutorial
-            gold = 100;
-        }
+
+            //Debug.LogException(e, this);
+            //selectedAnimal.name += e.ToString();
+
+        } 
+        
     }
+    
 
     public void CheckLevelUp()
     {
