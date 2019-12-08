@@ -67,6 +67,7 @@
     <Compile Include="Assets\ArrowAnimation.cs" />
     <Compile Include="Assets\Bonuses.cs" />
     <Compile Include="Assets\ButtonAnimation.cs" />
+    <Compile Include="Assets\ConfirmMessage.cs" />
     <Compile Include="Assets\Crafting.cs" />
     <Compile Include="Assets\CraftingOutputButton.cs" />
     <Compile Include="Assets\CraftingSlots.cs" />

@@ -403,6 +403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCost: 40
   crateRarity: 1
+  ConfirmPopup: {fileID: 3396722927125828547, guid: 2e181699ef4af8f40b1ef56bfbd052a7,
+    type: 3}
 --- !u!114 &904577670238705766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,6 +2062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCost: 200
   crateRarity: 3
+  ConfirmPopup: {fileID: 3396722927125828547, guid: 2e181699ef4af8f40b1ef56bfbd052a7,
+    type: 3}
 --- !u!114 &4293048675557725738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2209,6 +2213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCost: 50
   crateRarity: -1
+  ConfirmPopup: {fileID: 3396722927125828547, guid: 2e181699ef4af8f40b1ef56bfbd052a7,
+    type: 3}
 --- !u!114 &7020940004586617476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3236,6 +3242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCost: 500
   crateRarity: 4
+  ConfirmPopup: {fileID: 3396722927125828547, guid: 2e181699ef4af8f40b1ef56bfbd052a7,
+    type: 3}
 --- !u!114 &1730815757574976360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4545,6 +4553,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCost: 70
   crateRarity: 2
+  ConfirmPopup: {fileID: 3396722927125828547, guid: 2e181699ef4af8f40b1ef56bfbd052a7,
+    type: 3}
 --- !u!114 &3710584799203363862
 MonoBehaviour:
   m_ObjectHideFlags: 0

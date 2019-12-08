@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour
     public int goldCost;
     public int crateRarity;
     GameObject player;
+    public GameObject ConfirmPopup;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +27,20 @@ public class Shop : MonoBehaviour
 
         if(player.GetComponent<Player>().gold>=goldCost) //if player has enough gold
         {
-            if (player.GetComponent<Player>().slots[0] == null|| player.GetComponent<Player>().slots[1] == null || player.GetComponent<Player>().slots[2] == null) //check if empty slot before subtracting gold
-                player.GetComponent<Player>().gold -= goldCost;
-            player.GetComponent<Player>().CrateIntoInventory(1, crateRarity);
-            
-            
+
+            var confirm = Instantiate(ConfirmPopup, transform.parent);
+            confirm.GetComponent<ConfirmMessage>().shopItemClicked = gameObject;
+            confirm.GetComponent<ConfirmMessage>().PopupText.text = "Use " + goldCost + " gold in exchange for a crate?";
+
+
         }
     
+    }
+
+    public void Confirmed()
+    {
+        if (player.GetComponent<Player>().slots[0] == null || player.GetComponent<Player>().slots[1] == null || player.GetComponent<Player>().slots[2] == null) //check if empty slot before subtracting gold
+            player.GetComponent<Player>().gold -= goldCost;
+        player.GetComponent<Player>().CrateIntoInventory(1, crateRarity);
     }
 }

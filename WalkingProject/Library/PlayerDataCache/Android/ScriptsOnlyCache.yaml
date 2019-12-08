@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - ArrowAnimation
     - Bonuses
     - ButtonAnimation
+    - ConfirmMessage
     - CraftScreenTitle
     - Crafting
     - CraftingOutputButton
@@ -35,6 +36,8 @@ ScriptsOnlyBuild:
     - crateUI
     - goldUI
     - iapGold
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -56,6 +59,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
     com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -228,7 +232,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11000}
     - Class: 114
-      Script: {instanceID: 13878}
+      Script: {instanceID: 13896}
+    - Class: 114
+      Script: {instanceID: 18194}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -978,7 +984,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: dd728faade8aa51b50963e12489ff2c8
+      Hash: c8e29f88ac454fde6936ffdb9c05cc20
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shop
@@ -1282,7 +1288,13 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: 
     className: IAPDemo
+  - hash:
+      serializedVersion: 2
+      Hash: 799938a4e5032697012aac0b2c5bd220
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ConfirmMessage
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alex/Desktop/CCTurkeyFIX.apk
+  playerPath: C:/Users/Alex/Desktop/CCReindeer.apk

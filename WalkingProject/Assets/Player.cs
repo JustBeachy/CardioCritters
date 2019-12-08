@@ -88,26 +88,26 @@ public class Player : MonoBehaviour
          if(Input.GetKeyDown(KeyCode.Space))
          {
              //gameObject.GetComponent<Crafting>().CraftAnimal(Zoo.ToArray());
-             SaveGame();
+           //  SaveGame();
          }
          if (Input.GetKeyDown(KeyCode.L))
          {
              //LoadGame.Load();
-             Load();//LoadGame.PL);
+            // Load();//LoadGame.PL);
          }
          if (Input.GetKeyDown(KeyCode.C))
          {
 
 
 
-                ApplyDistance(100);//give distance to crates
+              //  ApplyDistance(100);//give distance to crates
 
 
 
          }
          if (Input.GetKeyDown(KeyCode.Escape))
          {
-             CrateIntoInventory(0);
+            // CrateIntoInventory(0);
          }
 
          //cheats disabled

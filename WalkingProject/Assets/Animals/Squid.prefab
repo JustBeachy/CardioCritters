@@ -96,8 +96,8 @@ MonoBehaviour:
   rarity: 2
   BonusText: 15% increased chance at finding rarer crates
   Albino: 0
-  bonus: 04000000
-  bonusAmount: 1.15
+  bonus: 00000000
+  bonusAmount: 15
   isActive: 0
   index: 175
   albinoIndex: 2

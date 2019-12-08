@@ -3802,7 +3802,7 @@ PrefabInstance:
     - target: {fileID: 6696748421752580488, guid: f0ace63e2729d49e8b632751b76950c9,
         type: 3}
       propertyPath: lepics.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6696748421752580488, guid: f0ace63e2729d49e8b632751b76950c9,
         type: 3}
@@ -4113,6 +4113,12 @@ PrefabInstance:
       propertyPath: lrares.Array.data[15]
       value: 
       objectReference: {fileID: 354465606796240242, guid: 22eba65f701ded448acf5614a506d37e,
+        type: 3}
+    - target: {fileID: 6696748421752580488, guid: f0ace63e2729d49e8b632751b76950c9,
+        type: 3}
+      propertyPath: lepics.Array.data[10]
+      value: 
+      objectReference: {fileID: 2111294401156159108, guid: 71f70bed0f0e38a499bbe1770e4e4e70,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ace63e2729d49e8b632751b76950c9, type: 3}
