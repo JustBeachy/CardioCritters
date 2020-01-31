@@ -45,13 +45,34 @@ public class CurrentAnimalUI : MonoBehaviour
         AnimalName.text = player.GetComponent<Player>().selectedAnimal.name;
         BonusText.text = player.GetComponent<Player>().selectedAnimal.GetComponent<AnimalStats>().BonusText;
 
-        if(AnimalModel.GetComponent<AnimalStats>().Albino)
+        if(AnimalModel.GetComponent<AnimalStats>().Albino) //double albino text
         {
             albinoBonusText.text = "Albino: Extra "+BonusText.text;
         }
         else
         {
             albinoBonusText.text = "";
+        }
+
+        if (AnimalModel.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Common) //color text
+        {
+
+            AnimalName.color = Color.white;
+        }
+        if (AnimalModel.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Rare)
+        {
+
+            AnimalName.color = Color.blue;
+        }
+        if (AnimalModel.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Epic)
+        {
+
+            AnimalName.color = Color.magenta;
+        }
+        if (AnimalModel.GetComponent<AnimalStats>().rarity == AnimalStats.Rarity.Legendary)
+        {
+
+            AnimalName.color = Color.yellow;
         }
     }
 

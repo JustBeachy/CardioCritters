@@ -16,6 +16,7 @@ public class SimpleScreenStateDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         foreach (ScreenState.Screen g in stateToStayIn)
         {
             if (ScreenState.currentScreen != g)

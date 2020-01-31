@@ -18,6 +18,8 @@ public class InventoryGUI : MonoBehaviour
     public string rarity;
     bool isClickedOn = false;
     public Text albinoText;
+    GameObject scrollView;
+    int dexcount = 0;
    
 
     
@@ -25,8 +27,8 @@ public class InventoryGUI : MonoBehaviour
     void Awake()
     {
         player = GameObject.FindWithTag("Player");
+        scrollView = GameObject.FindWithTag("ScrollView");
 
-        
     }
 
     // Update is called once per frame
@@ -134,6 +136,8 @@ public class InventoryGUI : MonoBehaviour
 
         if(zooList!=null)
         {
+            dexcount = 0; //reset dex counter
+            string nameCompare = "";
             for (int i = 0; i < AnimalLists.AllAnimals.Count; i++) //loop through animal dictionary
             {
 
@@ -145,6 +149,7 @@ public class InventoryGUI : MonoBehaviour
                         if (sameAnim == AnimalLists.AllAnimals[i]||
                             sameAnim == AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform)//if animal is in dictionary and is not the pet
                         {
+                            
                             if (ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal && sameAnim.GetComponent<AnimalStats>().Albino == true) //skip if albino form in albino crafting
                                 continue;
                             var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
@@ -161,6 +166,11 @@ public class InventoryGUI : MonoBehaviour
                                 toList.GetComponent<InventoryGUI>().albinoText.text = "Albino";
                             }
                             
+                            if(nameCompare != sameAnim.name && sameAnim.GetComponent<AnimalStats>().Albino == false) //if new name and not albino, add 1 to dex counter
+                            {
+                                nameCompare = sameAnim.name;
+                                dexcount++;
+                            }
                             
 
                         }
@@ -168,6 +178,7 @@ public class InventoryGUI : MonoBehaviour
                     }
                     parser = 0;
                 }
+                scrollView.GetComponent<LoadInventory>().DexCount.text = dexcount.ToString() + " out of " + AnimalLists.AllAnimals.Count + "\n Animals collected.";
                /* else
                 {
                     if (showUnknown&&ScreenState.currentScreen==ScreenState.Screen.AnimalSelect)

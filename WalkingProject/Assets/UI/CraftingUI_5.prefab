@@ -271,6 +271,8 @@ MonoBehaviour:
   amountToCraft: 5
   popUpScreen: {fileID: 6327539344021015590, guid: 678ef54857a0b4228aee8fa526bb8576,
     type: 3}
+  ScrollView: {fileID: 0}
+  TutorialManager: {fileID: 0}
 --- !u!1 &4893361194581196878
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +694,7 @@ GameObject:
   - component: {fileID: 4893361195803062859}
   - component: {fileID: 4385506831601511035}
   - component: {fileID: 6074382644017403827}
+  - component: {fileID: 4290276580881602464}
   m_Layer: 0
   m_Name: CraftingUI_5
   m_TagString: Untagged
@@ -755,6 +758,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XPtxt: {fileID: 7272736501008320773}
   AmountToDisplay: 500
+--- !u!114 &4290276580881602464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893361195803062858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e13c60723aae47eda5a7004bc10641a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toDestroy: {fileID: 4893361195803062858}
 --- !u!1 &4893361195848857354
 GameObject:
   m_ObjectHideFlags: 0

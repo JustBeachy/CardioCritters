@@ -5078,6 +5078,6 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: 'All profits go directly to #teamtrees.
+  m_Text: '50% of profits go directly to #teamtrees.
 
-    Let''s plant 20 million trees by 2020!'
+    $1.00 = 1 tree planted.'

@@ -206,35 +206,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10370}
     - Class: 114
-      Script: {instanceID: 10514}
+      Script: {instanceID: 10432}
     - Class: 114
-      Script: {instanceID: 10534}
+      Script: {instanceID: 10516}
     - Class: 114
-      Script: {instanceID: 10684}
+      Script: {instanceID: 10536}
     - Class: 114
-      Script: {instanceID: 10786}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 10822}
+      Script: {instanceID: 10788}
     - Class: 114
-      Script: {instanceID: 10872}
+      Script: {instanceID: 10824}
     - Class: 114
-      Script: {instanceID: 10886}
+      Script: {instanceID: 10874}
     - Class: 114
-      Script: {instanceID: 10914}
+      Script: {instanceID: 10888}
     - Class: 114
-      Script: {instanceID: 10922}
+      Script: {instanceID: 10916}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10924}
     - Class: 114
-      Script: {instanceID: 10934}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 10992}
+      Script: {instanceID: 10936}
     - Class: 114
-      Script: {instanceID: 11000}
+      Script: {instanceID: 10994}
     - Class: 114
-      Script: {instanceID: 13896}
+      Script: {instanceID: 11002}
     - Class: 114
-      Script: {instanceID: 18194}
+      Script: {instanceID: 13900}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1038,7 +1038,7 @@ ScriptsOnlyBuild:
     className: Tutorial
   - hash:
       serializedVersion: 2
-      Hash: c1038f86f51f89dabbd14f12cfda87c8
+      Hash: d7041386eccdd97baed6ce585e1b60e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LoadInventory
@@ -1054,6 +1054,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 799938a4e5032697012aac0b2c5bd220
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ConfirmMessage
   - hash:
       serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
@@ -1288,13 +1294,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: 
     className: IAPDemo
-  - hash:
-      serializedVersion: 2
-      Hash: 799938a4e5032697012aac0b2c5bd220
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ConfirmMessage
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alex/Desktop/CCReindeer.apk
+  playerPath: C:/Users/Alex/Desktop/CCApple.apk
