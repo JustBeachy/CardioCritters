@@ -101,7 +101,7 @@ MonoBehaviour:
   Albino: 0
   bonus: 0100000004000000
   bonusAmount: 1.13
-  isActive: 1
+  isActive: 0
   index: 22
   albinoIndex: 5
   albinoform: {fileID: 2111294401156159108, guid: a6b033c8305d55543b5ebd84cd5b3e39,

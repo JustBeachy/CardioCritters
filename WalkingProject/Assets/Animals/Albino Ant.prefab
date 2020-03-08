@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3144409780369482725}
   - component: {fileID: 2807177727150816309}
   m_Layer: 0
-  m_Name: Ant 1
+  m_Name: Albino Ant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

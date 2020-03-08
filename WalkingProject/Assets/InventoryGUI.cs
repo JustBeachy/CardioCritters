@@ -146,8 +146,8 @@ public class InventoryGUI : MonoBehaviour
                 {
                     foreach (GameObject sameAnim in zooList) //loop through inventory
                     {
-                        if (sameAnim == AnimalLists.AllAnimals[i]||
-                            sameAnim == AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform)//if animal is in dictionary and is not the pet
+                        if ((sameAnim == AnimalLists.AllAnimals[i]||
+                            sameAnim == AnimalLists.AllAnimals[i].GetComponent<AnimalStats>().albinoform))//&&!sameAnim.GetComponent<AnimalStats>().isActive)//if animal is in dictionary and is not the pet
                         {
                             
                             if (ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal && sameAnim.GetComponent<AnimalStats>().Albino == true) //skip if albino form in albino crafting
@@ -178,7 +178,7 @@ public class InventoryGUI : MonoBehaviour
                     }
                     parser = 0;
                 }
-                scrollView.GetComponent<LoadInventory>().DexCount.text = dexcount.ToString() + " out of " + AnimalLists.AllAnimals.Count + "\n Animals collected.";
+                scrollView.GetComponent<LoadInventory>().DexCount.text = dexcount.ToString() + " out of " + AnimalLists.AllAnimals.Count + "\n Critters collected.";
                /* else
                 {
                     if (showUnknown&&ScreenState.currentScreen==ScreenState.Screen.AnimalSelect)
