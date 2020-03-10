@@ -95,7 +95,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 3aa363bf8b2cce2428962516bc8ed387, type: 3}
   rarity: 0
   BonusText: This critter counts as 2 materials during crafting
-  Albino: 0
+  Albino: 1
   bonus: 05000000
   bonusAmount: 0
   isActive: 0

@@ -122,7 +122,7 @@ public class InventoryGUI : MonoBehaviour
 
     }
 
-    public void LoadInventory()
+    public void LoadInventory(bool filter = false, int filterType=0)
     {
         foreach (GameObject a in player.GetComponent<Player>().Zoo)
         {
@@ -152,6 +152,9 @@ public class InventoryGUI : MonoBehaviour
                             
                             if (ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal && sameAnim.GetComponent<AnimalStats>().Albino == true) //skip if albino form in albino crafting
                                 continue;
+                            if (filter&&(int)sameAnim.GetComponent<AnimalStats>().bonus[0]!=filterType) //skip if doesn't match filter type
+                                continue;
+
                             var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display animal
                             toList.GetComponent<InventoryGUI>().animalTiedToIcon = sameAnim; //tie animal to icon for sorting and clicking
                             toList.GetComponent<InventoryGUI>().rarity = SetRarityText(toList); //set raarity text
@@ -178,6 +181,7 @@ public class InventoryGUI : MonoBehaviour
                     }
                     parser = 0;
                 }
+                if(!filter)//if filter is off, write dex count
                 scrollView.GetComponent<LoadInventory>().DexCount.text = dexcount.ToString() + " out of " + AnimalLists.AllAnimals.Count + "\n Critters collected.";
                /* else
                 {

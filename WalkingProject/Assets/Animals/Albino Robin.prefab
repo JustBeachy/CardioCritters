@@ -97,7 +97,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 64b4970802479274a8b69ba9ee49e495, type: 3}
   rarity: 0
   BonusText: +10% Gold and XP
-  Albino: 0
+  Albino: 1
   bonus: 0200000003000000
   bonusAmount: 1.1
   isActive: 0

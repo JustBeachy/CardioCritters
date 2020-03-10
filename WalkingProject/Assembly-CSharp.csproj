@@ -78,6 +78,7 @@
     <Compile Include="Assets\CurrentAnimalUI.cs" />
     <Compile Include="Assets\Daily30.cs" />
     <Compile Include="Assets\DistanceCalc.cs" />
+    <Compile Include="Assets\FilterInventory.cs" />
     <Compile Include="Assets\FitnessStats.cs" />
     <Compile Include="Assets\GoldText.cs" />
     <Compile Include="Assets\goldUI.cs" />

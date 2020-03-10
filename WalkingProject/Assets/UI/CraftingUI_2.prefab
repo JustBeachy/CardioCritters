@@ -337,6 +337,7 @@ MonoBehaviour:
   popUpScreen: {fileID: 6327539344021015590, guid: 678ef54857a0b4228aee8fa526bb8576,
     type: 3}
   ScrollView: {fileID: 0}
+  TutorialManager: {fileID: 0}
 --- !u!114 &1245092666415987014
 MonoBehaviour:
   m_ObjectHideFlags: 0

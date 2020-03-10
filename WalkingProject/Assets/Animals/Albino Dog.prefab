@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6109893556803620197}
   - component: {fileID: 1246806312}
   m_Layer: 0
-  m_Name: Dog 1
+  m_Name: Albino Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   BonusText: 5% reduced distance needed to open crates
   Albino: 1
   bonus: 01000000
-  bonusAmount: 1.1999998
+  bonusAmount: 1.05
   isActive: 0
   index: 2
   albinoIndex: 3
