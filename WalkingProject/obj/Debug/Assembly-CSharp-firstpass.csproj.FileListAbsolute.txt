@@ -291,3 +291,5 @@ B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp-firstpas
 B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp-firstpass.csproj.CopyComplete
 B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp-firstpass.dll
 B:\Games\CardioCritters-master\WalkingProject\obj\Debug\Assembly-CSharp-firstpass.pdb
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\UnityEngine.Advertisements.Editor.dll
+B:\Games\CardioCritters-master\WalkingProject\Temp\bin\Debug\UnityEngine.Monetization.Editor.dll

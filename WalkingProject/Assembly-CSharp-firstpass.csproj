@@ -315,6 +315,12 @@
     <Reference Include="winrt">
       <HintPath>B:/Games/CardioCritters-master/WalkingProject/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>B:/Games/CardioCritters-master/WalkingProject/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization.Editor">
+      <HintPath>B:/Games/CardioCritters-master/WalkingProject/Assets/UnityAds/UnityEngine.Monetization.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>B:/Games/CardioCritters-master/WalkingProject/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>

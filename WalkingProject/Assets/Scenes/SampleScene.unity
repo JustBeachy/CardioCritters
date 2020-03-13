@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goldtext: {fileID: 572403240}
-  AmountToDisplay: 10
+  AmountToDisplay: 20
 --- !u!1 &58368739
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goldtext: {fileID: 769726185}
-  AmountToDisplay: 10
+  AmountToDisplay: 20
 --- !u!1 &256647808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 20
 --- !u!222 &769726186
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2842,7 +2842,7 @@ PrefabInstance:
     - target: {fileID: 1216802483053546554, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
       propertyPath: m_Text
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1216802483630433624, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
@@ -2954,6 +2954,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2138915788}
+    - target: {fileID: 4147725439570989998, guid: 4b1f852356f48b44bb588a803655e54c,
+        type: 3}
+      propertyPath: RewardPopup
+      value: 
+      objectReference: {fileID: 1807121603183430391, guid: 8c94a81948d54e2429aafe18381b3633,
+        type: 3}
     - target: {fileID: 365366451068685902, guid: 4b1f852356f48b44bb588a803655e54c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3787,6 +3793,12 @@ PrefabInstance:
       propertyPath: selectedAnimal
       value: 
       objectReference: {fileID: 738258843966275153, guid: bb1b5f4d9da50a243bb4ed3ed5b572b8,
+        type: 3}
+    - target: {fileID: 6696748421752580502, guid: f0ace63e2729d49e8b632751b76950c9,
+        type: 3}
+      propertyPath: levelUpScreen
+      value: 
+      objectReference: {fileID: 1807121603183430391, guid: 22bb57af5085e2e4597ad854e2eaa515,
         type: 3}
     - target: {fileID: 6696748421752580503, guid: f0ace63e2729d49e8b632751b76950c9,
         type: 3}

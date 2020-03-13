@@ -84,6 +84,7 @@
     <Compile Include="Assets\goldUI.cs" />
     <Compile Include="Assets\iapGold.cs" />
     <Compile Include="Assets\InventoryGUI.cs" />
+    <Compile Include="Assets\LevelText.cs" />
     <Compile Include="Assets\LoadInventory.cs" />
     <Compile Include="Assets\MoreInfoAnimal.cs" />
     <Compile Include="Assets\Player.cs" />
@@ -96,7 +97,9 @@
     <Compile Include="Assets\TutorialPickOne.cs" />
     <Compile Include="Assets\UISimpleDestroy.cs" />
     <Compile Include="Assets\UIxpBar.cs" />
+    <Compile Include="Assets\VideoAd.cs" />
     <Compile Include="Assets\XPtext.cs" />
+    <None Include="Assets\UnityAds\link.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>B:/Games/CardioCritters-master/WalkingProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -339,6 +342,12 @@
     </Reference>
     <Reference Include="winrt">
       <HintPath>B:/Games/CardioCritters-master/WalkingProject/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>B:/Games/CardioCritters-master/WalkingProject/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization.Editor">
+      <HintPath>B:/Games/CardioCritters-master/WalkingProject/Assets/UnityAds/UnityEngine.Monetization.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>B:/Games/CardioCritters-master/WalkingProject/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>

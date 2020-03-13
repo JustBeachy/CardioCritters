@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Text;
 
+
 [Serializable]
 public class Player : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Player : MonoBehaviour
     //steps are .4 height. 
     //use FileInfo for key to encryption
 
-
+        
     public GameObject crate;
     public string username = "";
     public GameObject selectedAnimal;
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
     public GameObject CrateSlotsFullMessage;
     public bool tutorialDone = false;
     public GameObject tutorial;
+    public GameObject levelUpScreen;
 
     string path; 
 
@@ -100,14 +102,14 @@ public class Player : MonoBehaviour
 
 
 
-              //  ApplyDistance(100);//give distance to crates
+                ApplyDistance(100);//give distance to crates
 
 
 
          }
          if (Input.GetKeyDown(KeyCode.Escape))
          {
-            // CrateIntoInventory(0);
+             CrateIntoInventory(0);
          }
 
          //cheats disabled
@@ -323,9 +325,11 @@ public class Player : MonoBehaviour
 
         if(prevLevel<level)
         {
-            gold += Mathf.CeilToInt( 10*Bonuses.goldMultiplier);
+            gold += Mathf.CeilToInt( 20*Bonuses.goldMultiplier);
             prevLevel = level;
             SaveGame();
+            Instantiate(levelUpScreen, GameObject.FindGameObjectWithTag("Canvas").transform);
+            
         }
     }
 

@@ -7,6 +7,7 @@ public class Daily30 : MonoBehaviour
     public Image BarFill;
     public Text CurrentTime;
     public GameObject player;
+    public GameObject RewardPopup;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +39,11 @@ public class Daily30 : MonoBehaviour
             BarFill.fillAmount = 1;
             CurrentTime.text = "Complete";
             //CurrentTime.transform.localPosition = new Vector2(120, 190);
-            if (player.GetComponent<Player>().dailyQuest == false)
+            if (player.GetComponent<Player>().dailyQuest == false)//if daily quest isnt checked off as "done"
             {
+                Instantiate(RewardPopup, GameObject.FindGameObjectWithTag("Canvas").transform);
                 player.GetComponent<Player>().dailyQuest = true;
-                player.GetComponent<Player>().gold += Mathf.CeilToInt(10 * Bonuses.goldMultiplier);
+                player.GetComponent<Player>().gold += Mathf.CeilToInt(20 * Bonuses.goldMultiplier);
                 player.GetComponent<Player>().SaveGame();
             }
            
