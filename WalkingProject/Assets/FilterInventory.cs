@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FilterInventory : MonoBehaviour
 {
-    public enum FilterType { RarerCrates, FasterCrates, ExtraGold, MoreXP, AlbinoChance, Crafting2x, None }
+    public enum FilterType { RarerCrates, FasterCrates, ExtraGold, MoreXP, AlbinoChance, Crafting2x, ShowMissing}
     public FilterType thisFilter;
     bool dontclearfilter = false;
     
@@ -63,6 +63,23 @@ public class FilterInventory : MonoBehaviour
         {
             if (i == inventoryList.Length - 1)
                 inventoryList[i].GetComponent<InventoryGUI>().LoadInventory(dontclearfilter,(int)thisFilter); //destroy all but 1, then re-create inventory with filter
+            else
+                Destroy(inventoryList[i]);
+        }
+    }
+
+    public void ShowMissing()
+    {
+        GameObject[] inventoryList = GameObject.FindGameObjectsWithTag("ListItem");
+
+
+        for (int i = 0; i < inventoryList.Length; i++)
+        {
+            if (i == inventoryList.Length - 1)
+            {
+                inventoryList[i].GetComponent<InventoryGUI>().showUnknown = !inventoryList[i].GetComponent<InventoryGUI>().showUnknown; //toggle showing missing
+                inventoryList[i].GetComponent<InventoryGUI>().LoadInventory(); //destroy all but 1, then re-create inventory with filter
+            }
             else
                 Destroy(inventoryList[i]);
         }

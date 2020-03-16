@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
     public bool tutorialDone = false;
     public GameObject tutorial;
     public GameObject levelUpScreen;
+    public GameObject DailyLoginReward;
 
     string path; 
 
@@ -64,9 +65,12 @@ public class Player : MonoBehaviour
     void Start()
     {
         Load();
-        //CrateIntoInventory(0);//put crate in 1st slot
+        
         //Application.targetFrameRate = 60;
         //QualitySettings.vSyncCount = 0;
+
+        level = ((int)xp / 1000) + 1;
+        prevLevel = level;
 
         timeNow = DateTime.Today;
         if ((timeNow - timeFromStart).Days!=dayCount)//check to see if new day. -reset dailies
@@ -74,14 +78,13 @@ public class Player : MonoBehaviour
             dailyDistance = 0;
             dailyTime = 0;
             dailyQuest = false;
-            
+            Instantiate(DailyLoginReward, GameObject.FindGameObjectWithTag("Canvas").transform);
         }
 
         
         
 
-        level = ((int)xp / 1000) + 1;
-        prevLevel = level;
+        
     }
 
     // Update is called once per frame

@@ -33,10 +33,12 @@ public class CraftingOutputButton : MonoBehaviour
         else
         {
             cancraft = false;
-            click2craft.text = "?";
-            click2craft.color = Color.white;
-            click2craft.fontSize = 70;
+            //click2craft.text = "?";
+            //click2craft.color = Color.white;
+            //click2craft.fontSize = 70;
         }
+
+        
     }
 
     public void CraftCrate()

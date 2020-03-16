@@ -23,7 +23,7 @@ public class MoreInfoAnimal : MonoBehaviour
     public Image Fade;
     GameObject TutorialManager;
     public Text AlbinoText;
-    
+    GameObject cleanupHolder;
    
     // Start is called before the first frame update
     void Start()
@@ -34,11 +34,14 @@ public class MoreInfoAnimal : MonoBehaviour
     {
         Destroy(NewCamera);
         Destroy(RT);
+        Destroy(cleanupHolder);
         //Destroy(animalPopup); deletes crates
     }
     public void CloseWindow()
     {
+        DestroyCamera();
         Destroy(gameObject);
+
     }
     public void CrateOpenAnimation(GameObject ob) //used when crate is about to be opened
     {
@@ -54,7 +57,7 @@ public class MoreInfoAnimal : MonoBehaviour
         var camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), ob.transform.rotation); //spawn new pet to camera
         camIt.tag = "Animate";
         Player.CameraCount++;
-
+        cleanupHolder = camIt;//store for deleting later
         Title.text = "The crate is opening! Tap to see what's inside!";
     }
     public void FillInfo(GameObject ob, bool isAnimal)
@@ -78,6 +81,7 @@ public class MoreInfoAnimal : MonoBehaviour
         var camIt = Instantiate(ob, new Vector3(-900 * Player.CameraCount, 900, 1200), ob.transform.rotation); //spawn new pet to camera
         camIt.tag = "PopUp";
         Player.CameraCount++;
+        cleanupHolder = camIt;//store for deleting later
 
             if (isAnimal)
             {

@@ -17,6 +17,7 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
     bool loaded = false;
     float timeOut = 0;
     bool finished = false;
+    public GameObject FullCratesScreen;
 
     private void Awake()
     {
@@ -40,7 +41,8 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
         if (myButton)
         {
             myButton.onClick.AddListener(InitializeAds);
-            myButton.onClick.AddListener(ShowRewardedVideo);
+            // myButton.onClick.AddListener(ShowRewardedVideo);
+            myButton.onClick.AddListener(PlayMultipleAds);
         }
 
         // Initialize the Ads listener and service:
@@ -49,8 +51,12 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
 
     void InitializeAds()
     {
-       
-            int cratecount = 0;
+
+        timeOut = 0;
+        finished = false;
+        loaded = false;//reset variables so ads can be viewed more than once
+
+        int cratecount = 0;
             for (int i = 0; i < 3; i++)
             {
                 if (Player.GetComponent<Player>().slots[i] != null)
@@ -59,15 +65,18 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
             if (crateReward&&cratecount == 3)
             {
                 myButton.interactable = false;
-                adText.text = "Crate Slots Full";
-                adText.fontSize = 24;
-                adText.color = Color.red;
+            Instantiate(FullCratesScreen, GameObject.FindGameObjectWithTag("Canvas").transform);
             }
             else
             {
-            Advertisement.AddListener(this);
-            Advertisement.Initialize(gameId);
+            if (!Advertisement.isInitialized) //if not initialized
+            
+                Advertisement.Initialize(gameId);
 
+                Advertisement.AddListener(this);
+            
+               
+            
             ShowRewardedVideo();
             }
             
@@ -106,7 +115,7 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
             adText.text = "Completed";
             adText.color = Color.gray;
 
-           
+            
             if(!finished)
             Advertisement.Show(myPlacementId);//show ad
             
@@ -132,6 +141,8 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
             }
 
             Player.GetComponent<Player>().SaveGame();
+            myButton.onClick.RemoveAllListeners();
+            Advertisement.RemoveListener(this);
             Destroy(screenToClose);
         }
         else if (showResult == ShowResult.Skipped)
@@ -156,5 +167,25 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsDidStart(string placementId)
     {
         // Optional actions to take when the end-users triggers an ad.
+    }
+
+   public void PlayMultipleAds()
+    {
+        int cratecount2 = 0;
+        for (int i = 0; i < 3; i++)
+        {
+            if (Player.GetComponent<Player>().slots[i] != null)
+                cratecount2++;
+        }
+        if (crateReward && cratecount2 == 3)
+        {
+            myButton.interactable = false;
+            
+        }
+        else if (Advertisement.IsReady(myPlacementId))
+        {
+            Advertisement.Show(myPlacementId);
+        }
+        
     }
 }

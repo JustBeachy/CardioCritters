@@ -13,7 +13,7 @@ public class InventoryGUI : MonoBehaviour
     public Sprite locked;
     public bool hide = false;
     public GameObject animalTiedToIcon;
-    public bool showUnknown = true;
+    public bool showUnknown = false;
     public GameObject SelectionScreen;
     public string rarity;
     bool isClickedOn = false;
@@ -83,12 +83,6 @@ public class InventoryGUI : MonoBehaviour
         }
 
         return Color.red;
-    }
-
-    public void ShowUnknown()
-    {
-        showUnknown = !showUnknown;
-        LoadInventory();
     }
 
 
@@ -181,21 +175,22 @@ public class InventoryGUI : MonoBehaviour
                     }
                     parser = 0;
                 }
-                if(!filter)//if filter is off, write dex count
-                scrollView.GetComponent<LoadInventory>().DexCount.text = dexcount.ToString() + " out of " + AnimalLists.AllAnimals.Count + "\n Critters collected.";
-               /* else
-                {
-                    if (showUnknown&&ScreenState.currentScreen==ScreenState.Screen.AnimalSelect)
-                    {
-                        var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display locked animal
-                        toList.GetComponent<Image>().sprite = locked;
-                        AnimalLists.iconList.Add(toList);//add to a list for sorting
-                        toList.GetComponentInChildren<Text>().text = "Unknown";
-                        toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]);
-                        toList.transform.parent = transform.parent;
-                    }
 
-                }*/
+                 else
+                 {
+                     if (showUnknown&&ScreenState.currentScreen==ScreenState.Screen.AnimalSelect)
+                     {
+                         var toList = Instantiate(listItem, new Vector2(1f, 1f), Quaternion.identity); //display locked animal
+                         toList.GetComponent<Image>().sprite = locked;
+                         AnimalLists.iconList.Add(toList);//add to a list for sorting
+                         toList.GetComponentInChildren<Text>().text = "Unknown";
+                         toList.GetComponentInChildren<Text>().color = SetColor(AnimalLists.AllAnimals[i]);
+                         toList.transform.parent = transform.parent;
+                     }
+
+                 }
+                if (!filter)//if filter is off, write dex count
+                    scrollView.GetComponent<LoadInventory>().DexCount.text = dexcount.ToString() + " out of " + AnimalLists.AllAnimals.Count + "\n Critters collected.";
             }
 
         }

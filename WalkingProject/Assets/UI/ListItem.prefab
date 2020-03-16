@@ -193,7 +193,7 @@ MonoBehaviour:
   locked: {fileID: 21300000, guid: 4a52282cd7502452c8ae32b1e51c0289, type: 3}
   hide: 0
   animalTiedToIcon: {fileID: 0}
-  showUnknown: 1
+  showUnknown: 0
   SelectionScreen: {fileID: 3537822298409845924, guid: 14a6e0a4af2064d06a7fb8efd7c6a4e6,
     type: 3}
   rarity: 

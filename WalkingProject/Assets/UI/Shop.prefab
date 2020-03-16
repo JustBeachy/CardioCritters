@@ -393,10 +393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97b6672bd742f44b9146c5b5b077d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenToClose: {fileID: 0}
+  screenToClose: {fileID: 1867055257137210482}
   adText: {fileID: 8077111621096400640}
   myPlacementId: rewardedVideo
   crateReward: 1
+  FullCratesScreen: {fileID: 3396722927125828547, guid: f67dea64e36096645a815c4dbc740f4e,
+    type: 3}
 --- !u!1 &1497620786555390958
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,7 +4694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6367924, g: 1, b: 0.9968887, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
