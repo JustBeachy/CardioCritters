@@ -26,7 +26,7 @@ public class CraftingOutputButton : MonoBehaviour
         if (Crafting.AnimalCraft.Count == amountToCraft)
         {
             cancraft = true;
-            click2craft.text = "CLICK TO CRAFT!";
+            click2craft.text = "TAP TO CRAFT!";
             click2craft.color = Color.cyan;
             click2craft.fontSize = 20;
         }

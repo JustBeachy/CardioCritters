@@ -10,14 +10,10 @@ public class FitnessStats : MonoBehaviour
 {
     string path;
     public List<float> disStats;
+    public List<float> timeStats;
+    DateTime timeFromStart;
+    DateTime today;
     GameObject player;
-    public GameObject bar;
-    bool isLoaded = false;
-    public Text topDistance;
-    public Text midDistance;
-    public Text barNum;
-    GameObject canvas;
-
 
 
     public static FitnessStats PL = new FitnessStats();
@@ -26,29 +22,33 @@ public class FitnessStats : MonoBehaviour
     {
         path = Application.persistentDataPath + "/FitnessStats.json";
         player = GameObject.FindGameObjectWithTag("Player");
-        canvas = GameObject.FindGameObjectWithTag("Canvas");
+     
+        timeFromStart = new DateTime(2020, 3, 17);
+        today = DateTime.Today;
+
+        
+        
+        
+        
     }
 
-    public void SaveStats()
+    public void SaveStats(bool firstTime = false)
     {
-        if (!isLoaded)
+       /* if(firstTime)
         {
-            LoadStats();
-            isLoaded = true;
+            disStats.Add(0);
+            timeStats.Add(0);
         }
-
-
-        DateTime timeNow = DateTime.Today;
-        while(disStats.Count-1<(timeNow-player.GetComponent<Player>().AccessStart).Days) 
+        */
+        
+        while((today-timeFromStart.AddDays(disStats.Count-1)).Days!=0) //set missing days to 0
         {
                 disStats.Add(0); //fill in missed days
-
+                timeStats.Add(0);
+            
         }
-        disStats[disStats.Count-1]=player.GetComponent<Player>().dailyDistance; //set daily distance
-
-
-
-
+        disStats[disStats.Count-1]=(float)Math.Round(player.GetComponent<Player>().dailyDistance,2); //set daily distance
+        timeStats[timeStats.Count-1] = player.GetComponent<Player>().dailyTime; //set daily time
 
         FitnessStats saveFile = gameObject.GetComponent<FitnessStats>();
        
@@ -62,30 +62,26 @@ public class FitnessStats : MonoBehaviour
     {
 
         if (File.Exists(@path))
-        { 
+        {
             string loadedString = File.ReadAllText(@path);
             JsonUtility.FromJsonOverwrite(loadedString, PL);
             disStats = PL.disStats;
+            timeStats = PL.timeStats;
+            
         }
+        else
+            SaveStats(true);
         
       
 
 
     }
 
-    public void DrawBars()
-    {
-        for (int x = 0; x < 7; x++)
-        {
-            
-            var makebar = Instantiate(bar, canvas.transform);
-            makebar.transform.localPosition += new Vector3(50, 0, 0);
-        }
-    }
+   
 
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 }

@@ -65,6 +65,7 @@
     <Compile Include="Assets\AnimalLists.cs" />
     <Compile Include="Assets\AnimalStats.cs" />
     <Compile Include="Assets\ArrowAnimation.cs" />
+    <Compile Include="Assets\BarGraph.cs" />
     <Compile Include="Assets\Bonuses.cs" />
     <Compile Include="Assets\ButtonAnimation.cs" />
     <Compile Include="Assets\ConfirmMessage.cs" />

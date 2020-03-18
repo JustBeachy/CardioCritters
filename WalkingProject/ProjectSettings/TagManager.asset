@@ -15,6 +15,7 @@ TagManager:
   - Animate
   - TM
   - Filter
+  - Bar
   layers:
   - Default
   - TransparentFX

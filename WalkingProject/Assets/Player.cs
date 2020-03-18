@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
     public int dayCount;
     public DateTime timeNow;
     DateTime timeFromStart=new DateTime(2018,11,11);
-    public DateTime AccessStart;
     public float cooldown = 0;
     public float currentCooldown = 0;
     public List<int> crateIndex = new List<int>();
@@ -78,6 +77,7 @@ public class Player : MonoBehaviour
             dailyDistance = 0;
             dailyTime = 0;
             dailyQuest = false;
+            if(tutorialDone) //make daily login bonus popup
             Instantiate(DailyLoginReward, GameObject.FindGameObjectWithTag("Canvas").transform);
         }
 
@@ -228,6 +228,7 @@ public class Player : MonoBehaviour
         AnimalSaves.Clear();
         AnimalSaves.TrimExcess();
 
+        GetComponent<FitnessStats>().SaveStats(); //save fitness stats
         print("game saved");
 
     }
@@ -302,6 +303,8 @@ public class Player : MonoBehaviour
                     Zoo[PL.selectedAnimalIndex].GetComponent<AnimalStats>().isActive = true; //load current animal
                     SelectBuddy(Zoo[PL.selectedAnimalIndex], false);//set buddy and set save to false
                 }
+
+                GetComponent<FitnessStats>().LoadStats(); //load fitness stats
                 
             }
             else
