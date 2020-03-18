@@ -26,7 +26,7 @@ public class FitnessStats : MonoBehaviour
         timeFromStart = new DateTime(2020, 3, 17);
         today = DateTime.Today;
 
-        
+        LoadStats();
         
         
         

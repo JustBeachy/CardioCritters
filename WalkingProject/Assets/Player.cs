@@ -105,16 +105,16 @@ public class Player : MonoBehaviour
 
 
 
-                ApplyDistance(100);//give distance to crates
+                //ApplyDistance(100);//give distance to crates
 
 
 
          }
          if (Input.GetKeyDown(KeyCode.Escape))
          {
-             CrateIntoInventory(0);
+            // CrateIntoInventory(0);
          }
-
+         
          //cheats disabled
 
        
@@ -304,7 +304,8 @@ public class Player : MonoBehaviour
                     SelectBuddy(Zoo[PL.selectedAnimalIndex], false);//set buddy and set save to false
                 }
 
-                GetComponent<FitnessStats>().LoadStats(); //load fitness stats
+                //GetComponent<FitnessStats>().LoadStats(); //load fitness stats
+                
                 
             }
             else

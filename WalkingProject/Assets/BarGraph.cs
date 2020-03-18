@@ -63,12 +63,14 @@ public class BarGraph : MonoBehaviour
         {
             listholder = timeStats;
             distanceisSelected = false;
+            DistanceText.text = "Time";
             DrawBars();
         }
         else
         {
             listholder = disStats;
             distanceisSelected = true;
+            DistanceText.text = "Distance";
             DrawBars();
         }
        
