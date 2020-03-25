@@ -7,6 +7,7 @@ public class CraftingSlots : MonoBehaviour
 {
     public int index;
     public Sprite empty;
+    public Sprite lockedImage;
     public Text AlbinoTextEnable;
     public Image Locked;
     public Text Qmark;
@@ -29,7 +30,7 @@ public class CraftingSlots : MonoBehaviour
             GetComponent<Image>().sprite = Crafting.AnimalCraft[index].GetComponent<AnimalStats>().Icon;//get animal icon for slot
             if (index == 0 && Crafting.AnimalCraft[index].GetComponent<AnimalStats>().Albino)
                 AlbinoTextEnable.text = "Albino";
-            if (index ==0 &&ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal)//if in albino crafting screen
+            if (index == 0 && ScreenState.currentScreen == ScreenState.Screen.CraftAlbinoAnimal)//if in albino crafting screen
             {
                 Qmark.text = "";
                 Locked.sprite = Crafting.AnimalCraft[index].GetComponent<AnimalStats>().Icon;//get animal icon for slot and replace the locked image
@@ -43,7 +44,15 @@ public class CraftingSlots : MonoBehaviour
 
         }
         else
+        {
             GetComponent<Image>().sprite = empty;
+            if (index == 0)
+            {
+                AlbinoTextEnable.text = "";
+                Rarity.text = "";
+                Locked.sprite = lockedImage;
+            }
+        }
 
     }
 

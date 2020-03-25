@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
 
 
 
-                //ApplyDistance(100);//give distance to crates
+                ApplyDistance(100);//give distance to crates
 
 
 
@@ -332,7 +332,7 @@ public class Player : MonoBehaviour
 
         if(prevLevel<level)
         {
-            gold += Mathf.CeilToInt( 20*Bonuses.goldMultiplier);
+            gold += Mathf.CeilToInt(20*Bonuses.goldMultiplier* (level - prevLevel)); //add gold times how many new levels
             prevLevel = level;
             SaveGame();
             Instantiate(levelUpScreen, GameObject.FindGameObjectWithTag("Canvas").transform);

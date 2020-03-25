@@ -30,22 +30,22 @@ public class crateUI : MonoBehaviour
     {
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Common) //check specific crate slot's rarity
         {
-            XPtext.text = "+" + ((int)(100 * Bonuses.xpMultiplier)).ToString()+" xp";//100, 250, 650,1500
+            XPtext.text = "+" + ((int)(50 * Bonuses.xpMultiplier)).ToString()+" xp";//50, 200, 500,1000
             return Ccrate;
         }
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Rare) //check specific crate slot's rarity
         {
-            XPtext.text = "+" + ((int)(250 * Bonuses.xpMultiplier)).ToString() + " xp";
+            XPtext.text = "+" + ((int)(200 * Bonuses.xpMultiplier)).ToString() + " xp";
             return Rcrate;
         }
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Epic) //check specific crate slot's rarity
         {
-            XPtext.text = "+" + ((int)(650 * Bonuses.xpMultiplier)).ToString() + " xp";
+            XPtext.text = "+" + ((int)(500 * Bonuses.xpMultiplier)).ToString() + " xp";
             return Ecrate;
         }
         if (player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().rarity == Crate.Rarity.Legendary) //check specific crate slot's rarity
         {
-            XPtext.text = "+"+((int)(1500 * Bonuses.xpMultiplier)).ToString() + " xp";
+            XPtext.text = "+"+((int)(1000 * Bonuses.xpMultiplier)).ToString() + " xp";
             return Lcrate;
         }
 
@@ -59,7 +59,7 @@ public class crateUI : MonoBehaviour
             gameObject.GetComponent<Image>().sprite = GetSplash();
             float cd = player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().currentdistance / 1000; //current distance
             float dto = player.GetComponent<Player>().slots[crateSlotNum].GetComponent<Crate>().distancetoopen/Bonuses.FasterCrates / 1000; //distance to open
-            crateText.text = cd.ToString("0.##") +" / " +dto.ToString("0.##") +"km";
+            crateText.text = cd.ToString("0.#") +" / " +dto.ToString("0.##") +"km";
             progressBar.fillAmount = cd / dto;
 
         }

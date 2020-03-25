@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 100gold
+  productId: 100GOLD
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -3102,7 +3102,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '   400'
+  m_Text: '   500'
 --- !u!114 &1867055257112649790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2cc6184b3d3ab4bb20aaba02feb299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldCost: 400
+  goldCost: 500
   crateRarity: 4
   ConfirmPopup: {fileID: 3396722927125828547, guid: 2e181699ef4af8f40b1ef56bfbd052a7,
     type: 3}
@@ -3797,7 +3797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 500gold
+  productId: 500GOLD
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -4597,7 +4597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 1000gold
+  productId: 1000GOLD
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:

@@ -13,6 +13,7 @@ public class CraftingOutputButton : MonoBehaviour
     public GameObject popUpScreen;
     public GameObject ScrollView;
     public GameObject TutorialManager;
+    bool dontRepeat = true;
     int run3times = 0;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class CraftingOutputButton : MonoBehaviour
         else
         {
             cancraft = false;
+            click2craft.text = "";
             //click2craft.text = "?";
             //click2craft.color = Color.white;
             //click2craft.fontSize = 70;
@@ -78,18 +80,26 @@ public void CraftAnimal()
 
                 foreach (GameObject cm in Crafting.AnimalCraft) //delete the crafting materials
                 {
-                    parser = 0;
+                    if (!dontRepeat && cm.GetComponent<AnimalStats>().bonus[0] == AnimalStats.Bonus.Crafting2x)//skip 1 iteration if bonus = 2x crafting
+                    {
+                        dontRepeat = true;
+                        continue;
+                    }
+
+                    int parser = 0;
                     foreach (GameObject a in player.GetComponent<Player>().Zoo)
                     {
 
                         a.GetComponent<AnimalStats>().index = parser; //assign index to animals so they can delete themselves in crafting (fixed an issue with removeAt)
                         parser++;
+
                     }
-                    if (run3times >= 3)//exit out of loop early if albinos
-                        break;
-                    player.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
-                    run3times++;
+                    player.gameObject.GetComponent<Player>().Zoo.RemoveAt(cm.GetComponent<AnimalStats>().index); //animal deletes itself from the zoo list
+                    dontRepeat = false;
+
+
                 }
+                dontRepeat = true;
                 Crafting.AnimalCraft.Clear();//clear crafting list
                 Crafting.AnimalCraft.TrimExcess();
 
@@ -97,6 +107,7 @@ public void CraftAnimal()
                 popup.GetComponent<MoreInfoAnimal>().FillInfo(newAlbino, true);//fill pop up screen
                 run3times = 0;
             }
+            player.gameObject.GetComponent<Player>().CheckLevelUp();
             player.GetComponent<Player>().SaveGame();
         }
     }

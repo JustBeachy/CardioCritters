@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor-firstpass.dll:
+    - UnityEditor.Purchasing.IAPButtonEditor
     Assembly-CSharp-firstpass.dll:
     - UnityEngine.Purchasing.IAPButton
     Assembly-CSharp.dll:
@@ -43,6 +45,9 @@ ScriptsOnlyBuild:
     - iapGold
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.ButtonEditor
+    - UnityEditor.UI.ImageEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -251,7 +256,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11140}
     - Class: 114
-      Script: {instanceID: 14266}
+      Script: {instanceID: 14264}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -419,7 +424,7 @@ ScriptsOnlyBuild:
     className: NetworkIdentity
   - hash:
       serializedVersion: 2
-      Hash: e52d5697da299817461c52aaf31c42be
+      Hash: c495e94e632ca18a50d45f2f286f0a0c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CraftingSlots
@@ -1368,4 +1373,4 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alex/Desktop/IOSSpringUpdate
+  playerPath: C:/Users/Alex/Desktop/iOS build6

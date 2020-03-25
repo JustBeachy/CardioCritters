@@ -83,9 +83,10 @@ public class DistanceCalc : MonoBehaviour {
                 if (distancemoved <= 200 && distancemoved > 20)//check speed limits
                 {
                     gameObject.GetComponent<Player>().ApplyDistance(distancemoved); //give distance to player total
+                }
                     clat = Input.location.lastData.latitude;
                     clong = Input.location.lastData.longitude;
-                }
+                
                 currentTime = 0;
             }
         }

@@ -101,26 +101,26 @@ public class Crate : MonoBehaviour
 
         if (rarity==Rarity.Common)
         {
-            player.GetComponent<Player>().xp += 100*Bonuses.xpMultiplier;
+            player.GetComponent<Player>().xp += 50*Bonuses.xpMultiplier;
             player.GetComponent<Player>().CheckLevelUp();
             return commons[Random.Range(0,commons.Count)]; //get random animal from list
 
         }
         if (rarity == Rarity.Rare)
         {
-            player.GetComponent<Player>().xp += 250 * Bonuses.xpMultiplier;
+            player.GetComponent<Player>().xp += 200 * Bonuses.xpMultiplier;
             player.GetComponent<Player>().CheckLevelUp();
             return rares[Random.Range(0, rares.Count)]; //get random animal from list
         }
         if (rarity == Rarity.Epic)
         {
-            player.GetComponent<Player>().xp += 650 * Bonuses.xpMultiplier;
+            player.GetComponent<Player>().xp += 500 * Bonuses.xpMultiplier;
             player.GetComponent<Player>().CheckLevelUp();
             return epics[Random.Range(0, epics.Count)]; //get random animal from list
         }
         if (rarity == Rarity.Legendary)
         {
-            player.GetComponent<Player>().xp += 1500 * Bonuses.xpMultiplier;
+            player.GetComponent<Player>().xp += 1000 * Bonuses.xpMultiplier;
             player.GetComponent<Player>().CheckLevelUp();
             return legendaries[Random.Range(0, legendaries.Count)]; //get random animal from list
         }

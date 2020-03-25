@@ -37,7 +37,7 @@ public class BarGraph : MonoBehaviour
         listholder = disStats;
         distanceisSelected = true;
 
-        totalDistance.text = "Total Distance Walked: " + Math.Round(player.GetComponent<Player>().totaldistance/1000,2).ToString()+"km"; //set total distance text
+        totalDistance.text = "Total Distance Walked: " + Math.Round(player.GetComponent<Player>().totaldistance/1000,0).ToString()+"km"; //set total distance text
         CountGamesPlayed();
         
 
@@ -93,7 +93,7 @@ public class BarGraph : MonoBehaviour
 
             if (distanceisSelected) //label differently based on type of graph
             {
-                topDistance.text = (maxvalue / 1000).ToString()+"km"; //re-label endings for distance
+                topDistance.text = Math.Round((maxvalue / 1000),1).ToString()+"km"; //re-label endings for distance
                 midDistance.text = Math.Round((maxvalue / 2000),1).ToString()+"km";
                 threefourthsDistance.text = Math.Round((maxvalue / 1000*.75f), 1).ToString() + "km";
                 onefourthDistance.text = Math.Round((maxvalue / 4000), 1).ToString() + "km";
@@ -132,7 +132,7 @@ public class BarGraph : MonoBehaviour
 
             if (distanceisSelected) //label differently based on type of graph
             {
-                topDistance.text = (maxvalue / 1000).ToString() + "km"; //re-label endings for distance
+                topDistance.text = Math.Round((maxvalue / 1000),1).ToString() + "km"; //re-label endings for distance
                 midDistance.text = Math.Round((maxvalue / 2000), 1).ToString() + "km";
                 threefourthsDistance.text = Math.Round((maxvalue / 1000 * .75f), 1).ToString() + "km";
                 onefourthDistance.text = Math.Round((maxvalue / 4000), 1).ToString() + "km";
@@ -175,7 +175,7 @@ public class BarGraph : MonoBehaviour
 
             if (distanceisSelected) //label differently based on type of graph
             {
-                topDistance.text = (maxvalue / 1000).ToString() + "km"; //re-label endings for distance
+                topDistance.text = Math.Round((maxvalue / 1000),1).ToString() + "km"; //re-label endings for distance
                 midDistance.text = Math.Round((maxvalue / 2000), 1).ToString() + "km";
                 threefourthsDistance.text = Math.Round((maxvalue / 1000 * .75f), 1).ToString() + "km";
                 onefourthDistance.text = Math.Round((maxvalue / 4000), 1).ToString() + "km";
