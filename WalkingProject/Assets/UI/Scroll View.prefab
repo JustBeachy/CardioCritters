@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -100, y: 90}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2446543989738403565
@@ -2239,12 +2239,12 @@ GameObject:
   - component: {fileID: 7734578444995684975}
   - component: {fileID: 5333084472934215894}
   m_Layer: 5
-  m_Name: RadioButton
+  m_Name: ShowMissing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7998281387818220830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2415,7 +2415,7 @@ PrefabInstance:
     - target: {fileID: 6485407226561811646, guid: 582947f736c464ac2b12327831f5b0a1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 562.5
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 6485407226561811646, guid: 582947f736c464ac2b12327831f5b0a1,
         type: 3}

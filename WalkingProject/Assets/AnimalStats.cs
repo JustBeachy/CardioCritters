@@ -47,45 +47,51 @@ public class AnimalStats : MonoBehaviour
         }
     }
 
-    public void DoubleBonus()
+    public float DoubleBonus()
     {
+        float multipliedBonus=0;
+
+        multipliedBonus = bonusAmount;
         if(Albino)
         {
-            if (bonusAmount <= 2.5)
+            if (multipliedBonus <= 2.5)
             {
-                bonusAmount -= 1; //so the lower bonuses multiply correctly
+                multipliedBonus -= 1; //so the lower bonuses multiply correctly
             }
-            bonusAmount *= 2;
-            if (bonusAmount <= 2.5)
+            multipliedBonus *= 2;
+            if (multipliedBonus <= 2.5)
             {
-                bonusAmount += 1;
+                multipliedBonus += 1;
             }
+
+            return multipliedBonus;
         }
+        return multipliedBonus;
     }
 
     public void ApplyBonus()
     {
-        DoubleBonus();
+       float multipliedBonus=DoubleBonus();
 
         for (int i = 0; i < bonus.Count; i++)
         {
             if (bonus[i] == Bonus.RarerCrates)
-                Bonuses.RarerCrates = bonusAmount;
+                Bonuses.RarerCrates = multipliedBonus;
 
             if (bonus[i] == Bonus.FasterCrates)
-                Bonuses.FasterCrates = bonusAmount;
+                Bonuses.FasterCrates = multipliedBonus;
 
             if (bonus[i] == Bonus.Crafting2x)
-                Bonuses.CraftingSlots2x = bonusAmount;
+                Bonuses.CraftingSlots2x = multipliedBonus;
 
             if (bonus[i] == Bonus.AlbinoChance)
-                Bonuses.AbinoEasier = bonusAmount;
+                Bonuses.AbinoEasier = multipliedBonus;
 
             if (bonus[i] == Bonus.MoreXP)
-                Bonuses.xpMultiplier = bonusAmount;
+                Bonuses.xpMultiplier = multipliedBonus;
 
             if (bonus[i] == Bonus.ExtraGold)
-                Bonuses.goldMultiplier = bonusAmount;
+                Bonuses.goldMultiplier = multipliedBonus;
         }
 
     }
