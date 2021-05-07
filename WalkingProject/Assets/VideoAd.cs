@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
-public class VideoAd : MonoBehaviour, IUnityAdsListener
+public class VideoAd : MonoBehaviour
 {
-
+    /*
     string gameId = "";
     public GameObject screenToClose;
     public Text adText;
@@ -188,4 +188,5 @@ public class VideoAd : MonoBehaviour, IUnityAdsListener
         }
         
     }
+    */
 }

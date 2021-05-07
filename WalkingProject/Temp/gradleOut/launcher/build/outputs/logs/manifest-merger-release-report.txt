@@ -1,0 +1,258 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+MERGED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:3:1-69:12
+MERGED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:2:1-24:12
+MERGED from [:common:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\e36bc408cc7169dc834e03c2fed658ca\AndroidManifest.xml:2:1-12:12
+MERGED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:2:1-37:12
+MERGED from [:UnityAdsAndroidPlugin:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\59c9a20909d0be17e446fe84f072079d\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+	package
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:70-109
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:110-156
+	android:versionCode
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:11-69
+	android:installLocation
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:157-197
+supports-screens
+ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:3-163
+	android:largeScreens
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:78-105
+	android:smallScreens
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:21-48
+	android:normalScreens
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:49-77
+	android:xlargeScreens
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:106-134
+	android:anyDensity
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:135-160
+application
+ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:5:3-121
+MERGED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:5-67:19
+MERGED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:5-67:19
+MERGED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:12:5-22:19
+MERGED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:12:5-22:19
+MERGED from [:common:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\e36bc408cc7169dc834e03c2fed658ca\AndroidManifest.xml:9:5-10:19
+MERGED from [:common:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\e36bc408cc7169dc834e03c2fed658ca\AndroidManifest.xml:9:5-10:19
+MERGED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:14:5-35:19
+MERGED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:14:5-35:19
+	android:label
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:5:16-48
+	android:icon
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:5:49-80
+	android:banner
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:5:81-118
+	android:isGame
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:18-39
+uses-sdk
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+MERGED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:9:5-11:41
+MERGED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:9:5-11:41
+MERGED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:6:5-8:41
+MERGED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:6:5-8:41
+MERGED from [:common:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\e36bc408cc7169dc834e03c2fed658ca\AndroidManifest.xml:7:5-43
+MERGED from [:common:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\e36bc408cc7169dc834e03c2fed658ca\AndroidManifest.xml:7:5-43
+MERGED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:7:5-9:41
+MERGED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:7:5-9:41
+MERGED from [:UnityAdsAndroidPlugin:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\59c9a20909d0be17e446fe84f072079d\AndroidManifest.xml:7:5-9:41
+MERGED from [:UnityAdsAndroidPlugin:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\59c9a20909d0be17e446fe84f072079d\AndroidManifest.xml:7:5-9:41
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+uses-feature#0x00020000
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:13:5-54
+	android:glEsVersion
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:13:19-51
+supports-gl-texture#GL_OES_compressed_ETC1_RGB8_texture
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:15:26-76
+uses-permission#android.permission.INTERNET
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:17:5-67
+MERGED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:12:5-67
+MERGED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:17:22-64
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:18:5-86
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:18:22-83
+uses-permission#android.permission.VIBRATE
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:19:5-66
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:19:22-63
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:20:22-76
+uses-feature#android.hardware.location.gps
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:22:5-24:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:24:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:23:9-53
+uses-feature#android.hardware.location
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:25:5-27:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:27:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:26:9-49
+uses-feature#android.hardware.touchscreen
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:28:5-30:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:9-52
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:31:5-33:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:9-63
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:5-36:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:9-72
+activity#com.unity3d.player.UnityPlayerActivity
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:9-56:20
+	android:screenOrientation
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:44:13-49
+	android:launchMode
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:43:13-44
+	android:hardwareAccelerated
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:13-48
+	android:configChanges
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:13-194
+	android:theme
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:13-54
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:40:13-66
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:android.intent.category.LEANBACK_LAUNCHER
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:13-51:29
+action#android.intent.action.MAIN
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:47:17-69
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:47:25-66
+category#android.intent.category.LAUNCHER
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:17-77
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:27-74
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:50:17-86
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:50:27-83
+meta-data#unityplayer.UnityActivity
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:53:13-55:40
+	android:value
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:17-37
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:17-57
+meta-data#unity.splash-mode
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:9-60:33
+	android:value
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-30
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:13-45
+meta-data#unity.splash-enable
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:9-63:36
+	android:value
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:63:13-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:13-47
+meta-data#unity.build-id
+ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:64:9-66:68
+	android:value
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-65
+	android:name
+		ADDED from [:unityLibrary] C:\Users\Alex\Desktop\CardioCritters-master\WalkingProject\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:65:13-42
+uses-permission#com.android.vending.BILLING
+ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:10:22-64
+meta-data#com.google.android.play.billingclient.version
+ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:13:9-15:37
+	android:value
+		ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:15:13-34
+	android:name
+		ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:14:13-73
+activity#com.android.billingclient.api.ProxyBillingActivity
+ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:17:9-21:75
+	android:exported
+		ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:20:13-37
+	android:configChanges
+		ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:19:13-96
+	android:theme
+		ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:21:13-72
+	android:name
+		ADDED from [:billing-3.0.1:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\c0a7a2d86cbc8fe676083941eda51304\AndroidManifest.xml:18:13-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:11:22-76
+activity#com.unity3d.services.ads.adunit.AdUnitActivity
+ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:15:9-19:74
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:18:13-47
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:17:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:19:13-71
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:16:13-74
+activity#com.unity3d.services.ads.adunit.AdUnitTransparentActivity
+ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:20:9-24:86
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:23:13-47
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:22:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:24:13-83
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:21:13-85
+activity#com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity
+ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:25:9-29:86
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:28:13-48
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:27:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:29:13-83
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:26:13-93
+activity#com.unity3d.services.ads.adunit.AdUnitSoftwareActivity
+ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:30:9-34:74
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:33:13-48
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:32:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:34:13-71
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f478a7d2b95183365ec7ffa4b7c9ae7a\AndroidManifest.xml:31:13-82

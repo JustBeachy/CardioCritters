@@ -67,7 +67,7 @@ public class CrateAnimation : MonoBehaviour
                 BG.color = tempColor; //tint screen
             }
             
-            camIt.transform.Rotate(new Vector3(0, Mathf.Pow(timer+3,2)));
+            camIt.transform.Rotate(new Vector3(0, Mathf.Pow(timer+1,2)));
 
         }
         else

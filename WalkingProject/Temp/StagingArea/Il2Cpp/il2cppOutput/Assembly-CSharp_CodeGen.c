@@ -1,0 +1,805 @@
+﻿#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+
+
+
+// 0x00000001 System.Void AnimalLists::Awake()
+extern void AnimalLists_Awake_m7A52B324C54AA3DD85E7F7E72D1A8522A2CBB94A (void);
+// 0x00000002 System.Void AnimalLists::Update()
+extern void AnimalLists_Update_m8C578B34363807D93E1F18859986D09839B3C360 (void);
+// 0x00000003 System.Void AnimalLists::.ctor()
+extern void AnimalLists__ctor_m9F7971158899B451650F2DD789D4068E2AC32D32 (void);
+// 0x00000004 System.Void AnimalLists::.cctor()
+extern void AnimalLists__cctor_mE3EBA64E108811B5C48202B905341D97CE72C993 (void);
+// 0x00000005 System.Void AnimalStats::Start()
+extern void AnimalStats_Start_m8733F60FED855A0952A7D7324637EDFE5CA7D3CC (void);
+// 0x00000006 System.Void AnimalStats::Update()
+extern void AnimalStats_Update_m2F06CDAEA0615EBD7135F57AF66BE8338A497401 (void);
+// 0x00000007 System.Void AnimalStats::ApplyAlbinoMaterial()
+extern void AnimalStats_ApplyAlbinoMaterial_m62CDEAE078B1A5CA0F6199AE3A688C3D3D66CCC4 (void);
+// 0x00000008 System.Single AnimalStats::DoubleBonus()
+extern void AnimalStats_DoubleBonus_m0BA213CA44E3B11A0DE90A90024F4F27F307CE3D (void);
+// 0x00000009 System.Void AnimalStats::ApplyBonus()
+extern void AnimalStats_ApplyBonus_mC6DA77CBEEB0FB16628185322EAEAD142714C335 (void);
+// 0x0000000A System.Void AnimalStats::.ctor()
+extern void AnimalStats__ctor_m07D7F3875E9E55A7B6ECAB734D17D0F90F3FF859 (void);
+// 0x0000000B System.Void ArrowAnimation::Start()
+extern void ArrowAnimation_Start_m961F0877A85036FB5EF9C59C7C17BE3ED9AA9052 (void);
+// 0x0000000C System.Void ArrowAnimation::Update()
+extern void ArrowAnimation_Update_m0EDD0A50F949CEBC26C117BC8DC1696C0C079755 (void);
+// 0x0000000D System.Void ArrowAnimation::.ctor()
+extern void ArrowAnimation__ctor_m93BDB1413F685738E099074EE60CD582A49BE2F8 (void);
+// 0x0000000E System.Void BarGraph::Start()
+extern void BarGraph_Start_mC10CCB43B7437471F91A32A8A748DAC186701CC4 (void);
+// 0x0000000F System.Void BarGraph::CountGamesPlayed()
+extern void BarGraph_CountGamesPlayed_m1D4C9994161DA2E2D508F664F3E893FA8EC55BBE (void);
+// 0x00000010 System.Void BarGraph::ChangeGraphType()
+extern void BarGraph_ChangeGraphType_mCA0127BD83C9EF3A4D5A003DEED3EC9EA12D37DF (void);
+// 0x00000011 System.Void BarGraph::DrawBars(System.Int32)
+extern void BarGraph_DrawBars_mA2355197E918A3DD1EAF6210120F7AF64BF6243E (void);
+// 0x00000012 System.Void BarGraph::.ctor()
+extern void BarGraph__ctor_m298747EBBB54A27E47BFCEE1F27DF3AF2EECDD7A (void);
+// 0x00000013 System.Void Bonuses::Start()
+extern void Bonuses_Start_m6C58632ACC51356384637AA5A88343BAFD7B3050 (void);
+// 0x00000014 System.Void Bonuses::Update()
+extern void Bonuses_Update_mA8ADD0CB68DF6002AD8EA107A8647563D07AA7C3 (void);
+// 0x00000015 System.Void Bonuses::ClearBonuses()
+extern void Bonuses_ClearBonuses_m64BDED01B71E8111B486597A79BA93A525E7FBFD (void);
+// 0x00000016 System.Void Bonuses::.ctor()
+extern void Bonuses__ctor_m3C8A2F0125C3CCF5ECF8EE889F2C53F468EF6E05 (void);
+// 0x00000017 System.Void Bonuses::.cctor()
+extern void Bonuses__cctor_mCB15196DBBA7490370BF98B2EE7596A35B3F2A6B (void);
+// 0x00000018 System.Void ButtonAnimation::Start()
+extern void ButtonAnimation_Start_m2CFA7768E3A0DD932F985BE48BBC1F587DA68BF4 (void);
+// 0x00000019 System.Void ButtonAnimation::Update()
+extern void ButtonAnimation_Update_m841D81549CC92B037BC9B6CC0F127D6D68814186 (void);
+// 0x0000001A System.Void ButtonAnimation::.ctor()
+extern void ButtonAnimation__ctor_mB8CFBDBACF3E66D6980525D6911D6988D523F2D5 (void);
+// 0x0000001B System.Void ConfirmMessage::Start()
+extern void ConfirmMessage_Start_mF2339B1D7F03773EE591E5D4C86EC6F4571BB457 (void);
+// 0x0000001C System.Void ConfirmMessage::BuyFromShopItem()
+extern void ConfirmMessage_BuyFromShopItem_mB06E250642D2EFBC82487E82652AA394ECCF8226 (void);
+// 0x0000001D System.Void ConfirmMessage::Update()
+extern void ConfirmMessage_Update_m583A84EF6B2C148F03A9CBDF0FACE69958B2A16A (void);
+// 0x0000001E System.Void ConfirmMessage::.ctor()
+extern void ConfirmMessage__ctor_m35BF133169C8FBEC702E8C0F66E00A30CACEBD58 (void);
+// 0x0000001F System.Void CraftScreenTitle::Awake()
+extern void CraftScreenTitle_Awake_mE30D7B00D769EA47289CD8F6CAC13C1C8804B6DD (void);
+// 0x00000020 System.Void CraftScreenTitle::Update()
+extern void CraftScreenTitle_Update_mF9D5B00CC72D0DC800428B06BE2D2A87A4A244E9 (void);
+// 0x00000021 System.Void CraftScreenTitle::.ctor()
+extern void CraftScreenTitle__ctor_mC8A58132CDEFA8E769136221C1ECE9CE10E71813 (void);
+// 0x00000022 System.Void Crafting::Start()
+extern void Crafting_Start_m906236CAD208D18CC38D9B63DE9938047D94368F (void);
+// 0x00000023 System.Void Crafting::Update()
+extern void Crafting_Update_m2FE0A13E3FB8F40034E29272FA9E258A70FA7EB8 (void);
+// 0x00000024 System.Void Crafting::CraftAnimal(System.Boolean)
+extern void Crafting_CraftAnimal_mAB26624D0D28A31B5014CF5AE610FC9220149D20 (void);
+// 0x00000025 UnityEngine.GameObject Crafting::CraftCrate(System.Int32,System.Boolean)
+extern void Crafting_CraftCrate_m3B7B1B9A730A6537F43448BBC12605CC10EC1044 (void);
+// 0x00000026 System.Void Crafting::.ctor()
+extern void Crafting__ctor_m11833CC78F47E157699EF67A2F5F0439843939E1 (void);
+// 0x00000027 System.Void Crafting::.cctor()
+extern void Crafting__cctor_m0D1008D20903C3C0CC202A1B76991A54CD73BECA (void);
+// 0x00000028 System.Void CraftingOutputButton::Start()
+extern void CraftingOutputButton_Start_mD55937F501157B2A81F0D027514EBF8070CD5F69 (void);
+// 0x00000029 System.Void CraftingOutputButton::Update()
+extern void CraftingOutputButton_Update_m87AAD1571E5845B1CAEED9166646946EFDD6B7AE (void);
+// 0x0000002A System.Void CraftingOutputButton::CraftCrate()
+extern void CraftingOutputButton_CraftCrate_m687C097001AB93D89675118E14C0B5E30B71524B (void);
+// 0x0000002B System.Void CraftingOutputButton::CraftAnimal()
+extern void CraftingOutputButton_CraftAnimal_m0B2541BF72C0BEC92C533255B1AF43EE230192C3 (void);
+// 0x0000002C System.Void CraftingOutputButton::.ctor()
+extern void CraftingOutputButton__ctor_m9B240D047500CE736B4DC88E0BEF6A28D6407429 (void);
+// 0x0000002D System.Void CraftingSlots::Awake()
+extern void CraftingSlots_Awake_mE7E4D32511D832B2F67376BCF9B095E506B912BF (void);
+// 0x0000002E System.Void CraftingSlots::Update()
+extern void CraftingSlots_Update_mE34EBE90D1D878E5D8AFC3945E810EED9A9A49B3 (void);
+// 0x0000002F System.Void CraftingSlots::GetRarityText()
+extern void CraftingSlots_GetRarityText_mD4B263DB0E140C74AC117EB255E4FEA1EB19A3B4 (void);
+// 0x00000030 System.Void CraftingSlots::.ctor()
+extern void CraftingSlots__ctor_mCE9252BA2046C28D8BB51476CEF2D4800042C023 (void);
+// 0x00000031 System.Void Crate::Start()
+extern void Crate_Start_m1A72030D132C540C1693655751BB0CED7672D250 (void);
+// 0x00000032 System.Void Crate::Update()
+extern void Crate_Update_mC589F67907AE3D98186803873973832249D8336D (void);
+// 0x00000033 System.Void Crate::ApplyRarity()
+extern void Crate_ApplyRarity_m388766F61F95524E78755DE1E3B2388A02C556C5 (void);
+// 0x00000034 UnityEngine.GameObject Crate::OpenCrate(System.Boolean)
+extern void Crate_OpenCrate_m07CA2BE30FB7798687320FC107FE63D5CE72D338 (void);
+// 0x00000035 System.Void Crate::ApplyDistance(System.Single,System.Boolean)
+extern void Crate_ApplyDistance_m76B778EA752F526060451F55975680540B110AC2 (void);
+// 0x00000036 System.Void Crate::.ctor()
+extern void Crate__ctor_mE06B10DE1316EEEFA7451AAFA0DB28B4945A0BD2 (void);
+// 0x00000037 System.Void CrateAnimation::Start()
+extern void CrateAnimation_Start_mB338D5C52849A68C3D5CE7DC4CDB10F1B646B4F2 (void);
+// 0x00000038 System.Void CrateAnimation::Open()
+extern void CrateAnimation_Open_mA49D72C5B536C10B765F99016543401CA1FD2BD0 (void);
+// 0x00000039 System.Void CrateAnimation::CrateOpeningAnimation(UnityEngine.GameObject)
+extern void CrateAnimation_CrateOpeningAnimation_m4CA67E0C7F3A29A8DA709393180BF4EC9B44D101 (void);
+// 0x0000003A System.Void CrateAnimation::Update()
+extern void CrateAnimation_Update_mBD69EE013563B6BD52970782C906C4E3AA1F36D5 (void);
+// 0x0000003B System.Void CrateAnimation::.ctor()
+extern void CrateAnimation__ctor_m02348FBF29FE1898730EBE68718842C271D2C577 (void);
+// 0x0000003C System.Void CurrentAnimalUI::Start()
+extern void CurrentAnimalUI_Start_mEA1981FEAFDA3666669CE92C355681599FADAB5E (void);
+// 0x0000003D System.Void CurrentAnimalUI::Update()
+extern void CurrentAnimalUI_Update_mEF142513535518C75D1D9711EBB4BAF1511EBF0F (void);
+// 0x0000003E System.Void CurrentAnimalUI::OnMouseDrag()
+extern void CurrentAnimalUI_OnMouseDrag_m7EAB7932BC80D03F7F63EB2D23EFA34DEB97BCDA (void);
+// 0x0000003F System.Void CurrentAnimalUI::UpdateSelectedAnimalUI()
+extern void CurrentAnimalUI_UpdateSelectedAnimalUI_mDD3CC7EA68624C136626B5B1B6EB5F55D5D9C44B (void);
+// 0x00000040 System.Void CurrentAnimalUI::MakeCraftingOptions()
+extern void CurrentAnimalUI_MakeCraftingOptions_m121DA0888642E8C1507C2A5EEC9A8EA0CBC6138F (void);
+// 0x00000041 System.Void CurrentAnimalUI::SetScreenState(System.Int32)
+extern void CurrentAnimalUI_SetScreenState_m33E45F47B26543BAE4D68202B4B7616BF56FD3DA (void);
+// 0x00000042 System.Void CurrentAnimalUI::CreateInventory()
+extern void CurrentAnimalUI_CreateInventory_m408A6186661F6552DAC9F1E6916C5859F40CD580 (void);
+// 0x00000043 System.Void CurrentAnimalUI::.ctor()
+extern void CurrentAnimalUI__ctor_m2687A0553F98B44586A22EA16F45CF2B67D5FF9A (void);
+// 0x00000044 System.Void Daily30::Start()
+extern void Daily30_Start_m4275763A11B9E1AACD35BFC555C69CF560E38E0D (void);
+// 0x00000045 System.Void Daily30::Update()
+extern void Daily30_Update_m50475E5D47269C6AA62D2329D2D3D967A06C690C (void);
+// 0x00000046 System.Void Daily30::.ctor()
+extern void Daily30__ctor_m58220FCAAF5BB610C77AADC2B4B3EE1A7DA5CA82 (void);
+// 0x00000047 System.Void DailyLoginPopup::Start()
+extern void DailyLoginPopup_Start_m3A93234ADDACBA2F8AE6FCF2A007C44213C096DA (void);
+// 0x00000048 System.Void DailyLoginPopup::Update()
+extern void DailyLoginPopup_Update_m9168D5237093C99635B1520133D15DAE005A7B8F (void);
+// 0x00000049 System.Void DailyLoginPopup::.ctor()
+extern void DailyLoginPopup__ctor_m195D11A0FE412BD8F717CF44E3F1026033DA1462 (void);
+// 0x0000004A System.Collections.IEnumerator DistanceCalc::Start()
+extern void DistanceCalc_Start_mB58FE7DD1E8D4238B0DCD96E5DD7FAC9EC236CA4 (void);
+// 0x0000004B System.Void DistanceCalc::Update()
+extern void DistanceCalc_Update_m8B597B9E52513C40E0E125EEFBB1CC4DD63884FC (void);
+// 0x0000004C System.Single DistanceCalc::LatLongDistance(System.Single,System.Single,System.Single,System.Single)
+extern void DistanceCalc_LatLongDistance_mE989BE8F848A5B0B20F6D0EC9317564242E8D436 (void);
+// 0x0000004D System.Void DistanceCalc::.ctor()
+extern void DistanceCalc__ctor_m9D4B765DE873E1D6E94E2D528382D4AC6737E68F (void);
+// 0x0000004E System.Void FilterInventory::Start()
+extern void FilterInventory_Start_m38DA0EAEB5EA8DF9BA0D17D61F940EAB1A4DD5CA (void);
+// 0x0000004F System.Void FilterInventory::Update()
+extern void FilterInventory_Update_m2B8882D734C08B4158B323434F2D6389D59454DC (void);
+// 0x00000050 System.Void FilterInventory::SelectFilter()
+extern void FilterInventory_SelectFilter_mC232E9F24D77DC2151950481B7872F4595D25E89 (void);
+// 0x00000051 System.Void FilterInventory::Filter()
+extern void FilterInventory_Filter_m8EF0720CA384F479E4CFDA77282BD3DE0349CE96 (void);
+// 0x00000052 System.Void FilterInventory::ShowMissing()
+extern void FilterInventory_ShowMissing_m616DB41D604B2F35C67998DD41937217D20A7523 (void);
+// 0x00000053 System.Void FilterInventory::.ctor()
+extern void FilterInventory__ctor_mDD66175435928CBB7A06F0128E8FD9C44AE68C48 (void);
+// 0x00000054 System.Void FitnessStats::Start()
+extern void FitnessStats_Start_mCA524B9236CB89C3BAEF65C356976F346F4AA739 (void);
+// 0x00000055 System.Void FitnessStats::SaveStats(System.Boolean)
+extern void FitnessStats_SaveStats_mB0D64F6B35456EA81F941436EF8B9F9EF5972437 (void);
+// 0x00000056 System.Void FitnessStats::LoadStats()
+extern void FitnessStats_LoadStats_m9A286CE145A403000F2F6B9EFAE0B56FB2DA35F8 (void);
+// 0x00000057 System.Void FitnessStats::Update()
+extern void FitnessStats_Update_m71E2EB6587F4900911AEA0D978BF15229FB8CBAB (void);
+// 0x00000058 System.Void FitnessStats::.ctor()
+extern void FitnessStats__ctor_mFFE6811B88BC28EAEE7E7E4E3A6E9C0B07EDE4C1 (void);
+// 0x00000059 System.Void FitnessStats::.cctor()
+extern void FitnessStats__cctor_m2A6DB7B2F2684BFDFB97B29AAFDCF9935F8ECC8E (void);
+// 0x0000005A System.Void GoldText::Start()
+extern void GoldText_Start_m52DE3E5198D2F2E3E2A85DA977D5116371B69D35 (void);
+// 0x0000005B System.Void GoldText::Update()
+extern void GoldText_Update_mF1ED159CF348253A8D40EC29C1EB2C2961448A89 (void);
+// 0x0000005C System.Void GoldText::.ctor()
+extern void GoldText__ctor_mB8BB2868009A3C5FD5690A0AEEEA88987DDE9393 (void);
+// 0x0000005D System.Void InventoryGUI::Awake()
+extern void InventoryGUI_Awake_m7DC2C1B05914F0B9C74961FBFE49445C3B3CF7B5 (void);
+// 0x0000005E System.Void InventoryGUI::Update()
+extern void InventoryGUI_Update_mE9453C4C34D2B29C6B4A9B67A023DCD024431CB8 (void);
+// 0x0000005F System.String InventoryGUI::SetRarityText(UnityEngine.GameObject)
+extern void InventoryGUI_SetRarityText_mBF009B6EB5D809276DB35FA8259D5613A362299B (void);
+// 0x00000060 UnityEngine.Color InventoryGUI::SetColor(UnityEngine.GameObject)
+extern void InventoryGUI_SetColor_m4054E4848E21CD24E617528B5DE277B27BE12412 (void);
+// 0x00000061 System.Void InventoryGUI::WhenClicked()
+extern void InventoryGUI_WhenClicked_m67B0B2C6F16D90DD8CA9329694FEFB2FCE88F43F (void);
+// 0x00000062 System.Void InventoryGUI::Cancelled()
+extern void InventoryGUI_Cancelled_m37683B14A22AA80021E434058564FBE2C5E21B3B (void);
+// 0x00000063 System.Void InventoryGUI::HitYesOnSelect()
+extern void InventoryGUI_HitYesOnSelect_m90510C2F31D35A5C9C979D02F3505E9D4DE11AAF (void);
+// 0x00000064 System.Void InventoryGUI::LoadInventory(System.Boolean,System.Int32)
+extern void InventoryGUI_LoadInventory_m64E2BDCBB56EC5272F444E9315674E2072BECEC1 (void);
+// 0x00000065 System.Void InventoryGUI::.ctor()
+extern void InventoryGUI__ctor_m2BF387567FA189549F8E37D6DF676590977B1CF6 (void);
+// 0x00000066 System.Void LevelText::Start()
+extern void LevelText_Start_mDAD65DD6BCE695037C3A969C4D55E485EBCAC7B0 (void);
+// 0x00000067 System.Void LevelText::Update()
+extern void LevelText_Update_m67AB0C1C35B33A4BDB40ACBF6D54960ED12016B1 (void);
+// 0x00000068 System.Void LevelText::.ctor()
+extern void LevelText__ctor_mE0F4EF0466EB189444CF437180F1B32D1FB35273 (void);
+// 0x00000069 System.Void LoadInventory::Start()
+extern void LoadInventory_Start_m98BB9D5D4258F45301F37033D642608E062C4553 (void);
+// 0x0000006A System.Void LoadInventory::Update()
+extern void LoadInventory_Update_m86A2AAC4CCCA7630780E2D8E558C0AFD59636D6A (void);
+// 0x0000006B System.Void LoadInventory::.ctor()
+extern void LoadInventory__ctor_m8A7A4020FDF116535C3B920BECF13B6EF18BD6C4 (void);
+// 0x0000006C System.Void MoreInfoAnimal::Start()
+extern void MoreInfoAnimal_Start_m91A712AA00EF90E4A95E38382FEC0A66C0833A7E (void);
+// 0x0000006D System.Void MoreInfoAnimal::DestroyCamera()
+extern void MoreInfoAnimal_DestroyCamera_m1D8F196A8AEEAF62BBEA2E0554A7F212E6FB2425 (void);
+// 0x0000006E System.Void MoreInfoAnimal::CloseWindow()
+extern void MoreInfoAnimal_CloseWindow_mC919AC90D95168BAF95ED57EFD90218007180C37 (void);
+// 0x0000006F System.Void MoreInfoAnimal::CrateOpenAnimation(UnityEngine.GameObject)
+extern void MoreInfoAnimal_CrateOpenAnimation_mDCA2CB9E15E4123B5A6343524D4717CCE3147A7B (void);
+// 0x00000070 System.Void MoreInfoAnimal::FillInfo(UnityEngine.GameObject,System.Boolean)
+extern void MoreInfoAnimal_FillInfo_m1BABAA3A6CEAD928BFAFBAED74851190DEB3EC9C (void);
+// 0x00000071 System.Void MoreInfoAnimal::AddToCraft()
+extern void MoreInfoAnimal_AddToCraft_m7471858A021EBB43E68A189DFDD1922F002EAE18 (void);
+// 0x00000072 System.Void MoreInfoAnimal::Update()
+extern void MoreInfoAnimal_Update_m9743EFCAF969C1B4A5B18FDDC8A959FCBA25971B (void);
+// 0x00000073 System.Void MoreInfoAnimal::.ctor()
+extern void MoreInfoAnimal__ctor_m3D39A0649DEC7456C81C1DF4268338BAB74E20DA (void);
+// 0x00000074 System.Void Player::Awake()
+extern void Player_Awake_mD94498D36D7F1E5FDB727209B4B6043A6F228E5C (void);
+// 0x00000075 System.Void Player::Start()
+extern void Player_Start_mE9ACCAA7FEBF4020693FFB73C0839CF3AAD0B0C4 (void);
+// 0x00000076 System.Void Player::Update()
+extern void Player_Update_m6F977BAE3756AB7073D64042B766B442E4EC6FD2 (void);
+// 0x00000077 System.Void Player::ApplyDistance(System.Single,System.Boolean)
+extern void Player_ApplyDistance_m09AFC266419D5C092298C6A029F39D602621C073 (void);
+// 0x00000078 System.Void Player::ActiveAnimal(UnityEngine.GameObject)
+extern void Player_ActiveAnimal_m8929ABEE0F5E1A4C17396247FE7AE8F981416A66 (void);
+// 0x00000079 System.Single Player::ConvertToDistance(System.Single)
+extern void Player_ConvertToDistance_m0F27D7B6061D9CAFB57B7D5666A1FBDE2F3EE253 (void);
+// 0x0000007A System.Void Player::SaveGame()
+extern void Player_SaveGame_m29108C98F0856D5EB14473D45060B3D211E8B57F (void);
+// 0x0000007B System.Void Player::Load()
+extern void Player_Load_mC2DC209DBB80EBD1A6E1EC564E28B92A8DA53221 (void);
+// 0x0000007C System.Void Player::CheckLevelUp()
+extern void Player_CheckLevelUp_m3C52C4E5F234A7DD48C95859C478300F9698DDE8 (void);
+// 0x0000007D System.Void Player::CrateIntoInventory(System.Int32,System.Int32)
+extern void Player_CrateIntoInventory_mECE5C3F110074D42406FD06280A04519A2109E26 (void);
+// 0x0000007E System.Void Player::SelectBuddy(UnityEngine.GameObject,System.Boolean)
+extern void Player_SelectBuddy_m6C107AA4803C85A72E01C9A54C456A2BF99F29CB (void);
+// 0x0000007F System.String Player::EncryptDecrypt(System.String,System.Int32)
+extern void Player_EncryptDecrypt_m1441B851F2A2C5C6C2E4C96CBAA493CEE059174C (void);
+// 0x00000080 System.Void Player::.ctor()
+extern void Player__ctor_m8F4AB650C5E2DE406B3C65EA8F662013458D85E2 (void);
+// 0x00000081 System.Void Player::.cctor()
+extern void Player__cctor_m66058F271CE07EF8B7E850E86952D7DA9FA9BE7A (void);
+// 0x00000082 System.Void RotatingBG::Start()
+extern void RotatingBG_Start_m3E21FCFB6B82D2848D422E0E69A730EF582C7198 (void);
+// 0x00000083 System.Void RotatingBG::Update()
+extern void RotatingBG_Update_m67C473AA9FBEC0EE1C42FFFB68FD9DF2DD3D5240 (void);
+// 0x00000084 System.Void RotatingBG::.ctor()
+extern void RotatingBG__ctor_m4139318855D8E3B13A5639C7F6CCFDBDFAE5E0E3 (void);
+// 0x00000085 System.Void ScreenState::Start()
+extern void ScreenState_Start_m0C015134372528E0E643287B77B97404C6B96587 (void);
+// 0x00000086 System.Void ScreenState::Update()
+extern void ScreenState_Update_m3BEFF5A7B16DF740F8F5CB102A2870C51DC030FD (void);
+// 0x00000087 System.Void ScreenState::.ctor()
+extern void ScreenState__ctor_m4AC1FEDBECD7DFAAECEED4547EFB77B1B4441CEC (void);
+// 0x00000088 System.Void ScreenState::.cctor()
+extern void ScreenState__cctor_m066F8BBABE876E3890FADAD47FC6AD25082A5D1E (void);
+// 0x00000089 System.Void Shop::Start()
+extern void Shop_Start_m624525FAE8163E81E7A1C3FE4230165F49CED736 (void);
+// 0x0000008A System.Void Shop::Update()
+extern void Shop_Update_m818C33CA8EAA95884F5B6CE4F33124368599FDC4 (void);
+// 0x0000008B System.Void Shop::BuyCrate()
+extern void Shop_BuyCrate_mCC45E23E005F1FB4D5261AFF9D9431823B41E791 (void);
+// 0x0000008C System.Void Shop::Confirmed()
+extern void Shop_Confirmed_m7948DF0E9D46D21D98755E141C310A648CD9FDDF (void);
+// 0x0000008D System.Void Shop::.ctor()
+extern void Shop__ctor_mE91032C14DE263A2419B0B6B8BDE9245845118A0 (void);
+// 0x0000008E System.Void SimpleCreate::Start()
+extern void SimpleCreate_Start_m85900F192F0EE8BF652319EE6F302964B17C62B2 (void);
+// 0x0000008F System.Void SimpleCreate::CreateObject()
+extern void SimpleCreate_CreateObject_m9872D4556FBBC89A1BC64984C8BFEF97BAC15847 (void);
+// 0x00000090 System.Void SimpleCreate::CreateObjectWithParent()
+extern void SimpleCreate_CreateObjectWithParent_mBFFBD870BBE1DA3C92437A97203669670D17C7E7 (void);
+// 0x00000091 System.Void SimpleCreate::Update()
+extern void SimpleCreate_Update_m8520B30B7604C3E83B93B4CCE0200C5B10408A75 (void);
+// 0x00000092 System.Void SimpleCreate::.ctor()
+extern void SimpleCreate__ctor_m928CDB844DD21738EBF8CA8CFC7B943DAF8F1D36 (void);
+// 0x00000093 System.Void SimpleScreenStateDestroy::Start()
+extern void SimpleScreenStateDestroy_Start_m7DF619E0345575E55FF4F5A07DD9B20B3F2AA059 (void);
+// 0x00000094 System.Void SimpleScreenStateDestroy::Update()
+extern void SimpleScreenStateDestroy_Update_mFE68547A6B1472633BAA46C0A95C7EFD6045F4F0 (void);
+// 0x00000095 System.Void SimpleScreenStateDestroy::.ctor()
+extern void SimpleScreenStateDestroy__ctor_m61B4E2E08D65E458414A03835CA5C29C6A25884E (void);
+// 0x00000096 System.Void Tutorial::Start()
+extern void Tutorial_Start_mE255CFF9ED845221919E70471246B1ABEAF36C76 (void);
+// 0x00000097 System.Void Tutorial::StartTutMessage()
+extern void Tutorial_StartTutMessage_m5A2A8A08FB5086E9474844D7C7CAF00A96485540 (void);
+// 0x00000098 System.Void Tutorial::NextStep()
+extern void Tutorial_NextStep_m7401492952C4A8CED3982EF58E93914FDB69D333 (void);
+// 0x00000099 System.Void Tutorial::FinalStep()
+extern void Tutorial_FinalStep_mA0080FDEB87758B2E24FA3CC5B97E9B8EF002D16 (void);
+// 0x0000009A System.Void Tutorial::Update()
+extern void Tutorial_Update_mEE404E12F6111A960017A61FE03F7F3450F70A8E (void);
+// 0x0000009B System.Void Tutorial::.ctor()
+extern void Tutorial__ctor_m2346B837A4D4C175320D861A09AD19C4B43BA28F (void);
+// 0x0000009C System.Void TutorialPickOne::Start()
+extern void TutorialPickOne_Start_m07A266F9DF1B23D7D079A6E766BF8214F17B7E7D (void);
+// 0x0000009D System.Void TutorialPickOne::PickedOne(System.Int32)
+extern void TutorialPickOne_PickedOne_m3481C9097D8400B5B118567D119DC7377734E171 (void);
+// 0x0000009E System.Void TutorialPickOne::Update()
+extern void TutorialPickOne_Update_mC7B40859726E537A93DE3DBA814B4516B7C41EAF (void);
+// 0x0000009F System.Void TutorialPickOne::.ctor()
+extern void TutorialPickOne__ctor_m669FE1FDE33CF741AABFF1A722CCBCE3EE046641 (void);
+// 0x000000A0 System.Void UISimpleDestroy::Start()
+extern void UISimpleDestroy_Start_m9BA33EF92B9EA0C63B68C382B1F4D9BEFA2AD0E8 (void);
+// 0x000000A1 System.Void UISimpleDestroy::DestroyObject()
+extern void UISimpleDestroy_DestroyObject_mEBCE98736FFEACFA82659CBDAEAAFCED5E3B2B7A (void);
+// 0x000000A2 System.Void UISimpleDestroy::Update()
+extern void UISimpleDestroy_Update_m918375357113A5C30BBF25095E28A6B11B938CD8 (void);
+// 0x000000A3 System.Void UISimpleDestroy::.ctor()
+extern void UISimpleDestroy__ctor_m1CAB064C4E66442A8437E147B880008E6BC2ED59 (void);
+// 0x000000A4 System.Void UIxpBar::Start()
+extern void UIxpBar_Start_m26FD4BE27A61BD44708FCC5A6169726C2D4857DF (void);
+// 0x000000A5 System.Void UIxpBar::Update()
+extern void UIxpBar_Update_m75D8FBF97208A272349575D68CC4B3DEB7864B87 (void);
+// 0x000000A6 System.Void UIxpBar::.ctor()
+extern void UIxpBar__ctor_mD2219A10F4F73402AFAF2A3827F73AAAE5CD3280 (void);
+// 0x000000A7 System.Void VideoAd::.ctor()
+extern void VideoAd__ctor_m2F9C02F601A8485C1CA855477A1EFF612CDFEB7B (void);
+// 0x000000A8 System.Void XPtext::Start()
+extern void XPtext_Start_m7120DCEB22941818898A86E3F050C1E201C9E056 (void);
+// 0x000000A9 System.Void XPtext::Update()
+extern void XPtext_Update_m7B908CC3003CBBE9C1828C718922F3F43863D758 (void);
+// 0x000000AA System.Void XPtext::.ctor()
+extern void XPtext__ctor_m6C717C3F620DB9EF450B4D857CFA0EEAD93BAD65 (void);
+// 0x000000AB System.Void crateUI::Start()
+extern void crateUI_Start_m75BAF363381C4457E4C98023270021AE911252F5 (void);
+// 0x000000AC System.Void crateUI::Update()
+extern void crateUI_Update_m75C028740C9ADBED679C636E5758593CDD92A697 (void);
+// 0x000000AD UnityEngine.Sprite crateUI::GetSplash()
+extern void crateUI_GetSplash_m32641AA0042E8297966FCABDF6A7CDCC4654CFF5 (void);
+// 0x000000AE System.Void crateUI::UpdateCrateUI()
+extern void crateUI_UpdateCrateUI_mB69386F2B6884343C4B21697C70B1598BC742EA8 (void);
+// 0x000000AF System.Void crateUI::.ctor()
+extern void crateUI__ctor_m1AAFE6A2A424EDBC9BAFBF3711009FFE193E1CCA (void);
+// 0x000000B0 System.Void goldUI::Start()
+extern void goldUI_Start_mCB0AF11594890758F95BC2C587B254637D13A727 (void);
+// 0x000000B1 System.Void goldUI::Update()
+extern void goldUI_Update_m0D8CE412BD39E341A69D8BD86228CBDC89C7BB8F (void);
+// 0x000000B2 System.Void goldUI::.ctor()
+extern void goldUI__ctor_mE6B56E020D1FBC8F265F7A9E95A2FFFE50394C52 (void);
+// 0x000000B3 System.Void iapGold::Start()
+extern void iapGold_Start_m1E276ED040FF8720642E18518F4D6BCF26C240F4 (void);
+// 0x000000B4 System.Void iapGold::IAP100()
+extern void iapGold_IAP100_m8B407A2B2BE15E86786355701D0F39032F37E6F6 (void);
+// 0x000000B5 System.Void iapGold::IAP500()
+extern void iapGold_IAP500_m6A1E9E0E03BA8401D21533C665974F486B9A629A (void);
+// 0x000000B6 System.Void iapGold::IAP1000()
+extern void iapGold_IAP1000_mDA44AFF779D28E97169527EA8B19527701B73516 (void);
+// 0x000000B7 System.Void iapGold::Update()
+extern void iapGold_Update_m3FA6EDD7476634CA9542D93E7A75DE0A5BC3643B (void);
+// 0x000000B8 System.Void iapGold::.ctor()
+extern void iapGold__ctor_mCCFA92CA3DBF746CB28EB87831B93E6123609352 (void);
+// 0x000000B9 System.Void DistanceCalc/<Start>d__6::.ctor(System.Int32)
+extern void U3CStartU3Ed__6__ctor_mCFA8B040B25ED0BC2C2C0BC2FA289E0EACF96ED4 (void);
+// 0x000000BA System.Void DistanceCalc/<Start>d__6::System.IDisposable.Dispose()
+extern void U3CStartU3Ed__6_System_IDisposable_Dispose_m902532F4751BFCD60C6CB2C5044E4370E4E6EA2B (void);
+// 0x000000BB System.Boolean DistanceCalc/<Start>d__6::MoveNext()
+extern void U3CStartU3Ed__6_MoveNext_mF7006B5F203F6D6C5ED97A5D8788E013DE439459 (void);
+// 0x000000BC System.Object DistanceCalc/<Start>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CStartU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1B348E9C59CC7AC4DD94BDFBC2CE7B147B0A3A33 (void);
+// 0x000000BD System.Void DistanceCalc/<Start>d__6::System.Collections.IEnumerator.Reset()
+extern void U3CStartU3Ed__6_System_Collections_IEnumerator_Reset_m4675A74CBA874BA90FA5C8EF7F6C2BF35978255C (void);
+// 0x000000BE System.Object DistanceCalc/<Start>d__6::System.Collections.IEnumerator.get_Current()
+extern void U3CStartU3Ed__6_System_Collections_IEnumerator_get_Current_m0A9464B1ECF926D7F8991DE40E665013487FE8EA (void);
+static Il2CppMethodPointer s_methodPointers[190] = 
+{
+	AnimalLists_Awake_m7A52B324C54AA3DD85E7F7E72D1A8522A2CBB94A,
+	AnimalLists_Update_m8C578B34363807D93E1F18859986D09839B3C360,
+	AnimalLists__ctor_m9F7971158899B451650F2DD789D4068E2AC32D32,
+	AnimalLists__cctor_mE3EBA64E108811B5C48202B905341D97CE72C993,
+	AnimalStats_Start_m8733F60FED855A0952A7D7324637EDFE5CA7D3CC,
+	AnimalStats_Update_m2F06CDAEA0615EBD7135F57AF66BE8338A497401,
+	AnimalStats_ApplyAlbinoMaterial_m62CDEAE078B1A5CA0F6199AE3A688C3D3D66CCC4,
+	AnimalStats_DoubleBonus_m0BA213CA44E3B11A0DE90A90024F4F27F307CE3D,
+	AnimalStats_ApplyBonus_mC6DA77CBEEB0FB16628185322EAEAD142714C335,
+	AnimalStats__ctor_m07D7F3875E9E55A7B6ECAB734D17D0F90F3FF859,
+	ArrowAnimation_Start_m961F0877A85036FB5EF9C59C7C17BE3ED9AA9052,
+	ArrowAnimation_Update_m0EDD0A50F949CEBC26C117BC8DC1696C0C079755,
+	ArrowAnimation__ctor_m93BDB1413F685738E099074EE60CD582A49BE2F8,
+	BarGraph_Start_mC10CCB43B7437471F91A32A8A748DAC186701CC4,
+	BarGraph_CountGamesPlayed_m1D4C9994161DA2E2D508F664F3E893FA8EC55BBE,
+	BarGraph_ChangeGraphType_mCA0127BD83C9EF3A4D5A003DEED3EC9EA12D37DF,
+	BarGraph_DrawBars_mA2355197E918A3DD1EAF6210120F7AF64BF6243E,
+	BarGraph__ctor_m298747EBBB54A27E47BFCEE1F27DF3AF2EECDD7A,
+	Bonuses_Start_m6C58632ACC51356384637AA5A88343BAFD7B3050,
+	Bonuses_Update_mA8ADD0CB68DF6002AD8EA107A8647563D07AA7C3,
+	Bonuses_ClearBonuses_m64BDED01B71E8111B486597A79BA93A525E7FBFD,
+	Bonuses__ctor_m3C8A2F0125C3CCF5ECF8EE889F2C53F468EF6E05,
+	Bonuses__cctor_mCB15196DBBA7490370BF98B2EE7596A35B3F2A6B,
+	ButtonAnimation_Start_m2CFA7768E3A0DD932F985BE48BBC1F587DA68BF4,
+	ButtonAnimation_Update_m841D81549CC92B037BC9B6CC0F127D6D68814186,
+	ButtonAnimation__ctor_mB8CFBDBACF3E66D6980525D6911D6988D523F2D5,
+	ConfirmMessage_Start_mF2339B1D7F03773EE591E5D4C86EC6F4571BB457,
+	ConfirmMessage_BuyFromShopItem_mB06E250642D2EFBC82487E82652AA394ECCF8226,
+	ConfirmMessage_Update_m583A84EF6B2C148F03A9CBDF0FACE69958B2A16A,
+	ConfirmMessage__ctor_m35BF133169C8FBEC702E8C0F66E00A30CACEBD58,
+	CraftScreenTitle_Awake_mE30D7B00D769EA47289CD8F6CAC13C1C8804B6DD,
+	CraftScreenTitle_Update_mF9D5B00CC72D0DC800428B06BE2D2A87A4A244E9,
+	CraftScreenTitle__ctor_mC8A58132CDEFA8E769136221C1ECE9CE10E71813,
+	Crafting_Start_m906236CAD208D18CC38D9B63DE9938047D94368F,
+	Crafting_Update_m2FE0A13E3FB8F40034E29272FA9E258A70FA7EB8,
+	Crafting_CraftAnimal_mAB26624D0D28A31B5014CF5AE610FC9220149D20,
+	Crafting_CraftCrate_m3B7B1B9A730A6537F43448BBC12605CC10EC1044,
+	Crafting__ctor_m11833CC78F47E157699EF67A2F5F0439843939E1,
+	Crafting__cctor_m0D1008D20903C3C0CC202A1B76991A54CD73BECA,
+	CraftingOutputButton_Start_mD55937F501157B2A81F0D027514EBF8070CD5F69,
+	CraftingOutputButton_Update_m87AAD1571E5845B1CAEED9166646946EFDD6B7AE,
+	CraftingOutputButton_CraftCrate_m687C097001AB93D89675118E14C0B5E30B71524B,
+	CraftingOutputButton_CraftAnimal_m0B2541BF72C0BEC92C533255B1AF43EE230192C3,
+	CraftingOutputButton__ctor_m9B240D047500CE736B4DC88E0BEF6A28D6407429,
+	CraftingSlots_Awake_mE7E4D32511D832B2F67376BCF9B095E506B912BF,
+	CraftingSlots_Update_mE34EBE90D1D878E5D8AFC3945E810EED9A9A49B3,
+	CraftingSlots_GetRarityText_mD4B263DB0E140C74AC117EB255E4FEA1EB19A3B4,
+	CraftingSlots__ctor_mCE9252BA2046C28D8BB51476CEF2D4800042C023,
+	Crate_Start_m1A72030D132C540C1693655751BB0CED7672D250,
+	Crate_Update_mC589F67907AE3D98186803873973832249D8336D,
+	Crate_ApplyRarity_m388766F61F95524E78755DE1E3B2388A02C556C5,
+	Crate_OpenCrate_m07CA2BE30FB7798687320FC107FE63D5CE72D338,
+	Crate_ApplyDistance_m76B778EA752F526060451F55975680540B110AC2,
+	Crate__ctor_mE06B10DE1316EEEFA7451AAFA0DB28B4945A0BD2,
+	CrateAnimation_Start_mB338D5C52849A68C3D5CE7DC4CDB10F1B646B4F2,
+	CrateAnimation_Open_mA49D72C5B536C10B765F99016543401CA1FD2BD0,
+	CrateAnimation_CrateOpeningAnimation_m4CA67E0C7F3A29A8DA709393180BF4EC9B44D101,
+	CrateAnimation_Update_mBD69EE013563B6BD52970782C906C4E3AA1F36D5,
+	CrateAnimation__ctor_m02348FBF29FE1898730EBE68718842C271D2C577,
+	CurrentAnimalUI_Start_mEA1981FEAFDA3666669CE92C355681599FADAB5E,
+	CurrentAnimalUI_Update_mEF142513535518C75D1D9711EBB4BAF1511EBF0F,
+	CurrentAnimalUI_OnMouseDrag_m7EAB7932BC80D03F7F63EB2D23EFA34DEB97BCDA,
+	CurrentAnimalUI_UpdateSelectedAnimalUI_mDD3CC7EA68624C136626B5B1B6EB5F55D5D9C44B,
+	CurrentAnimalUI_MakeCraftingOptions_m121DA0888642E8C1507C2A5EEC9A8EA0CBC6138F,
+	CurrentAnimalUI_SetScreenState_m33E45F47B26543BAE4D68202B4B7616BF56FD3DA,
+	CurrentAnimalUI_CreateInventory_m408A6186661F6552DAC9F1E6916C5859F40CD580,
+	CurrentAnimalUI__ctor_m2687A0553F98B44586A22EA16F45CF2B67D5FF9A,
+	Daily30_Start_m4275763A11B9E1AACD35BFC555C69CF560E38E0D,
+	Daily30_Update_m50475E5D47269C6AA62D2329D2D3D967A06C690C,
+	Daily30__ctor_m58220FCAAF5BB610C77AADC2B4B3EE1A7DA5CA82,
+	DailyLoginPopup_Start_m3A93234ADDACBA2F8AE6FCF2A007C44213C096DA,
+	DailyLoginPopup_Update_m9168D5237093C99635B1520133D15DAE005A7B8F,
+	DailyLoginPopup__ctor_m195D11A0FE412BD8F717CF44E3F1026033DA1462,
+	DistanceCalc_Start_mB58FE7DD1E8D4238B0DCD96E5DD7FAC9EC236CA4,
+	DistanceCalc_Update_m8B597B9E52513C40E0E125EEFBB1CC4DD63884FC,
+	DistanceCalc_LatLongDistance_mE989BE8F848A5B0B20F6D0EC9317564242E8D436,
+	DistanceCalc__ctor_m9D4B765DE873E1D6E94E2D528382D4AC6737E68F,
+	FilterInventory_Start_m38DA0EAEB5EA8DF9BA0D17D61F940EAB1A4DD5CA,
+	FilterInventory_Update_m2B8882D734C08B4158B323434F2D6389D59454DC,
+	FilterInventory_SelectFilter_mC232E9F24D77DC2151950481B7872F4595D25E89,
+	FilterInventory_Filter_m8EF0720CA384F479E4CFDA77282BD3DE0349CE96,
+	FilterInventory_ShowMissing_m616DB41D604B2F35C67998DD41937217D20A7523,
+	FilterInventory__ctor_mDD66175435928CBB7A06F0128E8FD9C44AE68C48,
+	FitnessStats_Start_mCA524B9236CB89C3BAEF65C356976F346F4AA739,
+	FitnessStats_SaveStats_mB0D64F6B35456EA81F941436EF8B9F9EF5972437,
+	FitnessStats_LoadStats_m9A286CE145A403000F2F6B9EFAE0B56FB2DA35F8,
+	FitnessStats_Update_m71E2EB6587F4900911AEA0D978BF15229FB8CBAB,
+	FitnessStats__ctor_mFFE6811B88BC28EAEE7E7E4E3A6E9C0B07EDE4C1,
+	FitnessStats__cctor_m2A6DB7B2F2684BFDFB97B29AAFDCF9935F8ECC8E,
+	GoldText_Start_m52DE3E5198D2F2E3E2A85DA977D5116371B69D35,
+	GoldText_Update_mF1ED159CF348253A8D40EC29C1EB2C2961448A89,
+	GoldText__ctor_mB8BB2868009A3C5FD5690A0AEEEA88987DDE9393,
+	InventoryGUI_Awake_m7DC2C1B05914F0B9C74961FBFE49445C3B3CF7B5,
+	InventoryGUI_Update_mE9453C4C34D2B29C6B4A9B67A023DCD024431CB8,
+	InventoryGUI_SetRarityText_mBF009B6EB5D809276DB35FA8259D5613A362299B,
+	InventoryGUI_SetColor_m4054E4848E21CD24E617528B5DE277B27BE12412,
+	InventoryGUI_WhenClicked_m67B0B2C6F16D90DD8CA9329694FEFB2FCE88F43F,
+	InventoryGUI_Cancelled_m37683B14A22AA80021E434058564FBE2C5E21B3B,
+	InventoryGUI_HitYesOnSelect_m90510C2F31D35A5C9C979D02F3505E9D4DE11AAF,
+	InventoryGUI_LoadInventory_m64E2BDCBB56EC5272F444E9315674E2072BECEC1,
+	InventoryGUI__ctor_m2BF387567FA189549F8E37D6DF676590977B1CF6,
+	LevelText_Start_mDAD65DD6BCE695037C3A969C4D55E485EBCAC7B0,
+	LevelText_Update_m67AB0C1C35B33A4BDB40ACBF6D54960ED12016B1,
+	LevelText__ctor_mE0F4EF0466EB189444CF437180F1B32D1FB35273,
+	LoadInventory_Start_m98BB9D5D4258F45301F37033D642608E062C4553,
+	LoadInventory_Update_m86A2AAC4CCCA7630780E2D8E558C0AFD59636D6A,
+	LoadInventory__ctor_m8A7A4020FDF116535C3B920BECF13B6EF18BD6C4,
+	MoreInfoAnimal_Start_m91A712AA00EF90E4A95E38382FEC0A66C0833A7E,
+	MoreInfoAnimal_DestroyCamera_m1D8F196A8AEEAF62BBEA2E0554A7F212E6FB2425,
+	MoreInfoAnimal_CloseWindow_mC919AC90D95168BAF95ED57EFD90218007180C37,
+	MoreInfoAnimal_CrateOpenAnimation_mDCA2CB9E15E4123B5A6343524D4717CCE3147A7B,
+	MoreInfoAnimal_FillInfo_m1BABAA3A6CEAD928BFAFBAED74851190DEB3EC9C,
+	MoreInfoAnimal_AddToCraft_m7471858A021EBB43E68A189DFDD1922F002EAE18,
+	MoreInfoAnimal_Update_m9743EFCAF969C1B4A5B18FDDC8A959FCBA25971B,
+	MoreInfoAnimal__ctor_m3D39A0649DEC7456C81C1DF4268338BAB74E20DA,
+	Player_Awake_mD94498D36D7F1E5FDB727209B4B6043A6F228E5C,
+	Player_Start_mE9ACCAA7FEBF4020693FFB73C0839CF3AAD0B0C4,
+	Player_Update_m6F977BAE3756AB7073D64042B766B442E4EC6FD2,
+	Player_ApplyDistance_m09AFC266419D5C092298C6A029F39D602621C073,
+	Player_ActiveAnimal_m8929ABEE0F5E1A4C17396247FE7AE8F981416A66,
+	Player_ConvertToDistance_m0F27D7B6061D9CAFB57B7D5666A1FBDE2F3EE253,
+	Player_SaveGame_m29108C98F0856D5EB14473D45060B3D211E8B57F,
+	Player_Load_mC2DC209DBB80EBD1A6E1EC564E28B92A8DA53221,
+	Player_CheckLevelUp_m3C52C4E5F234A7DD48C95859C478300F9698DDE8,
+	Player_CrateIntoInventory_mECE5C3F110074D42406FD06280A04519A2109E26,
+	Player_SelectBuddy_m6C107AA4803C85A72E01C9A54C456A2BF99F29CB,
+	Player_EncryptDecrypt_m1441B851F2A2C5C6C2E4C96CBAA493CEE059174C,
+	Player__ctor_m8F4AB650C5E2DE406B3C65EA8F662013458D85E2,
+	Player__cctor_m66058F271CE07EF8B7E850E86952D7DA9FA9BE7A,
+	RotatingBG_Start_m3E21FCFB6B82D2848D422E0E69A730EF582C7198,
+	RotatingBG_Update_m67C473AA9FBEC0EE1C42FFFB68FD9DF2DD3D5240,
+	RotatingBG__ctor_m4139318855D8E3B13A5639C7F6CCFDBDFAE5E0E3,
+	ScreenState_Start_m0C015134372528E0E643287B77B97404C6B96587,
+	ScreenState_Update_m3BEFF5A7B16DF740F8F5CB102A2870C51DC030FD,
+	ScreenState__ctor_m4AC1FEDBECD7DFAAECEED4547EFB77B1B4441CEC,
+	ScreenState__cctor_m066F8BBABE876E3890FADAD47FC6AD25082A5D1E,
+	Shop_Start_m624525FAE8163E81E7A1C3FE4230165F49CED736,
+	Shop_Update_m818C33CA8EAA95884F5B6CE4F33124368599FDC4,
+	Shop_BuyCrate_mCC45E23E005F1FB4D5261AFF9D9431823B41E791,
+	Shop_Confirmed_m7948DF0E9D46D21D98755E141C310A648CD9FDDF,
+	Shop__ctor_mE91032C14DE263A2419B0B6B8BDE9245845118A0,
+	SimpleCreate_Start_m85900F192F0EE8BF652319EE6F302964B17C62B2,
+	SimpleCreate_CreateObject_m9872D4556FBBC89A1BC64984C8BFEF97BAC15847,
+	SimpleCreate_CreateObjectWithParent_mBFFBD870BBE1DA3C92437A97203669670D17C7E7,
+	SimpleCreate_Update_m8520B30B7604C3E83B93B4CCE0200C5B10408A75,
+	SimpleCreate__ctor_m928CDB844DD21738EBF8CA8CFC7B943DAF8F1D36,
+	SimpleScreenStateDestroy_Start_m7DF619E0345575E55FF4F5A07DD9B20B3F2AA059,
+	SimpleScreenStateDestroy_Update_mFE68547A6B1472633BAA46C0A95C7EFD6045F4F0,
+	SimpleScreenStateDestroy__ctor_m61B4E2E08D65E458414A03835CA5C29C6A25884E,
+	Tutorial_Start_mE255CFF9ED845221919E70471246B1ABEAF36C76,
+	Tutorial_StartTutMessage_m5A2A8A08FB5086E9474844D7C7CAF00A96485540,
+	Tutorial_NextStep_m7401492952C4A8CED3982EF58E93914FDB69D333,
+	Tutorial_FinalStep_mA0080FDEB87758B2E24FA3CC5B97E9B8EF002D16,
+	Tutorial_Update_mEE404E12F6111A960017A61FE03F7F3450F70A8E,
+	Tutorial__ctor_m2346B837A4D4C175320D861A09AD19C4B43BA28F,
+	TutorialPickOne_Start_m07A266F9DF1B23D7D079A6E766BF8214F17B7E7D,
+	TutorialPickOne_PickedOne_m3481C9097D8400B5B118567D119DC7377734E171,
+	TutorialPickOne_Update_mC7B40859726E537A93DE3DBA814B4516B7C41EAF,
+	TutorialPickOne__ctor_m669FE1FDE33CF741AABFF1A722CCBCE3EE046641,
+	UISimpleDestroy_Start_m9BA33EF92B9EA0C63B68C382B1F4D9BEFA2AD0E8,
+	UISimpleDestroy_DestroyObject_mEBCE98736FFEACFA82659CBDAEAAFCED5E3B2B7A,
+	UISimpleDestroy_Update_m918375357113A5C30BBF25095E28A6B11B938CD8,
+	UISimpleDestroy__ctor_m1CAB064C4E66442A8437E147B880008E6BC2ED59,
+	UIxpBar_Start_m26FD4BE27A61BD44708FCC5A6169726C2D4857DF,
+	UIxpBar_Update_m75D8FBF97208A272349575D68CC4B3DEB7864B87,
+	UIxpBar__ctor_mD2219A10F4F73402AFAF2A3827F73AAAE5CD3280,
+	VideoAd__ctor_m2F9C02F601A8485C1CA855477A1EFF612CDFEB7B,
+	XPtext_Start_m7120DCEB22941818898A86E3F050C1E201C9E056,
+	XPtext_Update_m7B908CC3003CBBE9C1828C718922F3F43863D758,
+	XPtext__ctor_m6C717C3F620DB9EF450B4D857CFA0EEAD93BAD65,
+	crateUI_Start_m75BAF363381C4457E4C98023270021AE911252F5,
+	crateUI_Update_m75C028740C9ADBED679C636E5758593CDD92A697,
+	crateUI_GetSplash_m32641AA0042E8297966FCABDF6A7CDCC4654CFF5,
+	crateUI_UpdateCrateUI_mB69386F2B6884343C4B21697C70B1598BC742EA8,
+	crateUI__ctor_m1AAFE6A2A424EDBC9BAFBF3711009FFE193E1CCA,
+	goldUI_Start_mCB0AF11594890758F95BC2C587B254637D13A727,
+	goldUI_Update_m0D8CE412BD39E341A69D8BD86228CBDC89C7BB8F,
+	goldUI__ctor_mE6B56E020D1FBC8F265F7A9E95A2FFFE50394C52,
+	iapGold_Start_m1E276ED040FF8720642E18518F4D6BCF26C240F4,
+	iapGold_IAP100_m8B407A2B2BE15E86786355701D0F39032F37E6F6,
+	iapGold_IAP500_m6A1E9E0E03BA8401D21533C665974F486B9A629A,
+	iapGold_IAP1000_mDA44AFF779D28E97169527EA8B19527701B73516,
+	iapGold_Update_m3FA6EDD7476634CA9542D93E7A75DE0A5BC3643B,
+	iapGold__ctor_mCCFA92CA3DBF746CB28EB87831B93E6123609352,
+	U3CStartU3Ed__6__ctor_mCFA8B040B25ED0BC2C2C0BC2FA289E0EACF96ED4,
+	U3CStartU3Ed__6_System_IDisposable_Dispose_m902532F4751BFCD60C6CB2C5044E4370E4E6EA2B,
+	U3CStartU3Ed__6_MoveNext_mF7006B5F203F6D6C5ED97A5D8788E013DE439459,
+	U3CStartU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1B348E9C59CC7AC4DD94BDFBC2CE7B147B0A3A33,
+	U3CStartU3Ed__6_System_Collections_IEnumerator_Reset_m4675A74CBA874BA90FA5C8EF7F6C2BF35978255C,
+	U3CStartU3Ed__6_System_Collections_IEnumerator_get_Current_m0A9464B1ECF926D7F8991DE40E665013487FE8EA,
+};
+static const int32_t s_InvokerIndices[190] = 
+{
+	23,
+	23,
+	23,
+	3,
+	23,
+	23,
+	23,
+	668,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	32,
+	23,
+	23,
+	23,
+	3,
+	23,
+	3,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	31,
+	831,
+	23,
+	3,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	98,
+	1524,
+	23,
+	23,
+	23,
+	26,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	32,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	14,
+	23,
+	1728,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	31,
+	23,
+	23,
+	23,
+	3,
+	23,
+	23,
+	23,
+	23,
+	23,
+	28,
+	1729,
+	23,
+	23,
+	23,
+	751,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	26,
+	401,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	1524,
+	26,
+	1537,
+	23,
+	23,
+	23,
+	101,
+	401,
+	58,
+	23,
+	3,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	3,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	32,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	14,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	32,
+	23,
+	95,
+	14,
+	23,
+	14,
+};
+extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	190,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+};
